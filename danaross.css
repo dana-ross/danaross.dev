@@ -1,0 +1,106 @@
+@font-face {
+    font-family: "Ballpoint Signature";
+    src: url("Ballpoint Signature.woff") format("woff");
+}
+html {
+    min-height: 100%;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+}
+p, li, blockquote {
+    color: #333;
+}
+main {
+    margin: 6vh auto 0 auto;
+    padding-bottom: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+@media screen and (max-height: 600px) {
+    main {
+        margin: 0 auto;
+    }
+}
+h1 {
+    text-align: center;
+    font-family: "Ballpoint Signature";
+    font-size: 10rem;
+    color: rgba(255,0,221,1);
+    margin: 0;
+}
+h1 span {
+    background: linear-gradient(to bottom, rgba(181,0,241,1) 0%, rgba(255,0,221,1) 60%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+h1 span::after {
+    display: block;
+    font-size: 20rem;
+    content: "";
+    margin-top: -19rem;
+    margin-bottom: -7rem;
+    color: rgba(255,0,221,1);
+    background-clip: border-box;
+    -webkit-text-fill-color: rgba(255,0,221,1);
+}
+h1 small {
+    font-size: 3rem;
+    display: block;
+}
+h2, h3, h4, h5 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-family: "Ballpoint Signature", serif;
+    font-weight: 300;
+}
+
+#social ul {
+    list-style: none;
+    display: table;
+    margin: 2rem auto 0 auto;
+    width: 80%;
+    padding: 0;
+}
+#social ul li {
+    display: table-cell;
+    text-align: center;
+}
+#professional li  {
+    width: 50%;
+}
+#professional a:hover {
+    color: #000;
+}
+#social li {
+    width: 10%;
+}
+#social li img {
+    width: 50%;
+    filter: invert(60%) ;
+}
+#social li a:hover img {
+    filter: none;
+}
+a {
+    color: #0000ff;
+    text-decoration: underline dotted blue;
+}
+a:hover {
+    text-decoration: underline solid blue;
+}
+#intro a, #intro a:hover {
+    text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+    h1 span {
+        font-size: 4rem;
+    }
+    h1 span::after {
+        display: block;
+        font-size: 12px;
+    }
+    h1 small {
+        font-size: 1.6rem;
+    }
+}
