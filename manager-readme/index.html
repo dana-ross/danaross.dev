@@ -13,15 +13,15 @@
     {
       "@context": "http://www.schema.org",
       "@type": "person",
-      "name": "David Michael Ross",
-      "url": "https://davidmichaelross.com/",
+      "name": "Dana Rose Ross",
+      "url": "https://danaross.dev/",
       "sameAs": [
          "https://twitter.com/csixty4",
          "https://oldbytes.space/@daveross",
          "https://www.linkedin.com/in/david-michael-ross/",
          "https://github.com/daveross/"
       ],
-      "email": "dave@davidmichaelross.com"
+      "email": "dana+website@danaross.dev"
     }
     </script>
     <script>
@@ -73,91 +73,8 @@
         })
     })
     </script>
+    <link rel="stylesheet" href="/danaross.css">
     <style>
-        @import "https://fonts.davidmichaelross.com/css?family=Tofino|Clickbait|Vollkorn&display=swap";
-        
-        html {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-        
-        html.no-webp {
-            background-image: url('abstract-1510187_1280.png');
-        }
-        
-        html.webp {
-            background-image: url('abstract-1510187_1280.webp');
-        }
-        
-        body {
-            background: #ffffff;
-            color: #212020;
-            font-size: 16px;
-            padding: .5em 1em;
-            line-height: 1.2;
-            margin: 2rem auto;
-            max-width: 800px;
-            font-family: "Vollkorn Regular", serif;
-            box-shadow: #000 .5rem .5rem 1rem;
-        }
-
-        a {
-            color: #0000ff;
-            text-decoration: underline dotted blue;
-            font-size: 1rem;
-        }
-
-        a:hover {
-            text-decoration: underline solid blue;
-        }
-
-        p, li, blockquote {
-            color: #333;
-        }
-        
-        h1, h2, h3, h4, h5 {
-            margin-top: 1rem;
-            margin-bottom: 0;
-            font-family: "Clickbait", serif;
-            font-weight: 300;
-        }
-
-        h1 {
-            font-size: 8rem;
-            margin: 0 auto 2rem auto;
-            text-align: center;
-            color: #0000ff;
-        }
-        
-        h1 small {
-            margin-top: -2rem;
-            font-size: 2rem;
-            display: block;
-            font-family: "Tofino Black", sans-serif;
-            font-weight: 900;
-        }
-
-        header ul {
-            margin-left: 0rem;
-            padding-left: 0;
-        }
-
-        header ul li {
-            display: block;
-            font-family: "Tofino Regular", sans-serif;
-            line-height: 1.5;
-        }
-
-        header a {
-            color: #fe7402;
-        }
-        
-        header ul li:first-child {
-            border-left: 0;
-            padding-left: 0;
-        }
-
         h2 {
             color: #3D0023;
             font-size: 8rem;
@@ -181,21 +98,10 @@
             padding-right: .5rem;
             left: 0;
         }
-        
-        @media print {
-            html {
-                background: none;
-            }
-            
-            body {
-                box-shadow: none;
-            }
-            
-            a, a:hover {
-                border-bottom: none;
-            }
+
+        h1 {
+            margin-bottom: 1rem;
         }
-        
         #intro h2 {
             font-size: 1.2rem;  
             font-family: "Tofino Bold", sans-serif;
@@ -314,22 +220,6 @@
         figcaption, figcaption a {
             font-size: 12px;
         }
-
-        @media (max-width: 400px) {
-            html body {
-                margin-top: 4rem;
-            }
-            
-            h1 {
-                font-size: 5rem;
-            }
-            
-            h1 small {
-                font-size: 1.5rem;
-                margin-top: -.5rem;
-            }
-            
-        }
         
         @media (max-width: 768px) {
             #aboutme div {
@@ -337,36 +227,52 @@
                 column-gap: 3rem;
             }
         }
-
+        @media screen and (max-width: 800px) {
+            h2 {
+                font-size: 3rem;
+            }
+        }
         </style>
-        <title>Dave Ross' Manager README</title>
+        <title>Dana Ross' Manager Readme</title>
         <meta name="description" content="A description of what I’m all about and my philosophies about what being a team is about." />
         <meta property="og:site_name" content="Dave Ross"/>
         <meta property="og:title" content="My Manager README"/>
         <meta property="og:description" content="This is a description of what I’m all about and my philosophies about what being a team is about. This is NOT a pile of excuses for my bad behavior."/>
         <meta property="og:image" content="https://davidmichaelross.com/manager-readme/dave.jpg">
-        <meta property="og:url" content="https://davidmichaelross.com/manager-readme/">
+        <meta property="og:url" content="https://danaross.dev/manager-readme/">
         <meta property="og:type" content="article"/>
 </head>
 <body>
-<section id=intro>
-    <h1>Dave Ross<small>Manager README</small></h1>
-
-<h2>What is this?</h2>
-
-<p>This is a description of what I’m all about and my philosophies about what being a team is about.</p>
-
-<h2>What this is not:</h2>
-
-<p>This is NOT a pile of excuses for my bad behavior. This is not me trying to make my personality quirks into your problems because “well, I warned you about that in my README”.</p>
-
-<p>Camille Fournier has a great blog post called <a href="https://medium.com/@skamille/i-hate-manager-readmes-20a0dd9a70d0" rel=nofollow>I hate manager READMEs</a> that sums up how I feel about how these kinds of things tend to turn out.</p>
-</section>
+    <nav id="hamnav">
+        <!-- [THE HAMBURGER] -->
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+   
+        <!-- [MENU ITEMS] -->
+        <div id="hamitems">
+          <a href="/">Home</a>
+          <a href="/resume">Resume</a>
+          <a href="/manager-readme/">Manager Readme</a>
+        </div>
+      </nav>
 <main>
+<section id=intro>
+    <a href="/"><h1><span aria-label="Dana Ross">D R</span><small>Manager Readme</small></h1></a>
+
+    <h2>What is this?</h2>
+
+    <p>This is a description of what I’m all about and my philosophies about what being a team is about.</p>
+
+    <h2>What this is not:</h2>
+
+    <p>This is NOT a pile of excuses for my bad behavior. This is not me trying to make my personality quirks into your problems because “well, I warned you about that in my README”.</p>
+
+    <p>Camille Fournier has a great blog post called <a href="https://medium.com/@skamille/i-hate-manager-readmes-20a0dd9a70d0" rel=nofollow>I hate manager READMEs</a> that sums up how I feel about how these kinds of things tend to turn out.</p>
+</section>
 <section id=aboutme>
 <h2>About Me</h2>
 <div>
-<p>My pronouns are <a href="http://pronoun.is/they/them/their">they/them/their</a>.</p>
+<p>My pronouns are <a href="http://pronoun.is/she/her">she/her</a>.</p>
 
 <p>I was born in Chicago and moved to Boston in 2012.</p>
 
@@ -385,7 +291,7 @@
 <p>I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a little too close to home sometimes.</p>
 
 <video autoplay loop muted playsinline role="presentation">
-    <source src="being-a-boss.mp4" type="video/mp4">
+    <source src="/manager-readme/being-a-boss.mp4" type="video/mp4">
     <!-- Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'. -->
 </video>
 
@@ -415,9 +321,9 @@
 <p>I don’t want anyone on this team burning themselves out or neglecting their health. That means no 60 hour weeks where you’re really productive on paper but you can’t get anything done. Shoot for a 40 hour week average. Finish work at a decent time. Eat good food. Have hobbies. Exercise. Sleep.</p>
 <figure>
     <picture>
-        <source srcset="what-makes-me-productive.webp" type="image/webp">
-        <source srcset="what-makes-me-productive.png" type="image/png"> 
-        <img src="what-makes-me-productive.png" loading="lazy" alt="What I thought would make me productive: Picture of a pie chart with \"Hard work\" making up 100%. What actually does: Picture of a pie chart split up between hard work, exercise, healthy eating, sleep, and time off. Cartoon by @lizandmollie on Twitter.">
+        <source srcset="/manager-readme/what-makes-me-productive.webp" type="image/webp">
+        <source srcset="/manager-readme/what-makes-me-productive.png" type="image/png"> 
+        <img src="/manager-readme/what-makes-me-productive.png" loading="lazy" alt="What I thought would make me productive: Picture of a pie chart with \"Hard work\" making up 100%. What actually does: Picture of a pie chart split up between hard work, exercise, healthy eating, sleep, and time off. Cartoon by @lizandmollie on Twitter.">
     </picture>
     <figcaption>Cartoon by <a href="https://twitter.com/lizandmollie" rel="nofollow">@lizandmollie</a></figcaption>
 </figure>
@@ -505,38 +411,39 @@
 <ul class=books>
 <li><a href="https://www.amazon.com/Creating-Magic-Common-Leadership-Strategies/dp/0385523866/" rel=nofollow>
       <picture>
-        <source srcset="creating-magic-book.webp" type="image/webp">
-        <source srcset="creating-magic-book.png" type="image/png"> 
-        <img src="creating-magic-book.png" loading="lazy" alt="Creating Magic: 10 Common Sense Leadership Strategies from a Life at Disney">
+        <source srcset="/manager-readme/creating-magic-book.webp" type="image/webp">
+        <source srcset="/manager-readme/creating-magic-book.png" type="image/png"> 
+        <img src="/manager-readme/creating-magic-book.png" loading="lazy" alt="Creating Magic: 10 Common Sense Leadership Strategies from a Life at Disney">
       </picture>
     </a>
 </li>
 <li><a href="https://www.amazon.com/Career-Magic-Track-Achieve-Stellar/dp/1943127328/" rel=nofollow>
       <picture>
-        <source srcset="career-magic-book.webp" type="image/webp">
-        <source srcset="career-magic-book.png" type="image/png"> 
-        <img src="career-magic-book.png" loading="lazy" alt="Career Magic: How to Stay on Track to Achieve a Stellar Career" />
+        <source srcset="/manager-readme/career-magic-book.webp" type="image/webp">
+        <source srcset="/manager-readme/career-magic-book.png" type="image/png"> 
+        <img src="/manager-readme/career-magic-book.png" loading="lazy" alt="Career Magic: How to Stay on Track to Achieve a Stellar Career" />
       </picture>
     </a>
 </li>
 <li><a href="https://www.amazon.com/Time-Management-Magic-Surviving-Thriving/dp/0990769461/" rel=nofollow>
       <picture>
-        <source srcset="time-management-magic-book.webp" type="image/webp">
-        <source srcset="time-management-magic-book.png" type="image/png"> 
-        <img src="time-management-magic-book.png" loading="lazy" alt="Time Management Magic: How to Get More Done Every Day and Move from Surviving to Thriving" />
+        <source srcset="/manager-readme/time-management-magic-book.webp" type="image/webp">
+        <source srcset="/manager-readme/time-management-magic-book.png" type="image/png"> 
+        <img src="/manager-readme/time-management-magic-book.png" loading="lazy" alt="Time Management Magic: How to Get More Done Every Day and Move from Surviving to Thriving" />
       </picture>
     </a>
 </li>
 <li><a href="https://www.amazon.com/Customer-Rules-Essential-Delivering-Sensational/dp/0770435602/" rel=nofollow>
       <picture>
-        <source srcset="the-customer-rules-book.webp" type="image/webp">
-        <source srcset="the-customer-rules-book.png" type="image/png"> 
-        <img src="the-customer-rules-book.png" loading="lazy" alt="The Customer Rules: The 39 Essential Rules for Delivering Sensational Service" />
+        <source srcset="/manager-readme/the-customer-rules-book.webp" type="image/webp">
+        <source srcset="/manager-readme/the-customer-rules-book.png" type="image/png"> 
+        <img src="/manager-readme/the-customer-rules-book.png" loading="lazy" alt="The Customer Rules: The 39 Essential Rules for Delivering Sensational Service" />
       </picture>
     </a>
 </li>
 </ul>
 </section>
 </main>
+<script src="/danaross.js"></script>
 </body>
 </html>

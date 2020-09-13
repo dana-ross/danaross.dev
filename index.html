@@ -1,4 +1,5 @@
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,21 @@
         <link rel="stylesheet" href="/danaross.css">
     </head>
     <body>
+        <nav id="hamnav">
+            <!-- [THE HAMBURGER] -->
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+       
+            <!-- [MENU ITEMS] -->
+            <div id="hamitems">
+              <a href="/">Home</a>
+              <a href="/resume">Resume</a>
+              <a href="/manager-readme/">Manager Readme</a>
+            </div>
+          </nav>
         <main>
             <h1><span aria-label="Dana Ross">D R</span><small>Engineering Leader : Full-Stack Developer<br />Certified Accessibility Professional</small></h1>
-            <ul id="professional"><li><a href="">Resume</a></li><li><a href="/manager-readme">Manager README</a></li></ul>
+            <ul id="professional"><li><a href="/resume">Resume</a></li><li><a href="/manager-readme">Manager README</a></li></ul>
             <ul id="social">
                 <li><a href="https://oldbytes.space/@danaross"><img src="mastodon-svgrepo-com.svg" alt="Follow me on Mastodon" /></a></li>
                 <li><a href="https://twitter.com/csixty4"><img src="twitter-svgrepo-com.svg" alt="Follow me on Twitter" /></a></li>
@@ -18,19 +31,6 @@
             </ul>
 
         </main>
-        <script>
-            console.log("\
-8   8                           8   8  8\n\
-8   8 eeee e     e     eeeee    8   8  8 eeeee eeeee  e     eeeee\n\
-8eee8 8    8     8     8  88    8e  8  8 8  88 8   8  8     8   8\n\
-88  8 8eee 8e    8e    8   8    88  8  8 8   8 8eee8e 8e    8e  8\n\
-88  8 88   88    88    8   8    88  8  8 8   8 88   8 88    88  8\n\
-88  8 88ee 88eee 88eee 8eee8    88ee8ee8 8eee8 88   8 88eee 88ee8\n\
-\n\
-LET'S GO OLD SCHOOL!\n\
-See my vintage computing projects at https://csixty4.com\n\
-Got a gopher client? Visit my gopher site at danaross.dev\n\
-Get my public key and current projects using the Unix finger command: finger dana@danaross.dev")
-        </script>
+        <script src="/danaross.js"></script>
     </body>
 </html>
