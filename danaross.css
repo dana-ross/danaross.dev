@@ -1,9 +1,6 @@
 @import "/ham-menu.css";
+@import "https://fonts.danaross.dev/css?family=Ballpoint%20Signature";
 
-@font-face {
-    font-family: "Ballpoint Signature";
-    src: url("Ballpoint Signature.woff") format("woff");
-}
 html {
     min-height: 100%;
     background: #fff;
