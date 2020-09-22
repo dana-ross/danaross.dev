@@ -31,6 +31,7 @@ h1 {
 h1 span {
     background: linear-gradient(to bottom, rgba(181,0,241,1) 0%, rgba(255,0,221,1) 60%);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
 h1 span::after {
