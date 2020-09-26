@@ -1,3 +1,10 @@
+document.fonts.ready.then(() => {
+        if(document.fonts.check('1em "Ballpoint Signature"')) {
+                const heading = document.querySelector('span[data-font-swap-text]')
+                heading.innerText = heading.dataset.fontSwapText
+        }
+});
+
 console.log("\
 8   8                           8   8  8\n\
 8   8 eeee e     e     eeeee    8   8  8 eeeee eeeee  e     eeeee\n\
