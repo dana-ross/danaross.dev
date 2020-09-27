@@ -22,11 +22,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
          
-      - uses: contention/rsync-deployments@master
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: easingthemes/ssh-deploy@v2.1.5
         env:
-          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          USER_AND_HOST: rancher@danaross.dev
-          DEST: /mnt/volume_nyc3_01/danaross.dev/danaross.dev-deploy
-          SRC: /
-          RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'  
-          
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: "-rltgoDzvO"
+          SOURCE: "/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
