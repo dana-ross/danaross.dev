@@ -23,11 +23,10 @@ jobs:
       - uses: actions/checkout@v2
          
       - uses: contention/rsync-deployments@master
-        with:
+        env:
+          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           USER_AND_HOST: rancher@danaross.dev
           DEST: /mnt/volume_nyc3_01/danaross.dev/danaross.dev-deploy
           SRC: /
-          RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'
-        env:
-          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          RSYNC_OPTIONS: -avzr --delete --exclude node_modules --exclude '.git*'  
           
