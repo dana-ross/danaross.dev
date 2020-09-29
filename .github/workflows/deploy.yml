@@ -30,6 +30,7 @@ jobs:
         uses: nizarmah/auto-minify@master
         with:
           maxdepth: 999
+          directory: ${{ GITHUB_WORKSPACE }} 
       - name: Deploy
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
