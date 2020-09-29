@@ -1,0 +1,16 @@
+name: Linting
+on:
+# Disable the following line if you don't want the Action to run on PRs.
+- pull_request
+# Enable the following line if you want the Action to run on regular pushes.
+- push
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Cyb3r-Jak3/html5validator-action@v0.4.2
+        with:
+          root: ${{ github.workspace }}
+          css: true
