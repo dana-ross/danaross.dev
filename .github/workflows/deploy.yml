@@ -24,8 +24,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: easingthemes/ssh-deploy@v2.1.5
+      - name: Checkout main
+        uses: actions/checkout@v2
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@master
+        with:
+          maxdepth: 999
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rltgoDvOi -zz"
