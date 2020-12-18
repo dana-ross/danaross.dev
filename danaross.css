@@ -44,12 +44,12 @@ h1 span::after {
 h1 small {
     font-size: 3rem;
     display: block;
-    font-family: 'Ballast v0.1', serif;
+    font-family: "Ballast v0.1 Condensed Bold", serif;
 }
 h2, h3, h4, h5 {
     margin-top: 1rem;
     margin-bottom: 0;
-    font-family: "Ballast v0.1", serif;
+    font-family: "Ballast v0.1 Condensed Bold", serif;
 }
 #social, #professional {
     list-style: none;
