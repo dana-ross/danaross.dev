@@ -113,6 +113,18 @@ a[href="/"], a[href="/"]:hover {
     }
 }
 
+@media screen and (max-width: 430px) {
+    h1 small {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    h1 small {
+        font-size: 1.5rem;
+    }
+}
+
 /* HAM Menu */
 /* [ON BIG SCREEN] */
 /* Wrapper */
