@@ -45,11 +45,13 @@ h1 small {
     font-size: 3rem;
     display: block;
     font-family: "Ballast v0.1 Condensed Bold", serif;
+    font-weight: 500;
 }
 h2, h3, h4, h5 {
     margin-top: 1rem;
     margin-bottom: 0;
     font-family: "Ballast v0.1 Condensed Bold", serif;
+    font-weight: 500;
 }
 #social, #professional {
     list-style: none;
