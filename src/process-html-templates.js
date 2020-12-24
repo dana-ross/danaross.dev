@@ -19,10 +19,12 @@ function renderHTMLPage(fileName, buildDir) {
         buildDir + '/index.html' :
         buildDir + '/' + path.basename(fileName, '.html') + '/index.html'
 
+    const url = isHomeTemplate(fileName) ? '/' : '/' + path.basename(fileName, '.html') + '/'
+
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
     let source = fs.readFileSync(fileName, 'utf8')
-    source = replacePlaceholders(replacePartials(source), { url: 'http://example.com' })
+    source = replacePlaceholders(replacePartials(source, { url }))
 
     if (!isHomeTemplate(fileName)) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))
@@ -31,7 +33,7 @@ function renderHTMLPage(fileName, buildDir) {
     fs.writeFileSync(targetFileName, cleanHTML(source))
 }
 
-function replacePartials(source) {
+function replacePartials(source, variables) {
     const PARTIAL_TAG_REGEX = /<drr-partial\W?name="(?<name>[^"]*)"\W?(?<attributes>.+="[^"]+"?)*\W?\/?>(<\/drr-partial>)?/
 
     let partialTag = null;
@@ -42,9 +44,9 @@ function replacePartials(source) {
                     './partials/' + partialTag.groups.name + '.part',
                     'utf8'
                 ),
-                parseAttributeString(
+                unionOfObjects(variables, parseAttributeString(
                     partialTag.groups.attributes || ''
-                )
+                ))
             )
         )
         source = source.replace(PARTIAL_TAG_REGEX, replacement)
@@ -81,4 +83,16 @@ function cleanHTML(source) {
 
 function isHomeTemplate(fileName) {
     return (path.basename(fileName, '.html') == 'index')
+}
+
+function unionOfObjects(...objects) {
+    const retVal = {}
+    objects.forEach((settings) => {
+        if (settings) {
+            Object.keys(settings).forEach((key) => {
+                retVal[key] = settings[key]
+            })
+        }
+    })
+    return retVal
 }
