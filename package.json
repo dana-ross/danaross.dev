@@ -7,7 +7,8 @@
     "beautify": "0.0.8",
     "chalk": "^4.1.0",
     "svgo": "^1.3.2",
-    "uglify-js": "^3.12.3"
+    "uglify-js": "^3.12.3",
+    "uglifycss": "0.0.29"
   },
   "devDependencies": {},
   "scripts": {
