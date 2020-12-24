@@ -6,6 +6,7 @@
     <!-- [MENU ITEMS] -->
     <div id="hamitems">
         <a href="/">Home</a>
+        <a href="/about">About Me</a>
         <a href="/resume/">Resume</a>
         <a href="/manager-readme/">Manager Readme</a>
     </div>

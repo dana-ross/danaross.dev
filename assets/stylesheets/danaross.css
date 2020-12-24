@@ -4,6 +4,7 @@ html {
     color: #333;
     font-size: 16px;
 }
+
 p, li, blockquote {
     color: #333;
 }
@@ -13,6 +14,11 @@ main {
     width: 100%;
     max-width: 800px;
 }
+
+main p {
+    line-height: 1.6;
+}
+
 @media screen and (max-height: 600px) {
     main {
         margin: 0 auto;
