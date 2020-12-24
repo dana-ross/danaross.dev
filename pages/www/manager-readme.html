@@ -4,55 +4,6 @@
     <link rel="preconnect" href="https://syndication.twitter.com/" />
     <link rel="preconnect" href="https://cdn.syndication.twimg.com/" />
     <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
-    <script>
-    // webp test adapted from Modernizr https://github.com/modernizr/modernizr
-    document.addEventListener('DOMContentLoaded', () => {
-        const image = new Image()
-  
-        function addResult(event) {
-          // if the event is from 'onload', check the see if the image's width is
-          // 1 pixel (which indicates support). otherwise, it fails
-  
-          const result = event && event.type === 'load' ? image.width === 1 : false;
-          
-          Array.prototype.slice.call(document.getElementsByTagName('html')).forEach((element) => {
-                element.classList.add( result ? 'webp' : 'no-webp')
-          });
-        }
-  
-        image.onerror = addResult
-        image.onload = addResult
-  
-        image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA='
-    })
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const onIntersection = (targets) => {
-          
-          targets.forEach((target) => {
-              if(target.isIntersecting) {
-                const scriptElement = document.createElement('script')
-                scriptElement.async = "async"
-                scriptElement.src = "https://platform.twitter.com/widgets.js"
-                scriptElement.charset = "utf-8"
-                document.body.appendChild(scriptElement)
-                observer.unobserve(target.target)
-              }
-          })
-        }
-
-        const observer = new IntersectionObserver(
-          onIntersection,
-          {
-            rootMargin: '50px 0px',
-            threshold: 1
-          }
-        )
-        Array.prototype.slice.call(document.getElementsByClassName('twitter-tweet')).forEach((embed) => {
-          observer.observe(embed)
-        })
-    })
-    </script>
     <style>
         h2 {
             color: #3D0023;
