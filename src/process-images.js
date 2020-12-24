@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 const chalk = require('chalk')
 const SVGO = require('svgo')
 
@@ -81,8 +82,14 @@ module.exports = function (buildDir) {
   fs.readdirSync('./images').forEach(file => {
     const sourceFile = './images/' + file
     const targetFile = buildDir + '/images/' + file
-    console.log(`🖼️  ${chalk.white('Processing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
-    const originalSVG = fs.readFileSync(sourceFile)
-    svgo.optimize(originalSVG).then((optimizedSVG) => fs.writeFileSync(targetFile, optimizedSVG.data))
+    if (path.extname(file) == '.svg') {
+      console.log(`🖼️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
+      const originalSVG = fs.readFileSync(sourceFile)
+      svgo.optimize(originalSVG).then((optimizedSVG) => fs.writeFileSync(targetFile, optimizedSVG.data))
+    }
+    else {
+      console.log(`🖼️  ${chalk.white('Copying')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
+      fs.copyFileSync(sourceFile, targetFile)
+    }
   })
 }
