@@ -3,28 +3,31 @@ const path = require('path')
 const beautify = require('beautify');
 const chalk = require('chalk')
 
-module.exports = function (buildDir, pagesDir) {
+module.exports = function (buildDir, pagesDir, baseURL) {
     // Process WWW templates
     fs.readdir(pagesDir, (err, files) => {
         files.forEach(file => {
             if (path.extname(file) == '.html') {
-                renderHTMLPage(pagesDir + '/' + file, buildDir)
+                renderHTMLPage(pagesDir + '/' + file, buildDir, baseURL)
             }
         })
     })
 }
-function renderHTMLPage(fileName, buildDir) {
+function renderHTMLPage(fileName, buildDir, baseURL) {
 
     const targetFileName = isHomeTemplate(fileName) ?
         buildDir + '/index.html' :
         buildDir + '/' + path.basename(fileName, '.html') + '/index.html'
 
-    const url = isHomeTemplate(fileName) ? '/' : '/' + path.basename(fileName, '.html') + '/'
+    const url = baseURL + (isHomeTemplate(fileName) ? '' : path.basename(fileName, '.html') + '/')
+    const imagesBase = '/images/'
+    const stylesheetsBase = '/stylesheets/'
+    const scriptsBase = '/scripts/'
 
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
     let source = fs.readFileSync(fileName, 'utf8')
-    source = replacePlaceholders(replacePartials(source, { url }))
+    source = replacePlaceholders(replacePartials(source, { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }), { url, imagesBase, baseURL, stylesheetsBase, scriptsBase })
 
     if (!isHomeTemplate(fileName)) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))

@@ -47,12 +47,21 @@ h1 small {
     font-family: "Ballast v0.1 Condensed Bold", serif;
     font-weight: 500;
 }
-h2, h3, h4, h5 {
+h2 {
     margin-top: 1rem;
     margin-bottom: 0;
     font-family: "Ballast v0.1 Condensed Bold", serif;
     font-weight: 500;
 }
+
+h3 {
+    font-family: sans-serif;
+}
+
+h3 small {
+    display: block;
+}
+
 #social, #professional {
     list-style: none;
     display: table;
