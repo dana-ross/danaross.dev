@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/images/favicon.svg" sizes="any" type="image/svg+xml">
+        <link rel=“canonical” href="${url}" />
+        <link rel="stylesheet" href="/danaross.min.css">
+        <drr-partial name="schema">
+        <drr-partial name="font-loading">
+        <meta property="og:site_name" content="Dana Ross"/>
+        <meta property="og:type" content="profile"/>
+        <title>${title}</title>
+        <meta name="description" content="${metadescription}">
+

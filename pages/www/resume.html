@@ -1,27 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Standard Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicons/favIcon_64x64.ico" />
-    <script type='application/ld+json'>
-        {
-          "@context": "http://www.schema.org",
-          "@type": "person",
-          "name": "Dana Ross",
-          "url": "https://danaross.dev/",
-          "sameAs": [
-             "https://twitter.com/csixty4",
-             "https://oldbytes.space/@danaross",
-             "https://www.linkedin.com/in/dana-rose-ross/",
-             "https://github.com/dana-ross/"
-          ],
-          "email": "dana+website@danaross.dev"
-        }
-    </script>
-    <link rel="stylesheet" href="https://fonts.danaross.dev/css?family=Ballpoint%20Signature|Ballast%20v0.1&display=swap">
-    <link rel="stylesheet" href="/danaross.min.css">
+<drr-partial name="head" title="Dana Ross &mdash; Resume: Engineering Leader, Developer, Accessibility Pro" metadescription="Engineering Leader,  Experienced Full-Stack Developer, Certified Accessibility Pro.">
     <style>
         h2 {
             color: #3D0023;
@@ -29,42 +6,20 @@
             margin: 2rem auto 2rem auto;
             line-height: 0.8;
         }
-        h3 {
-            font-family: "Vollkorn";
-        }
         h3 small {
             display: block;
         }
 
     </style>
-    <title>Dana Ross &mdash; Resume: Engineering Leader, Developer, Accessibility Pro</title>
-    <meta property="og:site_name" content="Dana Ross"/>
-    <meta property="og:title" content="Resume"/>
-    <meta property="og:description" content="Engineering Leader,  Experienced Full-Stack Developer, Certified Accessibility Pro."/>
+    <meta property="og:title" content="Resume">
+    <meta property="og:description" content="Engineering Leader, Experienced Full-Stack Developer, Certified Accessibility Pro.">
     <meta property="og:image" content="https://davidmichaelross.com/resume/dana.jpg">
     <meta property="og:url" content="https://danaross.dev/resume/">
-    <meta property="og:type" content="profile"/>
-    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
-    <link rel="preload" href="https://fonts.danaross.dev/css?family=Ballpoint%20Signature|Ballast%20v0.1&display=swap" as="style">
-    <link rel="preload" href="https://fonts.danaross.dev/font/299ff933627fdfa14d08e36dbd366cd979575f5f7d0128a07120ae310d26ba0b.woff" type="font/woff" as="font" crossorigin>
-    <link rel="preload" href="https://fonts.danaross.dev/font/22f9e4c3ed7663066ea2082b55db2c03d4e85302b3028f5d399f748feb8e9571.woff" type="font/woff" as="font" crossorigin> 
 </head>
 <body>
-    <nav id="hamnav">
-        <!-- [THE HAMBURGER] -->
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-   
-        <!-- [MENU ITEMS] -->
-        <div id="hamitems">
-          <a href="/">Home</a>
-          <a href="/resume">Resume</a>
-          <a href="/manager-readme/">Manager Readme</a>
-        </div>
-      </nav>
+    <drr-partial name="hamnav">
     <main>
-
-    <a href="/"><h1><span aria-label="Dana Ross" data-font-swap-text="D R">Dana Ross</span><small>Resume</small></h1></a>
+    <a href="/"><drr-partial name="h1" subhead="Resume" /></a>
     <p>Boston, MA 02131</p>
     <h2>Links</h2>
 <ul>
@@ -164,5 +119,4 @@
 
 </section>
 </main>
-<script src="/danaross.min.js" async></script>
-</body>
+<drr-partial name="foot">

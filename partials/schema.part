@@ -1,0 +1,15 @@
+<script type='application/ld+json'>
+{
+"@context": "http://www.schema.org",
+"@type": "person",
+"name": "Dana Ross",
+"url": "https://danaross.dev/",
+"sameAs": [
+    "https://twitter.com/csixty4",
+    "https://oldbytes.space/@danaross",
+    "https://www.linkedin.com/in/dana-rose-ross/",
+    "https://github.com/dana-ross/"
+],
+"email": "dana+website@danaross.dev"
+}
+</script>
