@@ -9,7 +9,7 @@ module.exports = function (buildDir, scriptsDir) {
         files.forEach(file => {
             if (path.extname(file) == '.js') {
                 const targetFile = buildDir + '/scripts/' + path.basename(file, '.js') + '.min.js'
-                console.log(`🖼️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
+                console.log(`🤖️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
                 var minifiedJS = uglifyJS.minify(fs.readFileSync(scriptsDir + '/' + file, "utf8"), {
                     compress: {
                         dead_code: true,
