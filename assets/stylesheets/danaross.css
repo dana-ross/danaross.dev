@@ -3,6 +3,7 @@ html {
     background: #fff;
     color: #333;
     font-size: 16px;
+    font-family: "Tryst", sans-serif;
 }
 
 p, li, blockquote {
@@ -58,10 +59,6 @@ h2 {
     margin-bottom: 0;
     font-family: "Ballast v0.1 Condensed Bold", serif;
     font-weight: 500;
-}
-
-h3 {
-    font-family: sans-serif;
 }
 
 h3 small {
@@ -162,11 +159,11 @@ a[href="/"], a[href="/"]:hover {
       background-color: #333;
       top: 0;
       left: 0;
-      padding: 0;
+      padding: 0 5rem 0 0;
       font-size: 1.2rem;
       z-index: -1;
       display: table;
-      width: 100%;
+      width: 90%;
     }
 
 
