@@ -1,0 +1,90 @@
+## Summary
+Technology expertise throughout the software lifecycle, from pre-sales consulting through launch. A history of exceeding expectations: beating estimates, efficient coding, and delightful UX. Experience working with small businesses, world-class museums, government research labs, Fortune 500. Leverages deep experience with front and back end development to help engineers approach challenges. Creates positive environments where engineers excel and grow. Defines standards for technical excellence. Enforces requirements for secure, usable & accessible deliverables.
+
+## Education
+### Roosevelt University
+Bachelor of Science, Computer Science  
+2003—2005
+
+"Systems" emphasis included coursework in Computer Architecture and Operating System design. Electives included two classes on networking protocols.
+
+### Cornell University eCornell
+Certificate, Diversity & Inclusion  
+April, 2020
+
+## Certification & Courses
+
+### The Disney Approach to Leadership Excellence
+May, 2016
+
+### Certified Professional in Accessibility Core Competencies (CPACC)
+IAAP - International Association of Accessibility Professionals  
+December, 2017
+
+### Certified Interviewer
+Certified Interviewer Institute (Hire Authority)  
+January, 2018
+
+### Scrum Master Accredited Certification
+International Scrum Institute  
+July, 2014
+
+## Experience
+
+### Engineering Manager @ Wirecutter (Remote)  
+January, 2019—June, 2020
+    
+### Sr. Web Engineer @ Wirecutter (Remote)
+June, 2020—Present
+
+Hired to establish a Delivery team responsible for AWS environment upkeep and growth as well as tool building and process improvements. Established on-call rotation (PagerDuty) and set up an "SOS" Slack command for after-hours emergencies. Improved server monitoring and reporting. Oversaw implementation of more agile release workflow and associated tooling changes. Grew team from one engineer to three.
+
+Accepted an individual contributor role on the Reader Growth team as part of a re-org of our Digital department. Researched and planned out technical SEO work for H2 2020. Enhanced our newsletter subscription functionality, consolidating logic across diverse systems. Architected enhancements to our Fastly CDN implementation for major uptime improvements. Mentored new hires on our culture, workflows, and tech stack, as well as helping establish a culture which values testing.
+
+### Director of Engineering @ 10up (Remote)  
+June 2013—December, 2018
+
+Oversee 30 distributed engineers on four continents and multiple client engagements including Microsoft, ESPN, Time Magazine, and World Economic Forum. Introduced accessibility review into projects' Director checkpoint process. Initiated and oversaw development of a Continuous Integration pipeline featuring unit testing, static analysis, visual regression testing, and automated accessibility testing. Developed and evolved 10up's published Best Practices for WordPress development.
+
+### Freelance
+July, 2012—June, 2013
+
+Freelance Drupal and WordPress development for small businesses in the Chicago and Boston metro areas. Designed sites and implemented themes for non-profits.
+
+### Lead Developer @ Straight North  
+June, 2010—June, 2012
+
+### Lead Developer @ Xeno Media  
+November, 2006—June, 2010
+
+### Software Developer @ DriveItAway  
+May, 2005—October, 2006
+
+### Software Developer @ Florists Transworld Deliveries (FTD)  
+March, 2001—April, 2005
+
+### Sr. Programmer/Analyst @ gomembers, Inc.  
+July, 1999—March, 2001
+
+## Open Source
+
+### Adrian
+[github.com/dana-ross/adrian](https://github.com/dana-ross/adrian)  
+Language: Go  
+Adrian (Frutiger, not Pennino) is a server for hosting web fonts. It scans all the fonts in a directory and automatically generates CSS with @font-face declarations for individual fonts or families. Caching headers are added to all responses so browsers know not to request the same files repeatedly, while CORS and filename obfuscation helps comply with security restrictions in some fonts' licenses.
+It lets you serve fonts for your sites from a central location so they're not sitting in your project's repo. It also helps prevent you from being a one-stop distribution site for the fonts you paid good money for.
+
+### Functional Programming Utils for PHP 5.4+
+[github.com/dana-ross/functional-programming-utils](https://github.com/dana-ross/functional-programming-utils)  
+Language: PHP  
+Implementation of common Functional Programming constructs in modern PHP.
+* Memoization
+* Composition
+* Partial Application
+* Currying
+* Monads
+
+### Catalogopolis API
+[github.com/dana-ross/catalogopolis-api](https://github.com/dana-ross/catalogopolis-api)  
+Language: TypeScript, Node.js  
+API for retrieving information about Doctor Who episodes, cast, and crew. Written in TypeScript, running on node.js, and featuring REST & GraphQL endpoints. Available at [catalogopolis.xyz](https://api.catalogopolis.xyz/).

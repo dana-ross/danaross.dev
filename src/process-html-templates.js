@@ -1,7 +1,8 @@
 const fs = require('fs')
 const path = require('path')
-const beautify = require('beautify');
+const beautify = require('beautify')
 const chalk = require('chalk')
+const marked = require('marked')
 
 module.exports = function (buildDir, pagesDir, baseURL) {
     // Process WWW templates
@@ -27,7 +28,7 @@ function renderHTMLPage(fileName, buildDir, baseURL) {
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
     let source = fs.readFileSync(fileName, 'utf8')
-    source = replacePlaceholders(replacePartials(source, { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }), { url, imagesBase, baseURL, stylesheetsBase, scriptsBase })
+    source = insertContent(replacePlaceholders(replacePartials(source, { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }), { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }))
 
     if (!isHomeTemplate(fileName)) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))
@@ -53,6 +54,20 @@ function replacePartials(source, variables) {
             )
         )
         source = source.replace(PARTIAL_TAG_REGEX, replacement)
+    }
+
+    return source;
+}
+
+function insertContent(source) {
+    const CONTENT_TAG_REGEX = /<drr-content\W?name="(?<name>[^"]*)"\W?(?<attributes>.+="[^"]+"?)*\W?\/?>(<\/drr-content>)?/
+
+    let contentTag = null;
+    while (contentTag = source.match(CONTENT_TAG_REGEX)) {
+        const replacement =  marked(
+            fs.readFileSync('./content/' + contentTag.groups.name + '.md', 'utf8')
+        )
+        source = source.replace(CONTENT_TAG_REGEX, replacement)
     }
 
     return source;
