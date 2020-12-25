@@ -59,13 +59,14 @@ function replacePartials(source, variables) {
     return source;
 }
 
-function insertContent(source) {
+function insertContent(source, baseURL) {
     const CONTENT_TAG_REGEX = /<drr-content\W?name="(?<name>[^"]*)"\W?(?<attributes>.+="[^"]+"?)*\W?\/?>(<\/drr-content>)?/
 
     let contentTag = null;
     while (contentTag = source.match(CONTENT_TAG_REGEX)) {
         const replacement =  marked(
-            fs.readFileSync('./content/' + contentTag.groups.name + '.md', 'utf8')
+            fs.readFileSync('./content/' + contentTag.groups.name + '.md', 'utf8'),
+            { baseURL }
         )
         source = source.replace(CONTENT_TAG_REGEX, replacement)
     }
