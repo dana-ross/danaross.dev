@@ -9,7 +9,7 @@
         <drr-partial name="schema">
         <drr-partial name="font-loading">
         <meta property="og:site_name" content="Dana Ross">
-        <meta property="og:title" content="${ogtitle}>
+        <meta property="og:title" content="${ogtitle}">
         <meta property="og:type" content="${ogtype}">
         <meta property="og:url" content="${url}">
         <meta property="og:description" content="${ogdescription}">
