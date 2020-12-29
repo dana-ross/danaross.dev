@@ -1,0 +1,158 @@
+h2 {
+    color: #3D0023;
+    font-size: 8rem;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    line-height: 1;
+}
+
+h3 {
+    font-size: 7.5rem;
+    margin-bottom: .3rem;
+    color: #AD5949;
+}
+
+main ul {
+    list-style: none;
+}
+
+main ul li:before {
+    content: "★";
+    padding-right: .5rem;
+    left: 0;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+#what-is-this, #what-this-is-not {
+    font-size: 1.2rem;  
+    font-family: "Tryst-Regular", serif;
+    font-weight: 700;    
+}
+
+#about-me {
+    color: rgb(153, 0, 255);
+}
+
+#about-me p:first-child {
+    margin-top: 0;
+}
+
+#about-me div {
+    column-count: 2;
+    column-gap: 3rem;
+}
+
+#contacting-me {
+    color: #0000ff;
+}
+
+#my-values {
+    color: rgb(255, 0, 255);
+}
+
+#family, #physical-and-mental-health, #diversity, #respect, #growth {
+    display: inline;
+    color: #000;
+    font-family: "Tryst-Regular", serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#family + p, #physical-and-mental-health + p, #diversity + p, #respect + p, #growth + p {
+    display: inline;
+}
+
+#family:after, #physical-and-mental-health:after, #diversity:after, #respect:after, #growth:after {
+    content: ":";
+}
+
+#family:before, #physical-and-mental-health:before, #diversity:before, #respect:before, #growth:before {
+    content: "";
+    display: block;
+    clear: left;
+    margin-top: 1em;
+}
+
+#one-on-ones {
+    color: rgb(153, 0, 255);
+}
+
+#feedback {
+    color: #0000ff;
+}
+
+#code {
+    color: rgb(56, 118, 29);
+}
+
+#agile {
+    color: #ff0000;
+}
+
+#inspiration {
+    color: rgb(166, 77, 121);
+}
+
+.twitter-tweet-rendered, img[src$=gif], video {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+img[src$=gif], video {
+    max-width: 80%;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+cite::before {
+    content: "\2014 ";
+}
+
+.books {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(287px, .5fr));
+    grid-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.books li:before {
+    content: none;
+    padding: inherit;
+}
+
+.books a {
+    border: none;
+}
+
+figure {
+    max-width: 80%;
+    display: block;
+    margin: 1rem auto;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption, figcaption a {
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    #aboutme div {
+        column-count: 1;
+        column-gap: 3rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    h2 {
+        font-size: 3rem;
+    }
+}

@@ -3,7 +3,9 @@ html {
     background: #fff;
     color: #333;
     font-size: 16px;
+    font-family: "Tryst-Regular", sans-serif;
 }
+
 p, li, blockquote {
     color: #333;
 }
@@ -13,6 +15,11 @@ main {
     width: 100%;
     max-width: 800px;
 }
+
+main p {
+    line-height: 1.6;
+}
+
 @media screen and (max-height: 600px) {
     main {
         margin: 0 auto;
@@ -47,12 +54,17 @@ h1 small {
     font-family: "Ballast v0.1 Condensed Bold", serif;
     font-weight: 500;
 }
-h2, h3, h4, h5 {
+h2 {
     margin-top: 1rem;
     margin-bottom: 0;
     font-family: "Ballast v0.1 Condensed Bold", serif;
     font-weight: 500;
 }
+
+h3 small {
+    display: block;
+}
+
 #social, #professional {
     list-style: none;
     display: table;
@@ -147,11 +159,11 @@ a[href="/"], a[href="/"]:hover {
       background-color: #333;
       top: 0;
       left: 0;
-      padding: 0;
+      padding: 0 5rem 0 0;
       font-size: 1.2rem;
       z-index: -1;
       display: table;
-      width: 100%;
+      width: 90%;
     }
 
 
