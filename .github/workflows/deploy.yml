@@ -16,6 +16,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout main
         uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+        id: npm
       - name: Build site
         run: node ./src/build.js
         id: build
