@@ -27,7 +27,7 @@ function renderHTMLPage(fileName, buildDir, baseURL) {
 
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
-    let source = fs.readFileSync(fileName, 'utf8')
+    let source = unbreakMultilineTemplateTags(fs.readFileSync(fileName, 'utf8'))
     source = insertContent(replacePlaceholders(replacePartials(source, { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }), { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }))
 
     if (!isHomeTemplate(fileName)) {
@@ -114,4 +114,39 @@ function unionOfObjects(...objects) {
         }
     })
     return retVal
+}
+
+function unbreakMultilineTemplateTags(html) {
+    let state = 'outside'
+    let cleanHTML = ''
+    html.split('').forEach((char) => {
+      switch(char) {
+        case '<':
+          state = 'inside'
+          break
+        case '>':
+          state = 'outside'
+          break
+        case "\n":
+          if (state === 'inside') {
+            char = ' '
+            state = 'afternewline'
+          }
+          else if (state === 'afternewline') {
+            char = ''
+          }
+          break
+        case ' ':
+          if (state === 'afternewline') {
+            char = ''
+          }
+          break;
+        default:
+          if(state === 'afternewline') {
+            state = 'inside'
+          }
+      }
+      cleanHTML += char
+    })
+    return cleanHTML
 }
