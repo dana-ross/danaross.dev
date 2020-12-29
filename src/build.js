@@ -4,8 +4,7 @@ const processHTMLTemplates = require('./process-html-templates')
 const processScripts = require('./process-scripts')
 const processStylesheets = require('./process-stylesheets')
 
-// const BASE_URL = 'https://danaross.dev/'
-const BASE_URL = '/'
+const BASE_URL = 'https://danaross.dev/'
 const BUILD_DIR = './build/www'
 const PAGES_DIR = './pages/www'
 const SCRIPTS_DIR = './assets/scripts'
