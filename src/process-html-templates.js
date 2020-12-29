@@ -45,7 +45,7 @@ function replacePartials(source, variables) {
         const replacement = replacePartials(
             replacePlaceholders(
                 fs.readFileSync(
-                    './partials/' + partialTag.groups.name + '.part',
+                    './partials/www/' + partialTag.groups.name + '.part',
                     'utf8'
                 ),
                 unionOfObjects(variables, parseAttributeString(
