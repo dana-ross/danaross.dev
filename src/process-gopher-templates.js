@@ -3,6 +3,7 @@ const path = require('path')
 const chalk = require('chalk')
 const marked = require('marked')
 const {decode} = require('html-entities')
+const wrap = require('word-wrap');
 
 module.exports = function (buildDir, pagesDir) {
     fs.readdir(pagesDir, (err, files) => {
@@ -52,8 +53,7 @@ function replaceContent(source, variables) {
 }
 
 function processMarkdown(markdown) {
-    console.log(marked(markdown))
-    markdown = decode(marked(markdown)
+    markdown = wrap(decode(marked(markdown)
         .replace(/<br>/g, '\n')
         .replace(/\n<ul>\n/, '')
         .replace(/<h2/g, '## <h2')
@@ -63,7 +63,7 @@ function processMarkdown(markdown) {
         .replace(/<\/?[^>]+(>|$)/g, '')
         .replace(/\*\s*\n/g, '')
         .replace(/(\n\s*\n\s*[\n\s]+)/g, '\n\n')
-        )
+        ), {width: 70, indent: ''})
     return markdown
 }
 
