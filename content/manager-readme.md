@@ -10,7 +10,7 @@ Camille Fournier has a great blog post called [I hate manager READMEs](https://m
 
 ## About Me
 <div>
-My pronouns are [she/her](http://pronoun.is/she/her).
+My pronouns are [she-her](http://pronoun.is/she/her).
 
 I was born in Chicago and moved to Boston in 2012.
 
