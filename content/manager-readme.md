@@ -130,7 +130,7 @@ My certification is the result of $50 loose change in my pocket and a little too
 
 That’s to say I know quite a bit about Scrum workflows and I even have a PDF to prove it and that makes me no more of an authority on what works than you. Because at the end of the day, the Scrum ceremonies don’t matter. They’re tools to make us more productive and give us a framework to collaborate as a team. **We need to throw away things that don’t work for us today, double down on the things that do work, and try new things to see if they will work going forward.**
 
-**We need to be agile about being agile.**
+**We need to be agile about being Agile.**
 
 ## Inspiration
 I’m a huge fan of [Lee Cockerell](https://www.leecockerell.com/), former Executive Vice President of Operations for the Walt Disney World Resort. Lee worked his way up from waiting tables at a hotel, to running food & beverage departments, to running hotels, and then went on to Disney where he was critical to the launch and eventual success of Disneyland Paris and then Disney World in Florida. While there, he over saw a company-wide transition from top-down “command and control” leadership to a modern style of trust and distributed decision making authority.
