@@ -26,7 +26,7 @@ module.exports = function (buildDir, pagesDir) {
  */
 function renderGopherPage(fileName, buildDir) {
     const targetFileName = (path.basename(fileName) === 'gophermap') ? `${buildDir}/gophermap` : `${buildDir}/${path.basename(fileName)}/gophermap`
-    console.log(`🐾   ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
+    console.log(`🐾  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
     const page = fs.readFileSync(fileName, 'utf8')
     const html = replacePartials(replaceContent(page), {})
     if(path.basename(fileName) !== 'gophermap') {
