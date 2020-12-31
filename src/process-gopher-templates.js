@@ -5,6 +5,12 @@ const marked = require('marked')
 const {decode} = require('html-entities')
 const wrap = require('word-wrap');
 
+/**
+ * Asynchronously reads and processes templates to create gophermaps.
+ * 
+ * @param {String} buildDir root directory where gophermaps will be written 
+ * @param {String} pagesDir directory where page templates can be found
+ */
 module.exports = function (buildDir, pagesDir) {
     fs.readdir(pagesDir, (err, files) => {
         files.forEach(file => {
@@ -13,6 +19,11 @@ module.exports = function (buildDir, pagesDir) {
     })
 }
 
+/**
+ * Parses a page template to produce a gophermap.
+ * @param {String} fileName path & filename of the template to process
+ * @param {String} buildDir root directory where gophermaps will be written  
+ */
 function renderGopherPage(fileName, buildDir) {
     const targetFileName = (path.basename(fileName) === 'gophermap') ? `${buildDir}/gophermap` : `${buildDir}/${path.basename(fileName)}/gophermap`
     console.log(`🐾   ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
@@ -24,6 +35,14 @@ function renderGopherPage(fileName, buildDir) {
     fs.writeFileSync(targetFileName, html)
 }
 
+/**
+ * Replace partials in a gopher page template.
+ * Partial includes are indicated with an @ at the start of a line followed by
+ * the name of the partial.
+ * @param {String} source the gopher page template
+ * @param {Object} variables Variables to use when parsing the template {key:value}
+ * @returns String
+ */
 function replacePartials(source, variables) {
     const output = source.split('\n').reduce((output, current) => {
         if(current.charAt(0) === '@') {
@@ -38,6 +57,15 @@ function replacePartials(source, variables) {
     return output
 }
 
+/**
+ * Insert content into gopher templates.
+ * Content includes are indicated with a ^ at the start of a line followed by
+ * the name of the content file.
+ *
+ * @param {String} source the gopher page template
+ * @param {Object} variables Variables to use when parsing the template {key:value}
+ * @returns String
+ */
 function replaceContent(source, variables) {
     const output = source.split('\n').reduce((output, current) => {
         if(current.charAt(0) === '^') {
@@ -52,6 +80,11 @@ function replaceContent(source, variables) {
     return output
 }
 
+/**
+ * Parses markdown into a format appropriate to gopher.
+ * @param {String} markdown Markdown source for content
+ * @returns String 
+ */
 function processMarkdown(markdown) {
     markdown = wrap(decode(marked(markdown)
         .replace(/<br>/g, '\n')
@@ -66,15 +99,3 @@ function processMarkdown(markdown) {
         ), {width: 70, indent: ''})
     return markdown
 }
-
-/**
- * 
- * @param {} input
- * @see https://stackoverflow.com/a/1912522 
- */
-function htmlDecode(input){
-    var e = document.createElement('textarea');
-    e.innerHTML = input;
-    // handle case of empty input
-    return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
-  }

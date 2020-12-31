@@ -75,6 +75,12 @@ svgo = new SVGO({
   }]
 });
 
+/**
+ * Finds image files and copies them to the build directory.
+ * Optimizes SVG files.
+ * 
+ * @param {String} buildDir 
+ */
 module.exports = function (buildDir) {
   fs.mkdirSync(buildDir + '/images')
 

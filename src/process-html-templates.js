@@ -4,6 +4,14 @@ const beautify = require('beautify')
 const chalk = require('chalk')
 const marked = require('marked')
 
+/**
+ * Asynchronously reads and processes templates to create static pages.
+ * 
+ * @param {String} buildDir root directory where html files will be written 
+ * @param {String} pagesDir directory where page templates can be found
+ * @param {String} baseURL  base URL where the web site will live
+ */
+
 module.exports = function (buildDir, pagesDir, baseURL) {
     // Process WWW templates
     fs.readdir(pagesDir, (err, files) => {
@@ -14,6 +22,13 @@ module.exports = function (buildDir, pagesDir, baseURL) {
         })
     })
 }
+
+/**
+ * Parses a page template to produce a static html document.
+ * @param {String} fileName path & filename of the template to process
+ * @param {String} buildDir root directory where gophermaps will be written
+ * @param {String} baseURL  base URL where the web site will live
+ */
 function renderHTMLPage(fileName, buildDir, baseURL) {
 
     const targetFileName = isHomeTemplate(fileName) ?
@@ -37,6 +52,15 @@ function renderHTMLPage(fileName, buildDir, baseURL) {
     fs.writeFileSync(targetFileName, cleanHTML(source))
 }
 
+/**
+ * Replace partials in a web page template.
+ * Partial includes are indicated with a <drr-partial> tag with the
+ * name of the partial in the "name" attributes.
+ * 
+ * @param {String} source the web page template
+ * @param {Object} variables Variables to use when parsing the template {key:value}
+ * @returns String
+ */
 function replacePartials(source, variables) {
     const PARTIAL_TAG_REGEX = /<drr-partial\W?name="(?<name>[^"]*)"\W?(?<attributes>.+="[^"]+"?)*\W?\/?>(<\/drr-partial>)?/
 
@@ -59,6 +83,15 @@ function replacePartials(source, variables) {
     return source;
 }
 
+/**
+ * Insert content into web page templates.
+ * Content includes are indicated with a <drr-content> tag with the
+ * name of the content file in the "name" attribute.
+ *
+ * @param {String} source the web page template
+ * @param {Object} baseURL base URL where the web site will live
+ * @returns String
+ */
 function insertContent(source, baseURL) {
     const CONTENT_TAG_REGEX = /<drr-content\W?name="(?<name>[^"]*)"\W?(?<attributes>.+="[^"]+"?)*\W?\/?>(<\/drr-content>)?/
 
@@ -74,6 +107,12 @@ function insertContent(source, baseURL) {
     return source;
 }
 
+/**
+ * Parse a string of attributes in the format a="b"{space}x="y" 
+ * 
+ * @param {String} attributeString
+ * @returns {Object} {key:value} map of attribute names & values
+ */
 function parseAttributeString(attributeString) {
     let attributes = new Map()
     attributeString.split('" ').forEach((attributeString) => {
@@ -84,6 +123,14 @@ function parseAttributeString(attributeString) {
     return Object.fromEntries(attributes)
 }
 
+/**
+ * Replace variables/placeholders in a web page template.
+ * Placeholders use EJS format i.e. ${name}
+ * 
+ * @param {String} source the web page template
+ * @param {Object} placeholders Variables to insert into the template {key:value}
+ * @returns String
+ */
 function replacePlaceholders(source, placeholders) {
     const VARIABLE_REGEX = /\${(?<name>\w+)}/
     let placeholder = null;
@@ -96,14 +143,32 @@ function replacePlaceholders(source, placeholders) {
     return source
 }
 
+/**
+ * Improves the appearance of the generated HTML markup.
+ * 
+ * @param {String} source the rendered web page template
+ * @returns String
+ */
 function cleanHTML(source) {
     return beautify(source, { format: 'html' }).replace(/\n\W*\n/g, "\n")
 }
 
+/**
+ * Determine if the template represents the home page (index.html)
+ * 
+ * @param {String} fileName file name of the page template
+ * @returns boolean 
+ */
 function isHomeTemplate(fileName) {
     return (path.basename(fileName, '.html') == 'index')
 }
 
+/**
+ * Compute the union of two or more objects.
+ * 
+ * @param  {...Object} objects Objects to union
+ * @returns Object map containing the union of the objects passed 
+ */
 function unionOfObjects(...objects) {
     const retVal = {}
     objects.forEach((settings) => {
@@ -116,6 +181,14 @@ function unionOfObjects(...objects) {
     return retVal
 }
 
+/**
+ * Converts template tags that span multiple lines in the template
+ * into single lines. The parsing logic can't handle humanly-formatted
+ * HTML, and people shouldn't try to manage sprawling lines of HTML.
+ * 
+ * @param {String} html the page template
+ * @returns String 
+ */
 function unbreakMultilineTemplateTags(html) {
     let state = 'outside'
     let cleanHTML = ''

@@ -3,6 +3,13 @@ const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
 
+/**
+ * Process CSS stylesheets, minifying them and copying them into
+ * the build directory.
+ * 
+ * @param {String} buildDir 
+ * @param {String} stylesDir 
+ */
 module.exports = function (buildDir, stylesDir) {
     fs.mkdirSync(buildDir + '/stylesheets')
     fs.readdir(stylesDir, (err, files) => {

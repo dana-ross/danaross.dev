@@ -3,6 +3,13 @@ const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
 
+/**
+ * Process JavaScript files, minifying them and copying them into
+ * the build directory.
+ * 
+ * @param {String} buildDir 
+ * @param {String} stylesDir 
+ */
 module.exports = function (buildDir, scriptsDir) {
     fs.mkdirSync(buildDir + '/scripts')
     fs.readdir(scriptsDir, (err, files) => {
