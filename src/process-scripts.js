@@ -25,7 +25,7 @@ module.exports = function (buildDir, scriptsDir) {
                         }
                     }
                 })
-                fs.writeFile(targetFile, minifiedJS.code, (err) => { err ? console.log(err) : '' })
+                fs.writeFileSync(targetFile, minifiedJS.code)
             }
         })
     })

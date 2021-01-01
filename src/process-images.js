@@ -91,11 +91,11 @@ module.exports = function (buildDir) {
     if (path.extname(file) == '.svg') {
       console.log(`🖼️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
       const originalSVG = fs.readFileSync(sourceFile)
-      svgo.optimize(originalSVG).then((optimizedSVG) => fs.writeFile(targetFile, optimizedSVG.data, (err) => { err ? console.log(err) : ''}))
+      svgo.optimize(originalSVG).then((optimizedSVG) => fs.writeFileSync(targetFile, optimizedSVG.data))
     }
     else {
       console.log(`🖼️  ${chalk.white('Copying')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
-      fs.copyFile(sourceFile, targetFile, (err) => { err ? console.log(err) : '' })
+      fs.copyFileSync(sourceFile, targetFile)
     }
   })
 }
