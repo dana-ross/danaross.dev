@@ -19,7 +19,7 @@ module.exports = function (buildDir, stylesDir) {
                 console.log(`🎨️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
                 var minifiedCSS = uglifyCSS.processString(fs.readFileSync(stylesDir + '/' + file, "utf8"), {
                 })
-                fs.writeFileSync(targetFile, minifiedCSS)
+                fs.writeFile(targetFile, minifiedCSS, (err) => { err ? console.log(err) : '' })
             }
         })
     })

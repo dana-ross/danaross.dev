@@ -105,9 +105,10 @@ function processBlogPost(
     variables
   );
 
-  fs.writeFileSync(
+  fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "index.html"),
-    html
+    html,
+    (err) => { err ? console.log(err) : '' }
   );
 }
 
