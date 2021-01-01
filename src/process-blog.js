@@ -41,12 +41,24 @@ module.exports = function (buildDir, baseURL) {
         fs.readdir(contentPath, (err, potentialBlogPosts) => {
           potentialBlogPosts.forEach((potentialBlogPost) => {
             if (path.extname(potentialBlogPost) === ".md") {
+              const postTitle = path.basename(potentialBlogPost, ".md");
+              const postTimestamp = format(
+                Date.parse(path.basename(contentPath)),
+                "LLLL do, yyyy h:mm bbb"
+              );
+              const postSlug = titleToSlug(postTitle);
+              const postURL = `${baseURL}/blog/${postSlug}`;
+
               processBlogPost(
                 blogPostTemplate,
                 buildDir,
                 contentPath,
                 potentialBlogPost,
-                baseURL
+                baseURL,
+                postTitle,
+                postTimestamp,
+                postSlug,
+                postURL
               );
             }
           });
@@ -61,13 +73,12 @@ function processBlogPost(
   buildDir,
   contentPath,
   potentialBlogPost,
-  baseURL
+  baseURL,
+  postTitle,
+  postTimestamp,
+  postSlug,
+  postURL
 ) {
-  const postTitle = path.basename(potentialBlogPost, ".md");
-  const postTimestamp = format(Date.parse(path.basename(contentPath)), 'LLLL do, yyyy h:mm bbb')
-  const postSlug = titleToSlug(postTitle);
-  const url = `${baseURL}/blog/${postSlug}`;
-
   console.log(
     `📄️  ${chalk.white("Processing")} ${chalk.blue(
       path.basename(contentPath) + "/" + potentialBlogPost
@@ -77,7 +88,7 @@ function processBlogPost(
   fs.mkdirSync(path.resolve(buildDir, "blog", postSlug), { recursive: true });
 
   const variables = {
-    url,
+    url: postURL,
     baseURL,
     stylesheetsBase,
     scriptsBase,
