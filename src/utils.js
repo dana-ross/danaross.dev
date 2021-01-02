@@ -30,7 +30,7 @@ function replacePlaceholders(source, placeholders) {
  * @returns String
  */
 function replacePartials(source, variables) {
-    const PARTIAL_TAG_REGEX = /<drr-partial\W?name="(?<name>[^"]*)"\W?(?<attributes>.+="[^"]+"?)*\W?\/?>(<\/drr-partial>)?/
+    const PARTIAL_TAG_REGEX = /<drr-partial\s*name="(?<name>[^"]*)"\s*(?<attributes>[^">]+="[^">]+"\s*)*\s*\/?>(?:<\/drr-partial>)?/
 
     let partialTag = null;
     while (partialTag = source.match(PARTIAL_TAG_REGEX)) {
@@ -128,10 +128,18 @@ function unbreakMultilineTemplateTags(html) {
     return cleanHTML
 }
 
+function sortMap(map) {
+  return Array.from(map.keys()).reduce((sortedMap, key) => {
+    sortedMap.set(key, map.get(key))
+    return sortedMap
+  }, new Map())
+}
+
 module.exports = {
     replacePlaceholders,
     replacePartials,
     unionOfObjects,
     parseAttributeString,
-    unbreakMultilineTemplateTags
+    unbreakMultilineTemplateTags,
+    sortMap
 }

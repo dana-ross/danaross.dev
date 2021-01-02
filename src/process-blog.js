@@ -7,6 +7,7 @@ const {
   replacePlaceholders,
   replacePartials,
   unbreakMultilineTemplateTags,
+  sortMap,
 } = require("./utils");
 const {
   scriptsBase,
@@ -25,48 +26,93 @@ module.exports = function (buildDir, baseURL) {
   const blogTemplateDir = path.resolve(BLOG_DIR, "www");
   const blogContentDirectory = path.resolve(BLOG_DIR, "content");
 
-  const blogIndexTemplate = unbreakMultilineTemplateTags(
-    fs.readFileSync(path.resolve(blogTemplateDir, "blog.html"), "utf8")
-  );
   const blogPostTemplate = unbreakMultilineTemplateTags(
     fs.readFileSync(path.resolve(blogTemplateDir, "post.html"), "utf8")
   );
 
+  const blogIndexData = new Map();
+
   fs.mkdirSync(path.resolve(buildDir, "blog"), { recursive: true });
   // Process blog entries
-  fs.readdir(blogContentDirectory, (err, dirEntries) => {
-    dirEntries.forEach((dirEntry) => {
-      const contentPath = path.resolve(BLOG_DIR, "content", dirEntry);
-      if (fs.statSync(contentPath).isDirectory()) {
-        fs.readdir(contentPath, (err, potentialBlogPosts) => {
-          potentialBlogPosts.forEach((potentialBlogPost) => {
-            if (path.extname(potentialBlogPost) === ".md") {
-              const postTitle = path.basename(potentialBlogPost, ".md");
-              const postTimestamp = format(
-                Date.parse(path.basename(contentPath)),
-                "LLLL do, yyyy h:mm bbb"
-              );
-              const postSlug = titleToSlug(postTitle);
-              const postURL = `${baseURL}/blog/${postSlug}`;
-
-              processBlogPost(
-                blogPostTemplate,
-                buildDir,
-                contentPath,
-                potentialBlogPost,
-                baseURL,
-                postTitle,
-                postTimestamp,
-                postSlug,
-                postURL
-              );
-            }
+  const dirEntries = fs.readdirSync(blogContentDirectory);
+  dirEntries.forEach((dirEntry) => {
+    const contentPath = path.resolve(blogContentDirectory, dirEntry);
+    if (fs.statSync(contentPath).isDirectory()) {
+      const potentialBlogPosts = fs.readdirSync(contentPath);
+      potentialBlogPosts.forEach((potentialBlogPost) => {
+        if (path.extname(potentialBlogPost) === ".md") {
+          const postTitle = path.basename(potentialBlogPost, ".md");
+          const postTimestamp = format(
+            Date.parse(path.basename(contentPath)),
+            "LLLL do, yyyy h:mm bbb"
+          );
+          const postSlug = titleToSlug(postTitle);
+          const postURL = `${baseURL}blog/${postSlug}`;
+          blogIndexData.set(Date.parse(path.basename(contentPath)), {
+            postTitle,
+            postURL,
+            postTimestamp,
           });
-        });
-      }
-    });
+
+          processBlogPost(
+            blogPostTemplate,
+            buildDir,
+            contentPath,
+            potentialBlogPost,
+            baseURL,
+            postTitle,
+            postTimestamp,
+            postSlug,
+            postURL
+          );
+        }
+      });
+    }
   });
+
+  const blogIndexTemplate = unbreakMultilineTemplateTags(
+    fs.readFileSync(path.resolve(blogTemplateDir, "blog.html"), "utf8")
+  );
+
+  // Render the index page
+  console.log(
+    `📄️  ${chalk.white("Processing")} ${chalk.blue(
+      path.basename(blogTemplateDir) + "/blog.html"
+    )} → ${chalk.yellow(buildDir + "/blog/index.html")}`)
+
+  const blindex = insertBlogIndex(blogIndexTemplate, blogIndexData)
+  const variables = {
+    baseURL,
+    imagesBase,
+    stylesheetsBase,
+    scriptsBase,
+    url: baseURL + "blog",
+  }
+  const bliparty = replacePartials(blindex,variables)
+
+  fs.writeFile(
+    path.resolve(buildDir, "blog", "index.html"),
+    bliparty,
+    (err) => (err ? console.log(err) : "")
+  );
 };
+
+function insertBlogIndex(source, blogIndexData) {
+  const BLOG_INDEX_TAG_REGEX = /<drr-blogindex[^>]*>(.*)<\/drr-blogindex>/;
+  source = source.replace(/\n/g, "").replace(/>\s+</g, '><');
+  blogIndexData = sortMap(blogIndexData);
+  const matches = source.match(BLOG_INDEX_TAG_REGEX);
+  if (matches) {
+    const blogIndexTemplate = matches[1];
+    let replacement = "";
+    blogIndexData.forEach((value, key) => {
+      replacement += replacePlaceholders(blogIndexTemplate, value);
+    });
+    source = source.replace(BLOG_INDEX_TAG_REGEX, replacement);
+  }
+
+  return source;
+}
 
 function processBlogPost(
   blogPostTemplate,
