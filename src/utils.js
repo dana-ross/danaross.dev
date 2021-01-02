@@ -128,6 +128,11 @@ function unbreakMultilineTemplateTags(html) {
     return cleanHTML
 }
 
+/**
+ * Sort a Map so its keys are in order
+ * @param {Map} map
+ * @returns Map 
+ */
 function sortMap(map) {
   return Array.from(map.keys()).reduce((sortedMap, key) => {
     sortedMap.set(key, map.get(key))
