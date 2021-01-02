@@ -78,34 +78,30 @@ module.exports = function (buildDir, baseURL) {
   console.log(
     `📄️  ${chalk.white("Processing")} ${chalk.blue(
       path.basename(blogTemplateDir) + "/blog.html"
-    )} → ${chalk.yellow(buildDir + "/blog/index.html")}`)
-
-  const blindex = insertBlogIndex(blogIndexTemplate, blogIndexData)
-  const variables = {
-    baseURL,
-    imagesBase,
-    stylesheetsBase,
-    scriptsBase,
-    url: baseURL + "blog",
-  }
-  const bliparty = replacePartials(blindex,variables)
+    )} → ${chalk.yellow(buildDir + "/blog/index.html")}`
+  );
 
   fs.writeFile(
     path.resolve(buildDir, "blog", "index.html"),
-    bliparty,
+    replacePartials(insertBlogIndex(blogIndexTemplate, blogIndexData), {
+      baseURL,
+      imagesBase,
+      stylesheetsBase,
+      scriptsBase,
+      url: baseURL + "blog",
+    }),
     (err) => (err ? console.log(err) : "")
   );
 };
 
 function insertBlogIndex(source, blogIndexData) {
   const BLOG_INDEX_TAG_REGEX = /<drr-blogindex[^>]*>(.*)<\/drr-blogindex>/;
-  source = source.replace(/\n/g, "").replace(/>\s+</g, '><');
-  blogIndexData = sortMap(blogIndexData);
+  source = source.replace(/\n/g, "").replace(/>\s+</g, "><");
   const matches = source.match(BLOG_INDEX_TAG_REGEX);
   if (matches) {
     const blogIndexTemplate = matches[1];
     let replacement = "";
-    blogIndexData.forEach((value, key) => {
+    sortMap(blogIndexData).forEach((value) => {
       replacement += replacePlaceholders(blogIndexTemplate, value);
     });
     source = source.replace(BLOG_INDEX_TAG_REGEX, replacement);
