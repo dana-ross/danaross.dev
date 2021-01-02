@@ -1,4 +1,5 @@
 const fs = require('fs')
+const parseAttributeString = require('parse-attributes')
 
 /**
  * Replace variables/placeholders in a web page template.
@@ -67,22 +68,6 @@ function unionOfObjects(...objects) {
         }
     })
     return retVal
-}
-
-/**
- * Parse a string of attributes in the format a="b"{space}x="y" 
- * 
- * @param {String} attributeString
- * @returns {Object} {key:value} map of attribute names & values
- */
-function parseAttributeString(attributeString) {
-    let attributes = new Map()
-    attributeString.split('" ').forEach((attributeString) => {
-        attribute = attributeString.replace(/"$/, '').split('="')
-        attributes = attributes.set(attribute[0], attribute[1])
-    })
-
-    return Object.fromEntries(attributes)
 }
 
 /**
