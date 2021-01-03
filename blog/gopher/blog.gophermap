@@ -6,4 +6,6 @@ BLOG
 1${postTitle}	${postSlug}
 ${postTimestamp}
 >8
+
+1Return home	/	
 @foot
