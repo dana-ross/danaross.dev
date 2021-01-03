@@ -144,7 +144,7 @@ function unbreakMultilineTemplateTags(html) {
  * @returns Map 
  */
 function sortMap(map) {
-  return Array.from(map.keys()).reduce((sortedMap, key) => {
+  return Array.from(map.keys().sort().reverse()).reduce((sortedMap, key) => {
     sortedMap.set(key, map.get(key))
     return sortedMap
   }, new Map())
