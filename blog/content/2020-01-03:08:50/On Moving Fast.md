@@ -2,7 +2,7 @@ It started with a tweet from [@sama on Twitter](https://twitter.com/sama/):
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Move faster. Slowness anywhere justifies slowness everywhere.<br><br>2021 instead of 2022. This week instead of next week. Today instead of tomorrow.<br><br>Moving fast compounds so much more than people realize.</p>&mdash; Sam Altman (@sama) <a href="https://twitter.com/sama/status/1345140364995227648?ref_src=twsrc%5Etfw">January 1, 2021</a></blockquote>
 
-So many people had a hot take response to this tweet, myself included. I'm not a fan of the *move fast and break things* philosophy that permeated out industry in the last decade. People were moving fast, and things were getting broken *a lot*. But Chidi's whole character on NBC's *The Good Place* was built around his endless decision paralysis and over-analyzing. I've seen first-hand the stagnation and compounding problems that stem from inaction.
+So many people had a hot take response to this tweet, myself included. I'm not a fan of the *move fast and break things* philosophy that permeated our industry in the last decade. People were moving fast, and things were getting broken *a lot*. But Chidi's whole character on NBC's *The Good Place* was built around his endless decision paralysis and over-analyzing. I've seen first-hand the stagnation and compounding problems that stem from inaction.
 
 These days, my philosophy is to move as fast as I can *SAFELY*. I've cultivated my own bias for action and I try not to spend too much time overthinking or over-analyzing. I know myself. I will obsess over every detail. It's easy to feel safe in the short term when you don't do anything.
 
