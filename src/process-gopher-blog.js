@@ -84,7 +84,7 @@ module.exports = function (buildDir) {
 };
 
 function insertBlogIndex(source, blogIndexData) {
-  const BLOG_INDEX_TAG_REGEX = /(?<=^>8)((?<=^>8)(?<template>[^>8]*))/;
+  const BLOG_INDEX_TAG_REGEX = />8\n([\w\s\n{}$]*)>8/;
   const matches = source.match(BLOG_INDEX_TAG_REGEX);
   if (matches) {
     const blogIndexTemplate = matches[1];
@@ -92,7 +92,7 @@ function insertBlogIndex(source, blogIndexData) {
     sortMap(blogIndexData).forEach((value) => {
       replacement += replacePlaceholders(blogIndexTemplate, value);
     });
-    source = source.replace(BLOG_INDEX_TAG_REGEX, replacement).replace(/\n>8/, '');
+    source = source.replace(BLOG_INDEX_TAG_REGEX, replacement).replace(/\n>8\n/, '');
   }
 
   return source;
