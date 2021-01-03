@@ -3,7 +3,7 @@
 BLOG
 
 >8
-h${postTitle}   ${postSlug}
+1${postTitle}	${postSlug}
 ${postTimestamp}
 >8
 @foot
