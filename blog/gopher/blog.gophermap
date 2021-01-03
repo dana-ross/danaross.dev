@@ -1,9 +1,9 @@
 @head
+
 BLOG
 
 >8
-{$postTitle}   ${postURL}
+h${postTitle}   ${postSlug}
 ${postTimestamp}
-
 >8
 @foot
