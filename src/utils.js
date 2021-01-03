@@ -31,7 +31,7 @@ function replacePlaceholders(source, placeholders) {
  * @returns String
  */
 function replacePartials(source, variables) {
-    const PARTIAL_TAG_REGEX = /<drr-partial\s*name="(?<name>[^"]*)"\s*(?<attributes>[^">]+="[^">]+"\s*)*\s*\/?>(?:<\/drr-partial>)?/
+    const PARTIAL_TAG_REGEX = /<drr-partial\s*name="(?<name>[^"]*)"\s*(?<attributes>(\w+="[^"]*"\s*)*)\s*\/?>/
 
     let partialTag = null;
     while (partialTag = source.match(PARTIAL_TAG_REGEX)) {
