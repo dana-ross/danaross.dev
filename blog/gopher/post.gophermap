@@ -1,0 +1,8 @@
+@head
+
+${postTitle}
+${postTimestamp}
+
+
+%
+@foot

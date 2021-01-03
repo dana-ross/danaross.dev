@@ -1,5 +1,8 @@
 const fs = require('fs')
 const parseAttributeString = require('parse-attributes')
+const marked = require('marked')
+const {decode} = require('html-entities')
+const wrap = require('word-wrap');
 
 /**
  * Replace variables/placeholders in a web page template.
@@ -50,6 +53,28 @@ function replacePartials(source, variables) {
     }
 
     return source;
+}
+
+/**
+ * Replace partials in a gopher page template.
+ * Partial includes are indicated with an @ at the start of a line followed by
+ * the name of the partial.
+ * @param {String} source the gopher page template
+ * @param {Object} variables Variables to use when parsing the template {key:value}
+ * @returns String
+ */
+function replaceGopherPartials(source, variables) {
+  const output = source.split('\n').reduce((output, current) => {
+      if(current.charAt(0) === '@') {
+          const partial = replacePartials(fs.readFileSync(`./partials/gopher/${current.slice(1)}.part`, 'utf8'))
+          return output += `${partial}\n`
+      }
+      else {
+          return output += `${current}\n`
+      }
+  }, '')
+
+  return output
 }
 
 /**
@@ -125,11 +150,38 @@ function sortMap(map) {
   }, new Map())
 }
 
+/**
+ * Parses markdown into a format appropriate to gopher.
+ * @param {String} markdown Markdown source for content
+ * @returns String 
+ */
+function processMarkdown(markdown) {
+  markdown = wrap(decode(marked(markdown)
+      .replace(/<br>/g, '\n')
+      .replace(/\n<ul>\n/, '')
+      .replace(/<h2/g, '## <h2')
+      .replace(/<h3/g, '### <h3')
+      .replace(/<li/g, '* <li')
+      .replace(/<\/(p|h2)>/g, '\n')
+      .replace(/<\/?[^>]+(>|$)/g, '')
+      .replace(/\*\s*\n/g, '')
+      .replace(/(\n\s*\n\s*[\n\s]+)/g, '\n\n')
+      ), {width: 70, indent: ''})
+  return markdown
+}
+
+function titleToSlug(title) {
+  return title.toLowerCase().replace(/[^a-zA-Z0-9 ]/g,'').replace(/\s/g, "-");
+}
+
 module.exports = {
     replacePlaceholders,
     replacePartials,
+    replaceGopherPartials,
     unionOfObjects,
     parseAttributeString,
     unbreakMultilineTemplateTags,
-    sortMap
+    sortMap,
+    processMarkdown,
+    titleToSlug
 }

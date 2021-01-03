@@ -1,10 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
-const marked = require('marked')
-const {decode} = require('html-entities')
-const wrap = require('word-wrap');
-
+const { replaceGopherPartials, processMarkdown } = require('./utils')
 /**
  * Asynchronously reads and processes templates to create gophermaps.
  * 
@@ -28,33 +25,11 @@ function renderGopherPage(fileName, buildDir) {
     const targetFileName = (path.basename(fileName) === 'gophermap') ? `${buildDir}/gophermap` : `${buildDir}/${path.basename(fileName)}/gophermap`
     console.log(`🐾  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
     const page = fs.readFileSync(fileName, 'utf8')
-    const html = replacePartials(replaceContent(page), {})
+    const html = replaceGopherPartials(replaceContent(page), {})
     if(path.basename(fileName) !== 'gophermap') {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName))    
     }
     fs.writeFileSync(targetFileName, html)
-}
-
-/**
- * Replace partials in a gopher page template.
- * Partial includes are indicated with an @ at the start of a line followed by
- * the name of the partial.
- * @param {String} source the gopher page template
- * @param {Object} variables Variables to use when parsing the template {key:value}
- * @returns String
- */
-function replacePartials(source, variables) {
-    const output = source.split('\n').reduce((output, current) => {
-        if(current.charAt(0) === '@') {
-            const partial = replacePartials(fs.readFileSync(`./partials/gopher/${current.slice(1)}.part`, 'utf8'))
-            return output += `${partial}\n`
-        }
-        else {
-            return output += `${current}\n`
-        }
-    }, '')
-
-    return output
 }
 
 /**
@@ -78,24 +53,4 @@ function replaceContent(source, variables) {
     }, '')
 
     return output
-}
-
-/**
- * Parses markdown into a format appropriate to gopher.
- * @param {String} markdown Markdown source for content
- * @returns String 
- */
-function processMarkdown(markdown) {
-    markdown = wrap(decode(marked(markdown)
-        .replace(/<br>/g, '\n')
-        .replace(/\n<ul>\n/, '')
-        .replace(/<h2/g, '## <h2')
-        .replace(/<h3/g, '### <h3')
-        .replace(/<li/g, '* <li')
-        .replace(/<\/(p|h2)>/g, '\n')
-        .replace(/<\/?[^>]+(>|$)/g, '')
-        .replace(/\*\s*\n/g, '')
-        .replace(/(\n\s*\n\s*[\n\s]+)/g, '\n\n')
-        ), {width: 70, indent: ''})
-    return markdown
 }
