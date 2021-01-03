@@ -8,7 +8,7 @@ These days, my philosophy is to move as fast as I can *SAFELY*. I've cultivated 
 
 Writing a doc? Stressing over every bit of spelling & grammar? In school, we're graded for it. In a client services role it conveys professionalism and attention to detail and is as much a part of the deliverable as the content itself. But an email to your boss? They're more interested in the meat of what you're saying. Make that part clear and don't sweat the rest.
 
-Read about the role of shame in our lives. When you over-analyze, are you really hiding from potential shame? And who is making you feel it? I bet it's you! Check out John Bradshaw's *[Healing the Shame that Binds You](https://www.johnbradshaw.com/books/healing-the-shame-that-binds-you)*. It was life changing for me.
+Read about the role of shame in our lives. When you over-analyze, are you really hiding from potential shame if your decision doesn't work out? And who would be making you feel that shame? I bet at the end of the day it's you! Check out John Bradshaw's *[Healing the Shame that Binds You](https://www.johnbradshaw.com/books/healing-the-shame-that-binds-you)*. It was life changing for me.
 
 Life won't let us sit still. We need to do things! So one of the best things you can do is build guardrails & safety nets to protect you & those that depend on those decisions. This is a great use of the time between tasks or big projects.
 
