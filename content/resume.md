@@ -1,5 +1,12 @@
 ## Summary
-Technology expertise throughout the software lifecycle, from pre-sales consulting through launch. A history of exceeding expectations: beating estimates, efficient coding, and delightful UX. Experience working with small businesses, world-class museums, government research labs, Fortune 500. Leverages deep experience with front and back end development to help engineers approach challenges. Creates positive environments where engineers excel and grow. Defines standards for technical excellence. Enforces requirements for secure, usable & accessible deliverables.
+
+I’ve I’ve been passionate about technology for as long as I can remember. Alongside my passion for the advancement of technology itself lies a core value that software and content can empower everyone. Whether it was tinkering with Apple IIs and Commodore 64s as a child or teaching myself to code at an early age, I’ve been fascinated by technology’s ability to bridge gaps and connect people.
+
+When it comes to my teams, I understand engineers are only as efficient as their systems. It’s my belief that teams should be agile about being Agile. As a team leader, I mentor new hires on culture and technical skills that aid in their growth as engineers and collaborators.
+
+A successful team also needs a positive workplace environment where they feel valued, included, and respected as a contributor to all our success. I firmly believe every person should have the opportunity to learn, find community, and experience joy through technology. If something isn’t working, it’s time to innovate our solutions and strike the right balance between oversight, process, and focused programming time.
+
+I’ve managed agile projects through all points in the software life cycle, from initial requirements gathering through to the launch of scalable, award-winning applications across numerous technology stacks. I encourage teams to understand and value the needs of all users, regardless of background, age, or disability, and to reflect that understanding in the things they build. With these factors combined, we can drive growth and success of both the individual and the team while offering endless possibilities for achievement and creative breakthroughs in technology.
 
 ## Education
 ### Roosevelt University
