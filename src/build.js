@@ -5,6 +5,9 @@ const processHTMLTemplates = require('./process-html-templates')
 const processScripts = require('./process-scripts')
 const processStylesheets = require('./process-stylesheets')
 const processGopherTemplates = require('./process-gopher-templates')
+const processBlogWWW = require('./process-blog')
+const processBlogGopher = require('./process-gopher-blog')
+const processBlog = require('./process-blog')
 
 const BASE_URL = 'https://danaross.dev/'
 const BUILD_DIR = './build'
@@ -26,3 +29,6 @@ processScripts(BUILD_WWW_DIR, SCRIPTS_DIR)
 processStylesheets(BUILD_WWW_DIR, STYLES_DIR)
 
 processGopherTemplates(BUILD_GOPHER_DIR, PAGES_GOPHER_DIR)
+
+processBlogWWW(BUILD_WWW_DIR, BASE_URL)
+processBlogGopher(BUILD_GOPHER_DIR)

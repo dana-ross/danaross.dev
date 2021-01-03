@@ -1,0 +1,16 @@
+<drr-partial name="head" title="Dana Ross &mdash; ${postTitle}"
+    metadescription="${postTitle}"
+    ogtype="article" ogdescription="${postTitle}"
+    ogtitle="${postTitle}">
+    </head>
+
+    <body>
+        <drr-partial name="hamnav">
+            <main>
+                <a href="/">
+                    <drr-partial name="h1" subhead="${postTitle}" />
+                </a>
+                <p>${postTimestamp}</p>
+                <drr-postcontent />
+            </main>
+            <drr-partial name="foot">
