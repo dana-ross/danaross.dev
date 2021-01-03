@@ -12,7 +12,7 @@ Read about the role of shame in our lives. When you over-analyze, are you really
 
 Life won't let us sit still. We need to do things! So one of the best things you can do is build guardrails & safety nets to protect you & those that depend on those decisions. This is a great use of the time between tasks or big projects.
 
-In your personal life, this could involve
+In your personal life, this could involve:
 * saving up some *[fuck you money](https://www.urbandictionary.com/define.php?term=fuck%20you%20money)*
 * lining up some part time work while you get your new business off the ground and working that investment into your plan
 
