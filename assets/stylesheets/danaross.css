@@ -169,7 +169,7 @@ a[href="/"], a[href="/"]:hover {
 
   #hamitems a {
     display: table-cell;
-    width: 33.3%; /* 100% / 3 tabs = 33.3% */
+    width: 20%; /* 100% / 5 tabs = 20% */
     padding: 10px;
     color: white;
     text-decoration: none;
