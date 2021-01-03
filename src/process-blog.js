@@ -102,7 +102,7 @@ function insertBlogIndex(source, blogIndexData) {
   if (matches) {
     const blogIndexTemplate = matches[1];
     let replacement = "";
-    sortMap(blogIndexData).forEach((value) => {
+    sortMap(blogIndexData, true).forEach((value) => {
       replacement += replacePlaceholders(blogIndexTemplate, value);
     });
     source = source.replace(BLOG_INDEX_TAG_REGEX, replacement);
