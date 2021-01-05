@@ -5,6 +5,7 @@ BLOG
 >8
 1${postTitle}	${postSlug}
 ${postTimestamp}
+${postSummary}
 >8
 
 1Return home	/	

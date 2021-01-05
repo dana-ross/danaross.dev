@@ -45,10 +45,21 @@ module.exports = function (buildDir) {
             "LLLL do, yyyy h:mm bbb"
           );
           const postSlug = titleToSlug(postTitle);
+          const postSummary = fs.existsSync(
+            path.resolve(contentPath, "summary.txt")
+          )
+            ? processMarkdown(
+                fs.readFileSync(
+                  path.resolve(contentPath, "summary.txt"),
+                  "utf8"
+                )
+              )
+            : "";
           blogIndexData.set(Date.parse(path.basename(contentPath)), {
             postTitle,
             postTimestamp,
-            postSlug
+            postSlug,
+            postSummary,
           });
 
           processBlogPost(
