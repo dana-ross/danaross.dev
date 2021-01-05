@@ -9,6 +9,7 @@ const {
   unbreakMultilineTemplateTags,
   sortMap,
   titleToSlug,
+  handleFSError,
 } = require("./utils");
 const {
   scriptsBase,
@@ -23,7 +24,7 @@ const {
  * @param {String} buildDir root directory where html files will be written
  * @param {String} baseURL  base URL where the blog will live
  */
-module.exports = function (buildDir, baseURL) {
+module.exports = async function (buildDir, baseURL) {
   const blogTemplateDir = path.resolve(BLOG_DIR, "www");
   const blogContentDirectory = path.resolve(BLOG_DIR, "content");
 
@@ -103,7 +104,7 @@ module.exports = function (buildDir, baseURL) {
       scriptsBase,
       url: baseURL + "blog",
     }),
-    (err) => (err ? console.log(err) : "")
+    handleFSError
   );
 };
 
@@ -163,7 +164,7 @@ function processBlogPost(
   fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "index.html"),
     html,
-    (err) => (err ? console.log(err) : "")
+    handleFSError
   );
 }
 

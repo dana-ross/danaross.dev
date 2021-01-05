@@ -1,14 +1,14 @@
 const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
-const { replaceGopherPartials, processMarkdown } = require('./utils')
+const { replaceGopherPartials, processMarkdown, handleFSError } = require('./utils')
 /**
  * Asynchronously reads and processes templates to create gophermaps.
  * 
  * @param {String} buildDir root directory where gophermaps will be written 
  * @param {String} pagesDir directory where page templates can be found
  */
-module.exports = function (buildDir, pagesDir) {
+module.exports = async function (buildDir, pagesDir) {
     fs.readdir(pagesDir, (err, files) => {
         files.forEach(file => {
             renderGopherPage(pagesDir + '/' + file, buildDir)
@@ -29,7 +29,7 @@ function renderGopherPage(fileName, buildDir) {
     if(path.basename(fileName) !== 'gophermap') {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName))    
     }
-    fs.writeFile(targetFileName, html, (err) => (err ? console.log(err) : ""))
+    fs.writeFile(targetFileName, html, handleFSError)
 }
 
 /**

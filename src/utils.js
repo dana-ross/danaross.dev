@@ -60,7 +60,7 @@ function replacePartials(source, variables) {
  * Replace partials in a gopher page template.
  * Partial includes are indicated with an @ at the start of a line followed by
  * the name of the partial.
- * 
+ *
  * @param {String} source the gopher page template
  * @param {Object} variables Variables to use when parsing the template {key:value}
  * @returns String
@@ -142,7 +142,7 @@ function unbreakMultilineTemplateTags(html) {
 
 /**
  * Sort a Map so its keys are in order
- * 
+ *
  * @param {Map} map The Map to sort
  * @param {boolean} reverse If true, results are sorted ascending
  * @returns Map The Map sorted by key
@@ -158,7 +158,7 @@ function sortMap(map, reverse = false) {
 
 /**
  * Parses markdown into a format appropriate to gopher
- * 
+ *
  * @param {String} markdown Markdown source for content
  * @returns String
  */
@@ -183,15 +183,25 @@ function processMarkdown(markdown) {
 
 /**
  * Convert a post title to something that looks at home in a URL
- * 
+ *
  * @param {String} title
- * @returns String 
+ * @returns String
  */
 function titleToSlug(title) {
   return title
     .toLowerCase()
     .replace(/[^a-zA-Z0-9 ]/g, "")
     .replace(/\s/g, "-");
+}
+
+/**
+ * Standard error handler for async fs functions
+ * @param {Object|null} err 
+ */
+function handleFSError(err) {
+  if (err) {
+    console.log(err);
+  }
 }
 
 module.exports = {
@@ -204,4 +214,5 @@ module.exports = {
   sortMap,
   processMarkdown,
   titleToSlug,
+  handleFSError,
 };

@@ -2,6 +2,7 @@ const uglifyCSS = require('uglifycss')
 const fs = require('fs')
 const path = require('path')
 const chalk = require('chalk')
+const {handleFSError} = require('./utils')
 
 /**
  * Process CSS stylesheets, minifying them and copying them into
@@ -10,7 +11,7 @@ const chalk = require('chalk')
  * @param {String} buildDir 
  * @param {String} stylesDir 
  */
-module.exports = function (buildDir, stylesDir) {
+module.exports = async function (buildDir, stylesDir) {
     fs.mkdirSync(buildDir + '/stylesheets')
     fs.readdir(stylesDir, (err, files) => {
         files.forEach(file => {
@@ -19,7 +20,7 @@ module.exports = function (buildDir, stylesDir) {
                 console.log(`🎨️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
                 var minifiedCSS = uglifyCSS.processString(fs.readFileSync(stylesDir + '/' + file, "utf8"), {
                 })
-                fs.writeFile(targetFile, minifiedCSS, (err) => (err ? console.log(err) : ""))
+                fs.writeFile(targetFile, minifiedCSS, handleFSError)
             }
         })
     })

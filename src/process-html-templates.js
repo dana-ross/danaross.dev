@@ -3,7 +3,7 @@ const path = require('path')
 const beautify = require('beautify')
 const chalk = require('chalk')
 const marked = require('marked')
-const { replacePlaceholders, replacePartials, unbreakMultilineTemplateTags } = require('./utils')
+const { replacePlaceholders, replacePartials, unbreakMultilineTemplateTags, handleFSError } = require('./utils')
 const { scriptsBase, stylesheetsBase, imagesBase } = require('./paths')
 
 
@@ -14,7 +14,7 @@ const { scriptsBase, stylesheetsBase, imagesBase } = require('./paths')
  * @param {String} pagesDir directory where page templates can be found
  * @param {String} baseURL  base URL where the web site will live
  */
-module.exports = function (buildDir, pagesDir, baseURL) {
+module.exports = async function (buildDir, pagesDir, baseURL) {
     // Process WWW templates
     fs.readdir(pagesDir, (err, files) => {
         files.forEach(file => {
@@ -48,7 +48,7 @@ function renderHTMLPage(fileName, buildDir, baseURL) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))
     }
 
-    fs.writeFile(targetFileName, cleanHTML(source), (err) => (err ? console.log(err) : ""))
+    fs.writeFile(targetFileName, cleanHTML(source), handleFSError)
 }
 
 /**

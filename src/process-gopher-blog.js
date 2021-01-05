@@ -8,11 +8,10 @@ const {
   unbreakMultilineTemplateTags,
   sortMap,
   processMarkdown,
-  titleToSlug
+  titleToSlug,
+  handleFSError,
 } = require("./utils");
-const {
-  BLOG_DIR,
-} = require("./paths");
+const { BLOG_DIR } = require("./paths");
 
 /**
  * Asynchronously reads and processes templates to create static pages.
@@ -20,7 +19,7 @@ const {
  * @param {String} buildDir root directory where html files will be written
  * @param {String} baseURL  base URL where the blog will live
  */
-module.exports = function (buildDir) {
+module.exports = async function (buildDir) {
   const blogTemplateDir = path.resolve(BLOG_DIR, "gopher");
   const blogContentDirectory = path.resolve(BLOG_DIR, "content");
 
@@ -39,7 +38,9 @@ module.exports = function (buildDir) {
       const potentialBlogPosts = fs.readdirSync(contentPath);
       potentialBlogPosts.forEach((potentialBlogPost) => {
         if (path.extname(potentialBlogPost) === ".md") {
-          const postTitle = path.basename(potentialBlogPost, ".md").toUpperCase();
+          const postTitle = path
+            .basename(potentialBlogPost, ".md")
+            .toUpperCase();
           const postTimestamp = format(
             Date.parse(path.basename(contentPath)),
             "LLLL do, yyyy h:mm bbb"
@@ -89,8 +90,11 @@ module.exports = function (buildDir) {
 
   fs.writeFile(
     path.resolve(buildDir, "blog", "gophermap"),
-    replaceGopherPartials(insertBlogIndex(blogIndexTemplate, blogIndexData), {}),
-    (err) => (err ? console.log(err) : "")
+    replaceGopherPartials(
+      insertBlogIndex(blogIndexTemplate, blogIndexData),
+      {}
+    ),
+    handleFSError
   );
 };
 
@@ -103,7 +107,9 @@ function insertBlogIndex(source, blogIndexData) {
     sortMap(blogIndexData, true).forEach((value) => {
       replacement += replacePlaceholders(blogIndexTemplate, value);
     });
-    source = source.replace(BLOG_INDEX_TAG_REGEX, replacement).replace(/\n>8\n/, '');
+    source = source
+      .replace(BLOG_INDEX_TAG_REGEX, replacement)
+      .replace(/\n>8\n/, "");
   }
 
   return source;
@@ -121,7 +127,7 @@ function processBlogPost(
   console.log(
     `📄️  ${chalk.white("Processing")} ${chalk.blue(
       path.basename(contentPath) + "/" + potentialBlogPost
-    )} → ${chalk.yellow(buildDir + "/blog/" + postSlug + '/gophermap')}`
+    )} → ${chalk.yellow(buildDir + "/blog/" + postSlug + "/gophermap")}`
   );
 
   fs.mkdirSync(path.resolve(buildDir, "blog", postSlug), { recursive: true });
@@ -129,7 +135,7 @@ function processBlogPost(
   const variables = {
     postTitle,
     postTimestamp,
-    postSlug
+    postSlug,
   };
 
   const gophermap = replaceGopherPartials(
@@ -143,18 +149,15 @@ function processBlogPost(
   fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "gophermap"),
     gophermap,
-    (err) => (err ? console.log(err) : "")
+    handleFSError
   );
 }
 
 function insertContent(source, contentPath, fileName) {
   const CONTENT_TAG_REGEX = /(\n%)/;
-  const filePath = path.resolve(contentPath, fileName)
+  const filePath = path.resolve(contentPath, fileName);
   if ((contentTag = source.match(CONTENT_TAG_REGEX))) {
-    const replacement = processMarkdown(
-      fs.readFileSync(filePath, "utf8"),
-      {}
-    );
+    const replacement = processMarkdown(fs.readFileSync(filePath, "utf8"), {});
     source = source.replace(CONTENT_TAG_REGEX, replacement);
   }
 
