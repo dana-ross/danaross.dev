@@ -1,5 +1,4 @@
 const fs = require('fs')
-const chalk = require('chalk')
 const processImages = require('./process-images')
 const processHTMLTemplates = require('./process-html-templates')
 const processScripts = require('./process-scripts')
