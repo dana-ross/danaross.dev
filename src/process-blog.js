@@ -49,10 +49,15 @@ module.exports = function (buildDir, baseURL) {
           );
           const postSlug = titleToSlug(postTitle);
           const postURL = `${baseURL}blog/${postSlug}`;
+          const postSummary = fs.existsSync(path.resolve(contentPath, "summary.txt")) ?
+            marked(fs.readFileSync(path.resolve(contentPath, "summary.txt"), "utf8")) :
+            '';
+
           blogIndexData.set(Date.parse(path.basename(contentPath)), {
             postTitle,
             postURL,
             postTimestamp,
+            postSummary,
           });
 
           processBlogPost(
