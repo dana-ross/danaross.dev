@@ -48,7 +48,7 @@ function renderHTMLPage(fileName, buildDir, baseURL) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))
     }
 
-    fs.writeFileSync(targetFileName, cleanHTML(source))
+    fs.writeFile(targetFileName, cleanHTML(source), (err) => (err ? console.log(err) : ""))
 }
 
 /**

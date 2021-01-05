@@ -140,9 +140,10 @@ function processBlogPost(
     variables
   );
 
-  fs.writeFileSync(
+  fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "gophermap"),
-    gophermap
+    gophermap,
+    (err) => (err ? console.log(err) : "")
   );
 }
 

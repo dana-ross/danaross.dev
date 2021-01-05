@@ -29,7 +29,7 @@ function renderGopherPage(fileName, buildDir) {
     if(path.basename(fileName) !== 'gophermap') {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName))    
     }
-    fs.writeFileSync(targetFileName, html)
+    fs.writeFile(targetFileName, html, (err) => (err ? console.log(err) : ""))
 }
 
 /**
