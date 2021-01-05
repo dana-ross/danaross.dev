@@ -86,17 +86,19 @@ module.exports = async function (buildDir) {
   fs.mkdirSync(buildDir + '/images')
 
   // Copy images
-  fs.readdirSync('./images').forEach(file => {
-    const sourceFile = './images/' + file
-    const targetFile = buildDir + '/images/' + file
-    if (path.extname(file) == '.svg') {
-      console.log(`🖼️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
-      const originalSVG = fs.readFileSync(sourceFile)
-      svgo.optimize(originalSVG).then((optimizedSVG) => fs.writeFile(targetFile, optimizedSVG.data, handleFSError))
-    }
-    else {
-      console.log(`🖼️  ${chalk.white('Copying')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
-      fs.copyFile(sourceFile, targetFile, handleFSError)
-    }
+  fs.readdir('./images', (err, files) => {
+    files.forEach((file) => {
+      const sourceFile = './images/' + file
+      const targetFile = buildDir + '/images/' + file
+      if (path.extname(file) == '.svg') {
+        console.log(`🖼️  ${chalk.white('Optimizing')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
+        const originalSVG = fs.readFileSync(sourceFile)
+        svgo.optimize(originalSVG).then((optimizedSVG) => fs.writeFile(targetFile, optimizedSVG.data, handleFSError))
+      }
+      else {
+        console.log(`🖼️  ${chalk.white('Copying')} ${chalk.blue(file)} → ${chalk.yellow(targetFile)}`)
+        fs.copyFile(sourceFile, targetFile, handleFSError)
+      }
+    })
   })
 }
