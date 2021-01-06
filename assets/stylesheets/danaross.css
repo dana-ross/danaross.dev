@@ -65,19 +65,33 @@ h3 small {
     display: block;
 }
 
-#social, #professional {
+#social {
     list-style: none;
     display: table;
     margin: 2rem auto 0 auto;
     width: 80%;
     padding: 0;
 }
-#social li, #professional li {
+#social li {
     display: table-cell;
     text-align: center;
 }
-#professional li  {
-    width: 25%;
+
+#professional {
+    list-style: none;
+    display: grid;
+    margin: 2rem auto 0 auto;
+    width: 80%;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+#professional li {
+    display: block;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #social li {
     width: 10%;
@@ -128,6 +142,11 @@ a[href="/"], a[href="/"]:hover {
 @media screen and (max-width: 430px) {
     h1 small {
         font-size: 1.8rem;
+    }
+    #professional {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 }
 
