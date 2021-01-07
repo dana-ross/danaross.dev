@@ -123,6 +123,8 @@ I like inline documentation. JSDoc & PHPDoc are awesome. So are comments that ex
 
 This is a job. We’re here to deliver value to our readers, to help them find the best products in any category they could be looking for, and to make it easy for them to buy quality products they can trust and enjoy. In the process, we make money, which lets us put food on our tables and keep working another day. **Let’s not lose sight of this fact, and strive for balance between academically perfect code and delivering quickly.**
 
+Lastly, if you have a computer science degree, I want you to question everything you learned. A lot of the canonical algorithms you were taught in college are designed for a world of single core CPUs clocked in MHz, scarce RAM, and slow secondary storage, and when *Big Data* was a couple hundred thousand records. Consider how you can best take advantage of today's technology in the things you build. We're swimming in a sea of abundant compute & storage resources. Consider how much the "best" solution saves in actual time on the clock vs the burden it might put on your fellow engineers to understand & maintain it. Consider if you can throw more inexpensive CPU cores at a problem for the cost of a burrito. That's not saying I'll excuse inefficient code, but I also don't want to see us fussing over a few cycles of performance with no real-world value.
+
 ## Agile
 I have a Scrum Master Accredited Certification from the International Scrum Institute. That's not the same as a Certified Scrum Master certification, because that’s trademarked…and expensive.
 
