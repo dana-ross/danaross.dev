@@ -22,6 +22,9 @@ module.exports = async function (buildDir, pagesDir, baseURL, urlRegistry) {
         if (path.extname(file) == '.html') {
             renderHTMLPage(pagesDir + '/' + file, buildDir, baseURL, urlRegistry)
         }
+        else if(path.extname(file) == '.txt') {
+            fs.copyFile(path.resolve(pagesDir, file), path.resolve(buildDir, file), handleFSError)
+        }
     })
 }
 
