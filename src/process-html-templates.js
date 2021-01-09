@@ -13,15 +13,15 @@ const { scriptsBase, stylesheetsBase, imagesBase } = require('./paths')
  * @param {String} buildDir root directory where html files will be written 
  * @param {String} pagesDir directory where page templates can be found
  * @param {String} baseURL  base URL where the web site will live
+ * @param {Map}    urlRegistry 
  */
-module.exports = async function (buildDir, pagesDir, baseURL) {
+module.exports = async function (buildDir, pagesDir, baseURL, urlRegistry) {
     // Process WWW templates
-    fs.readdir(pagesDir, (err, files) => {
-        files.forEach(file => {
-            if (path.extname(file) == '.html') {
-                renderHTMLPage(pagesDir + '/' + file, buildDir, baseURL)
-            }
-        })
+    const files = fs.readdirSync(pagesDir)
+    files.forEach(file => {
+        if (path.extname(file) == '.html') {
+            renderHTMLPage(pagesDir + '/' + file, buildDir, baseURL, urlRegistry)
+        }
     })
 }
 
@@ -30,14 +30,16 @@ module.exports = async function (buildDir, pagesDir, baseURL) {
  * @param {String} fileName path & filename of the template to process
  * @param {String} buildDir root directory where gophermaps will be written
  * @param {String} baseURL  base URL where the web site will live
+ * @param {Map}    urlRegistry
  */
-function renderHTMLPage(fileName, buildDir, baseURL) {
+function renderHTMLPage(fileName, buildDir, baseURL, urlRegistry) {
 
     const targetFileName = isHomeTemplate(fileName) ?
         buildDir + '/index.html' :
         buildDir + '/' + path.basename(fileName, '.html') + '/index.html'
 
     const url = baseURL + (isHomeTemplate(fileName) ? '' : path.basename(fileName, '.html') + '/')
+    urlRegistry.set(path.resolve(targetFileName), url)
 
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 

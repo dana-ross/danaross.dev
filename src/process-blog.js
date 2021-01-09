@@ -24,7 +24,7 @@ const {
  * @param {String} buildDir root directory where html files will be written
  * @param {String} baseURL  base URL where the blog will live
  */
-module.exports = async function (buildDir, baseURL) {
+module.exports = async function (buildDir, baseURL, urlRegistry) {
   const blogTemplateDir = path.resolve(BLOG_DIR, "www");
   const blogContentDirectory = path.resolve(BLOG_DIR, "content");
 
@@ -61,6 +61,7 @@ module.exports = async function (buildDir, baseURL) {
               )
             : "";
 
+          urlRegistry.set(path.resolve(contentPath, potentialBlogPost), postURL)
           blogIndexData.set(Date.parse(path.basename(contentPath)), {
             postTitle,
             postURL,
