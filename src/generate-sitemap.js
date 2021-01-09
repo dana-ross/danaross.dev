@@ -1,8 +1,15 @@
 const fs = require("fs");
 const path = require("path");
+const chalk = require("chalk");
+const { handleFSError } = require("./utils");
 
 module.exports = (buildDir, urlRegistry) => {
-  console.log(path.resolve(buildDir, "sitemap.xml"));
+  console.log(
+    `📄️  ${chalk.white("Generating")} ${chalk.blue(
+      path.basename(buildDir) + "/sitemap.xml"
+    )}`
+  );
+
   const sitemapFile = fs.openSync(path.resolve(buildDir, "sitemap.xml"), "w");
   fs.writeSync(sitemapFile, '<?xml version="1.0" encoding="UTF-8"?>\n');
   fs.writeSync(
@@ -14,5 +21,5 @@ module.exports = (buildDir, urlRegistry) => {
     fs.writeSync(sitemapFile, `<url><loc>${value}</loc></url>\n`);
   });
   fs.writeSync(sitemapFile, "</urlset>");
-  fs.close(sitemapFile);
+  fs.close(sitemapFile, handleFSError);
 };
