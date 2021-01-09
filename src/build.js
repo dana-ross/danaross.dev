@@ -6,6 +6,9 @@ const processStylesheets = require('./process-stylesheets')
 const processGopherTemplates = require('./process-gopher-templates')
 const processBlogWWW = require('./process-blog')
 const processBlogGopher = require('./process-gopher-blog')
+const generateSitemap = require('./generate-sitemap')
+
+const urlRegistry = new Map()
 
 const BASE_URL = 'https://danaross.dev/'
 const BUILD_DIR = './build'
@@ -21,12 +24,16 @@ fs.rmdirSync(BUILD_DIR, { recursive: true })
 fs.mkdirSync(BUILD_WWW_DIR, { recursive: true })
 fs.mkdirSync(BUILD_GOPHER_DIR, { recursive: true})
 
-processImages(BUILD_WWW_DIR)
-processHTMLTemplates(BUILD_WWW_DIR, PAGES_WWW_DIR, BASE_URL)
-processScripts(BUILD_WWW_DIR, SCRIPTS_DIR)
-processStylesheets(BUILD_WWW_DIR, STYLES_DIR)
+Promise.all([
+    processImages(BUILD_WWW_DIR),
+    processHTMLTemplates(BUILD_WWW_DIR, PAGES_WWW_DIR, BASE_URL, urlRegistry),
+    processScripts(BUILD_WWW_DIR, SCRIPTS_DIR),
+    processStylesheets(BUILD_WWW_DIR, STYLES_DIR),
 
-processGopherTemplates(BUILD_GOPHER_DIR, PAGES_GOPHER_DIR)
+    processGopherTemplates(BUILD_GOPHER_DIR, PAGES_GOPHER_DIR),
 
-processBlogWWW(BUILD_WWW_DIR, BASE_URL)
-processBlogGopher(BUILD_GOPHER_DIR)
+    processBlogWWW(BUILD_WWW_DIR, BASE_URL, urlRegistry),
+    processBlogGopher(BUILD_GOPHER_DIR)
+]).then((_) => {
+    generateSitemap(BUILD_WWW_DIR, urlRegistry)
+}).catch((err) => console.log(err))
