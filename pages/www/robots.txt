@@ -2,3 +2,7 @@ User-Agent: *
 Allow: / 
 
 Sitemap: https://danaross.dev/sitemap.xml
+
+# If you look closer you'll recognize
+# I'm not that special, I'm broke inside
+# Crashing slowly, the bugs are in me
