@@ -38,15 +38,15 @@ July, 2014
 
 ## Experience
 
+### Engineering Manager @ Chewy
+January, 2021
+
 ### Engineering Manager @ Wirecutter (Remote)  
-January, 2019—June, 2020
-    
-### Sr. Web Engineer @ Wirecutter (Remote)
-June, 2020—Present
+January, 2019—January, 2021
 
 Hired to establish a Delivery team responsible for AWS environment upkeep and growth as well as tool building and process improvements. Established on-call rotation (PagerDuty) and set up an "SOS" Slack command for after-hours emergencies. Improved server monitoring and reporting. Oversaw implementation of more agile release workflow and associated tooling changes. Grew team from one engineer to three.
 
-Accepted an individual contributor role on the Reader Growth team as part of a re-org of our Digital department. Researched and planned out technical SEO work for H2 2020. Enhanced our newsletter subscription functionality, consolidating logic across diverse systems. Architected enhancements to our Fastly CDN implementation for major uptime improvements. Mentored new hires on our culture, workflows, and tech stack, as well as helping establish a culture which values testing.
+Researched and planned out technical SEO work for H2 2020. Enhanced our newsletter subscription functionality, consolidating logic across diverse systems. Architected enhancements to our Fastly CDN implementation for major uptime improvements. Mentored new hires on our culture, workflows, and tech stack, as well as helping establish a culture which values testing.
 
 ### Director of Engineering @ 10up (Remote)  
 June 2013—December, 2018
