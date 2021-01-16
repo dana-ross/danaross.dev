@@ -29,6 +29,7 @@ I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a l
 
 <video autoplay loop muted playsinline role="presentation">
     <source src="../images/being-a-boss.mp4" type="video/mp4">
+    <img src="../images/being-a-boss.gif">
     <!-- Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'. -->
 </video>
 
@@ -40,13 +41,13 @@ I run 5k, 10k, and half marathon races, although not as much or as fast as I did
     kid was born.
 
 ## Contacting Me
-I don’t usually answer my phone, but if it’s urgent you can leave a voicemail and I’ll get back to you.
+You'll get my personal cell phone number the day you join my team. I don’t usually answer my phone, but if it’s urgent you can leave a voicemail and I’ll get back to you.
 
 I check my work email & personal email constantly on my phone, even outside of work hours. That doesn’t mean I expect you to do that too, or that I will get back to you before the start of the next day. It just means I have bad FOMO.
 
 I may not respond to your Slack message until the following day, either.
 
-If a message from me needs an urgent response, I’ll tell you. Otherwise, assume it can wait until you have a moment to review what I'm saying and give it the appropriate amount of thought before responding. And if it's after hours (and not urgent), I can wait until you start your next work day.
+If a message from me needs an urgent response, I’ll tell you. Otherwise, assume it can wait until you have a moment to review what I'm saying and give it the appropriate amount of thought before responding. And if it's after hours (and not urgent), I can wait until you get settled into your next work day.
 
 ## My Values
 ### Family
@@ -82,7 +83,7 @@ You ever hear that joke that goes?:
 > CEO: What if we spend all this money on our people and they leave?  
 > Manager: What if we don’t invest in them and they STAY?
 
-As your manager, I have a personal investment in your success. It helps you grow as an individual. It helps our team deliver new and innovative solutions. It helps the company as a whole to meet and exceed our goals. It helps me continue to have a job.
+As your manager, I have a personal investment in your success. It helps you grow as an individual. It helps our team deliver new and innovative solutions. It helps the company as a whole to meet and exceed our goals. Your success is my success, both in real terms of job security and in the pride of watching you grow.
 
 I hope you will take advantage of the resources the company and I make available to you, and I will regularly check in with you to make sure you’re setting aside time to learn new things appropriate to the work you do. I also hope you will make time outside work to invest in yourself.
 
@@ -121,7 +122,7 @@ I like readable code. If you can make a function pure and still have it make sen
 
 I like inline documentation. JSDoc & PHPDoc are awesome. So are comments that explain the reason code works a certain way or some non-obvious requirement it’s meant to address. I don’t like comments that tell what the code does, as the code itself should be clear enough to convey that.
 
-This is a job. We’re here to deliver value to our readers, to help them find the best products in any category they could be looking for, and to make it easy for them to buy quality products they can trust and enjoy. In the process, we make money, which lets us put food on our tables and keep working another day. **Let’s not lose sight of this fact, and strive for balance between academically perfect code and delivering quickly.**
+This is a job. We’re here to deliver value and to make it easy for our customers to buy quality they trust and enjoy. It's how we make money, both as individuals and as a company. **Let’s not lose sight of this fact, and strive for balance between academically perfect code and delivering quickly.**
 
 Lastly, if you have a computer science degree, I want you to question everything you learned. A lot of the canonical algorithms you were taught in college are designed for a world of single core CPUs clocked in MHz, scarce RAM, and slow secondary storage, and when *Big Data* was a couple hundred thousand records. Consider how you can best take advantage of today's technology in the things you build. We're swimming in a sea of abundant compute & storage resources. Consider how much the "best" solution saves in actual time on the clock vs the burden it might put on your fellow engineers to understand & maintain it. Consider if you can throw more inexpensive CPU cores at a problem for the cost of a burrito. That's not saying I'll excuse inefficient code, but I also don't want to see us fussing over a few cycles of performance with no real-world value.
 
