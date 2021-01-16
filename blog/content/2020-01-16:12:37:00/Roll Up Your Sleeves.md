@@ -2,12 +2,12 @@ New job. Two weeks notice. Last day. Tears. Goodbyes. Exit interviews. Telling t
 
 ## "What advice do you have for me?"
 
-It's nerve-wracking to chat with your boss's boss, even if you only report to them for a few hours more. But to be asked for your advice? That's rough. My advice covered several things, but the last thing was the biggest: roll up your sleeves and do the work your team does.
+It's nerve-wracking to chat with your boss's boss, even if you only report to them for a few hours more. But to be asked for your advice? That's awkward. My advice covered several things, but the last thing was the biggest: roll up your sleeves and do the work your team does.
 
 The title *big cheese* means something different in an organization ostensibly helmed by a five foot tall mouse. But Lee Cockerell, former Executive Vice President of Walt Disney World Resorts, didn't let his title or ego get in the way of doing the front-line work he asked of his team:
 
 > Cockerell, who oversaw 40,000 cast members, spent time cleaning tables, cooking french fries, organizing strollers, and renting out wheelchairs.
-> “It’s very enlightening,” he said. “You find out you don’t know anything. You think you know everything, but you don’t. **As an executive, you’re trying to make the best decisions. If you don’t know what’s going on, you can’t make them.**” [Emphasis Mine - Dana]
+> "It's very enlightening,” he said. “You find out you don’t know anything. You think you know everything, but you don't. As an executive, you’re trying to make the best decisions. If you don’t know what’s going on, you can't make them."
 > https://www.fwbusiness.com/news/latest/businessweekly/article_0477c86e-992a-5448-8e55-e608357c031a.html
 
 ## It builds trust.
