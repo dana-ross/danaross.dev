@@ -7,7 +7,7 @@ It's nerve-wracking to chat with your boss's boss, even if you only report to th
 The title *big cheese* means something different in an organization ostensibly helmed by a five foot tall mouse. But Lee Cockerell, former Executive Vice President of Walt Disney World Resorts, didn't let his title or ego get in the way of doing the front-line work he asked of his team:
 
 > Cockerell, who oversaw 40,000 cast members, spent time cleaning tables, cooking french fries, organizing strollers, and renting out wheelchairs.
-> "It's very enlightening,” he said. “You find out you don’t know anything. You think you know everything, but you don't. As an executive, you’re trying to make the best decisions. If you don’t know what’s going on, you can't make them."
+> "It's very enlightening," he said. "You find out you don’t know anything. You think you know everything, but you don't. As an executive, you’re trying to make the best decisions. If you don’t know what’s going on, you can't make them."
 > https://www.fwbusiness.com/news/latest/businessweekly/article_0477c86e-992a-5448-8e55-e608357c031a.html
 
 ## It builds trust.
