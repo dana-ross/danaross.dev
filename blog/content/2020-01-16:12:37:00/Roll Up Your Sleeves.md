@@ -2,7 +2,7 @@ New job. Two weeks notice. Last day. Tears. Goodbyes. Exit interviews. Telling t
 
 ## "What advice do you have for me?"
 
-It's nerve-wracking to chat with your boss's boss, even if you only report to them for a few hours more. But to be asked for your advice? That's awkward. My advice covered several things, but the last thing was the biggest: roll up your sleeves and do the work your team does.
+It's nerve-wracking to chat with your boss's boss, even if you only report to them for a few more hours. But to be asked for your advice? That's awkward. My advice covered several things, but the last thing was the biggest: roll up your sleeves and do the work your team does.
 
 The title *big cheese* means something different in an organization ostensibly helmed by a five foot tall mouse. But Lee Cockerell, former Executive Vice President of Walt Disney World Resorts, didn't let his title or ego get in the way of doing the front-line work he asked of his team:
 
