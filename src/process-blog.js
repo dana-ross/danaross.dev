@@ -17,6 +17,7 @@ const {
   stylesheetsBase,
   imagesBase,
   BLOG_DIR,
+  ogimage,
 } = require("./paths");
 
 /**
@@ -104,6 +105,7 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
       stylesheetsBase,
       scriptsBase,
       url: baseURL + "blog",
+      ogimage
     }),
     handleFSError
   );
@@ -154,6 +156,7 @@ function processBlogPost(
     postTitle,
     postTimestamp,
     postSummary,
+    ogimage
   };
 
   const html = replacePartials(

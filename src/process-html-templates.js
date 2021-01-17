@@ -4,7 +4,7 @@ const beautify = require('beautify')
 const chalk = require('chalk')
 const marked = require('marked')
 const { replacePlaceholders, replacePartials, unbreakMultilineTemplateTags, handleFSError, typeset } = require('./utils')
-const { scriptsBase, stylesheetsBase, imagesBase } = require('./paths')
+const { scriptsBase, stylesheetsBase, imagesBase, ogimage } = require('./paths')
 
 
 /**
@@ -47,7 +47,9 @@ function renderHTMLPage(fileName, buildDir, baseURL, urlRegistry) {
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
     let source = unbreakMultilineTemplateTags(fs.readFileSync(fileName, 'utf8'))
-    source = insertContent(replacePlaceholders(replacePartials(source, { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }), { url, imagesBase, baseURL, stylesheetsBase, scriptsBase }))
+    source = insertContent(replacePlaceholders(replacePartials(source,
+        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage }),
+        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage }))
 
     if (!isHomeTemplate(fileName)) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))

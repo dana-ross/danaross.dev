@@ -4,5 +4,6 @@ module.exports = {
     stylesheetsBase: '/stylesheets/',
     scriptsBase: '/scripts/',
     imagesBase: '/images/',
-    BLOG_DIR: './blog'
+    BLOG_DIR: './blog',
+    ogimage: 'https://danaross.dev/images/dana_sweater.jpg',
 }
