@@ -8,7 +8,7 @@ The title *big cheese* means something different in an organization ostensibly h
 
 > Cockerell, who oversaw 40,000 cast members, spent time cleaning tables, cooking french fries, organizing strollers, and renting out wheelchairs.
 > "It's very enlightening," he said. "You find out you don’t know anything. You think you know everything, but you don't. As an executive, you’re trying to make the best decisions. If you don’t know what’s going on, you can't make them."
-> https://www.fwbusiness.com/news/latest/businessweekly/article_0477c86e-992a-5448-8e55-e608357c031a.html
+> <cite>[Of mouse and men: Disney veteran talks leadership](https://www.fwbusiness.com/news/latest/businessweekly/article_0477c86e-992a-5448-8e55-e608357c031a.html)</cite>
 
 ## It builds empathy for your team and their work.
 
