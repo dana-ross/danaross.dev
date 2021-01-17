@@ -3,7 +3,7 @@ const path = require('path')
 const beautify = require('beautify')
 const chalk = require('chalk')
 const marked = require('marked')
-const { replacePlaceholders, replacePartials, unbreakMultilineTemplateTags, handleFSError } = require('./utils')
+const { replacePlaceholders, replacePartials, unbreakMultilineTemplateTags, handleFSError, typeset } = require('./utils')
 const { scriptsBase, stylesheetsBase, imagesBase } = require('./paths')
 
 
@@ -70,10 +70,10 @@ function insertContent(source, baseURL) {
 
     let contentTag = null;
     while (contentTag = source.match(CONTENT_TAG_REGEX)) {
-        const replacement =  marked(
+        const replacement =  marked(typeset(
             fs.readFileSync('./content/' + contentTag.groups.name + '.md', 'utf8'),
             { baseURL }
-        )
+        ))
         source = source.replace(CONTENT_TAG_REGEX, replacement)
     }
 

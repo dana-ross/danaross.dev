@@ -10,6 +10,7 @@ const {
   sortMap,
   titleToSlug,
   handleFSError,
+  typeset,
 } = require("./utils");
 const {
   scriptsBase,
@@ -53,12 +54,12 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
           const postSummary = fs.existsSync(
             path.resolve(contentPath, "summary.txt")
           )
-            ? marked(
+            ? marked(typeset(
                 fs.readFileSync(
                   path.resolve(contentPath, "summary.txt"),
                   "utf8"
                 )
-              )
+              ))
             : "";
 
           urlRegistry.set(path.resolve(contentPath, potentialBlogPost), postURL)
@@ -173,10 +174,10 @@ function insertContent(source, contentPath, potentialBlogPost, baseURL) {
   const CONTENT_TAG_REGEX = /<drr-postcontent[^>]+>(<\/drr-content>)?/;
 
   if ((contentTag = source.match(CONTENT_TAG_REGEX))) {
-    const replacement = marked(
+    const replacement = marked(typeset(
       fs.readFileSync(path.resolve(contentPath, potentialBlogPost), "utf8"),
       { baseURL }
-    );
+    ));
     source = source.replace(CONTENT_TAG_REGEX, replacement);
   }
 

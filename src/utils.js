@@ -204,6 +204,54 @@ function handleFSError(err) {
   }
 }
 
+/**
+ * Change straight quotes to curly and double hyphens to em-dashes.
+ * @see https://gist.github.com/drdrang/705071 which uses regexes
+ * @param {String} a Text to typeset
+ * @return Text with Unicode characters substituted for quotes & em-dashes 
+ */
+function typeset(a) {
+  let inTag = false;
+  let index = 0;
+  const whitespace = [' ', "\t", "\n", "\r"];
+
+  while (index < a.length) {
+    if (inTag) {
+      if (a[index] === '>') {
+        inTag = false;
+      }
+    }
+    else {
+      if (a[index] === '<') {
+        inTag = true;
+      }
+      else if (a[index] === '-' && a[index + 1] === '-') {
+        a = `${a.slice(0, index)}—${a.slice(index + 2)}`;
+        index += 1;
+      }
+      else if (a[index] === '"') {
+        if (whitespace.includes(a[index + 1])) {
+          // closing quote
+          a = `${a.slice(0, index)}”${a.slice(index + 1)}`
+        }
+        else {
+          // opening quote
+          a = `${a.slice(0, index)}“${a.slice(index + 1)}`
+        }
+      }
+      else if (a[index] === "'") {
+        a = `${a.slice(0, index)}’${a.slice(index + 1)}`
+      }
+    }
+
+    index += 1;
+  }
+
+  return a
+
+};
+
+
 module.exports = {
   replacePlaceholders,
   replacePartials,
@@ -215,4 +263,5 @@ module.exports = {
   processMarkdown,
   titleToSlug,
   handleFSError,
+  typeset
 };
