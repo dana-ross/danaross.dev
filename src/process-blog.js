@@ -54,20 +54,18 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
           const postSummary = fs.existsSync(
             path.resolve(contentPath, "summary.txt")
           )
-            ? marked(typeset(
-                fs.readFileSync(
-                  path.resolve(contentPath, "summary.txt"),
-                  "utf8"
-                )
-              ))
+            ? fs.readFileSync(
+                path.resolve(contentPath, "summary.txt"),
+                "utf8"
+              )
             : "";
 
-          urlRegistry.set(path.resolve(contentPath, potentialBlogPost), postURL)
+            urlRegistry.set(path.resolve(contentPath, potentialBlogPost), postURL)
           blogIndexData.set(Date.parse(path.basename(contentPath)), {
             postTitle,
             postURL,
             postTimestamp,
-            postSummary,
+            postSummary: marked(typeset(postSummary)),
           });
 
           processBlogPost(
@@ -79,7 +77,8 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
             postTitle,
             postTimestamp,
             postSlug,
-            postURL
+            postURL,
+            postSummary
           );
         }
       });
@@ -135,7 +134,8 @@ function processBlogPost(
   postTitle,
   postTimestamp,
   postSlug,
-  postURL
+  postURL,
+  postSummary
 ) {
   console.log(
     `📄️  ${chalk.white("Processing")} ${chalk.blue(
@@ -153,6 +153,7 @@ function processBlogPost(
     imagesBase,
     postTitle,
     postTimestamp,
+    postSummary,
   };
 
   const html = replacePartials(
