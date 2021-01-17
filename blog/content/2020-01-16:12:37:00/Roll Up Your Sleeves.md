@@ -16,7 +16,7 @@ By engaging in the kind of work they use, using the same tools, and following th
 
 * Do the tools we provide make them as efficient as they can be?
 * Do our processes get in the way?
-* Is the work to challenging or not challenging enough?
+* Is the work too challenging or not challenging enough?
 * Would I feel engaged with my work if I did this task every day too?
 * Is the work environment one I would feel proud of?
 
