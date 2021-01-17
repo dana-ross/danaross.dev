@@ -24,7 +24,7 @@ It's one thing to observe their work or ask for opinions, it's another to live t
 
 ## It builds trust.
 
-In my last engineering management role, I made a point of taking time every couple Fridays to write code. Sometimes I would take on an SEO related task. Usually I'd be adding unit tests to ensure our systems worked the way they intended.
+In my last engineering management role, I made a point of taking time every couple Fridays to write code. Sometimes I would take on an SEO related task. Usually I'd be adding unit tests to ensure our systems worked the way we intended.
 
 I used the same tools as my team and their peers. I used the same processes. I presented my work for the same scrutiny they did. I crossed my fingers for luck as we rolled my code out to the web site just like they did.
 
