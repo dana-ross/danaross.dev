@@ -41,7 +41,7 @@ I run 5k, 10k, and half marathon races, although not as much or as fast as I did
     kid was born.
 
 ## Contacting Me
-You'll get my personal cell phone number the day you join my team. I don’t usually answer my phone, but if it’s urgent you can leave a voicemail and I’ll get back to you.
+You'll get my personal cell phone number the day you join my team. I don’t usually answer my phone, but if it’s urgent you can leave a voicemail and I’ll get back to you. I want you to feel comfortable coming to me at any time if there's something weighing heavily on your mind.
 
 I check my work email & personal email constantly on my phone, even outside of work hours. That doesn’t mean I expect you to do that too, or that I will get back to you before the start of the next day. It just means I have bad FOMO.
 
@@ -75,7 +75,7 @@ There’s a wide variety of people out there, and we do ourselves a disservice i
 </blockquote>
 
 ### Respect
-We usually don’t get to pick our co-workers. We all need to find common ground, work together and not get in the way of anybody else getting their work done. That means personal respect, respecting boundaries, and acting like grown-up professionals here to do a job.
+We usually don’t get to pick our co-workers. We all need to find common ground, work together and not get in the way of anybody else getting their work done. That means personal respect, respecting boundaries, and acting like professionals.
 
 ### Growth
 You ever hear that joke that goes?:
@@ -101,7 +101,7 @@ But, really, this meeting is supposed to be about you. So go ahead and drop a co
 * How our team can work together more effectively.
 
 ## Feedback
-I am not a *servant leader*. I’m here to encourage you, to challenge you, and to eliminate the barriers that keep you from making amazing things happen here. But while I may be friendly, I’m not your friend. And while I’m at all the team’s meetings, from standups to gaming time, I’m not a member of the team. I’m your manager, and I’m not doing you a favor if I pretend otherwise, especially if the only reason is to make myself more comfortable with the power disparity between us.
+I'm not a *servant leader*. I’m here to encourage you, to challenge you, and to eliminate the barriers that keep you from making amazing things happen here. But while I may be friendly, I’m not your friend. And while I’m at all the team’s meetings, from standups to gaming time, I’m not a member of the team. I’m your manager, and I’m not doing you a favor if I pretend otherwise, especially if the only reason is to make myself more comfortable with the power disparity between us.
 
 > Here’s the thing, though. Servants don’t fire the people they serve, and you do. Servants don’t set salaries for the people they serve, and you do. Servants don’t approve vacations, assign work, or shut down the toxic behaviours of the people they serve.  
 > <cite>[We Need to Talk About Servant Leadership](https://mfbt.ca/we-need-to-talk-about-servant-leadership-a719c4c05434)</cite>
