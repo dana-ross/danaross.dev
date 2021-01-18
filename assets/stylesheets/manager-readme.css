@@ -103,7 +103,7 @@ h1 {
 }
 
 img[src$=gif] {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 img[src$=gif], video {
