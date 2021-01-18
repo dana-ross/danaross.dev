@@ -27,11 +27,7 @@ My favorite color is orange. At least for this week.
 
 I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a little too close to home sometimes.
 
-<video autoplay loop onloadedmetadata="this.muted=true" muted playsinline role="presentation">
-    <source src="../images/being-a-boss.mp4" type="video/mp4">
-    <img src="../images/being-a-boss.gif">
-    <!-- Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'. -->
-</video>
+<img src="../images/being-a-boss.gif" alt="Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'." />
 
 Music? Pretty much anything but mostly 90s industrial, 90s-2000s EBM, Electro-swing, and Synthwave.
 
