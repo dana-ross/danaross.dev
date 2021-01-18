@@ -27,7 +27,7 @@ My favorite color is orange. At least for this week.
 
 I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a little too close to home sometimes.
 
-<video autoplay loop muted playsinline role="presentation">
+<video autoplay loop muted oncanplay="this.muted=true" playsinline role="presentation">
     <source src="../images/being-a-boss.mp4" type="video/mp4">
     <img src="../images/being-a-boss.gif">
     <!-- Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'. -->
