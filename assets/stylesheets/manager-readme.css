@@ -102,6 +102,10 @@ h1 {
     display: block;
 }
 
+img[src$=gif] {
+    margin-bottom: 1rem;
+}
+
 img[src$=gif], video {
     max-width: 80%;
 }
