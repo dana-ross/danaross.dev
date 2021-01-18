@@ -12,7 +12,7 @@ The title *big cheese* means something different in an organization ostensibly h
 
 ## It builds empathy for your team and their work.
 
-By engaging in the kind of work they use, using the same tools, and following the same processes they do, you'll get to see what their daily work experience is like. Ask yourself: "is this really what I want for people who report to me?"
+By engaging in the kind of work they perform, using the same tools, and following the same processes they do, you'll get to see what their daily work experience is like. Ask yourself: "is this really what I want for people who report to me?"
 
 * Do the tools we provide make them as efficient as they can be?
 * Do our processes get in the way?
