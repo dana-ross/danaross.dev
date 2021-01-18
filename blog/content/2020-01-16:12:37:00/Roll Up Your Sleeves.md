@@ -29,8 +29,8 @@ In my last engineering management role, I made a point of taking time every coup
 I used the same tools as my team and their peers. I used the same processes. I presented my work for the same scrutiny they did. I crossed my fingers for luck as we rolled my code out to the web site just like they did.
 
 People told me they had never seen a manager do that before. I hope it sent some clear messages:
-* When I advise them on technical issues, I can be trusted to understand the issues they face.
-* I'm willing to invest time in make sure first-hand that their work processes and tools are the best we can provide.
+* When I advise them on technical things, I can be trusted to understand the issues they face.
+* I'm willing to invest time to make sure first-hand that their work processes and tools are the best we can provide.
 * Lastly, my role is different from theirs, but I'm not better than them.
 
 When you establish trust with your team, your feedback is more meaningful and changes are more welcome because they know they aren't arbitrary.
