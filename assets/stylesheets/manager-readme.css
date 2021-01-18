@@ -102,10 +102,6 @@ h1 {
     display: block;
 }
 
-img[src$=gif] {
-    padding-bottom: 1rem;
-}
-
 img[src$=gif], video {
     max-width: 80%;
 }
