@@ -136,7 +136,7 @@ I’m a huge fan of [Lee Cockerell](https://www.leecockerell.com/), former Execu
 
 He was at the helm of the Disney World resort through two hurricanes and the terrorist attack of 9/11.
 
-He’s now a public speaker and author on leadership. His books are invaluable to me, and I encourage you to seek them out whether you’re in a management role or not, and to bring out the leader within you.
+He’s now a public speaker and author on leadership. His books are invaluable to me, and I encourage you to seek them out whether you’re in a management role or not, and to nurture the leader within you.
 
 <ul class=books>
     <li><a href="https://www.amazon.com/Creating-Magic-Common-Leadership-Strategies/dp/0385523866/"
