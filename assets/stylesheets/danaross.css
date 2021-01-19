@@ -141,7 +141,7 @@ a[href="/"], a[href="/"]:hover {
 
 @media screen and (max-width: 500px) {
     h1 small {
-        font-size: 1.8rem;
+        font-size: 1.65rem;
     }
     #professional {
         display: grid;
