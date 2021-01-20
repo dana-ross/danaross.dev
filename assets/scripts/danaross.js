@@ -1,7 +1,9 @@
+// Swap in special characters for the Ballpoint Signature font
 document.fonts.ready.then(() => {
         if (document.fonts.check('1em "Ballpoint Signature"')) {
-                const heading = document.querySelector('span[data-font-swap-text]')
-                heading.innerText = heading.dataset.fontSwapText
+                document.querySelectorAll('[data-font-swap-text]').forEach((target) => {
+                        target.innerText = target.dataset.fontSwapText
+                })
         }
 });
 
