@@ -65,7 +65,7 @@ h3 small {
     display: block;
 }
 
-main span[data-font-swap-text] {
+#bio span[data-font-swap-text] {
     font-family: "Ballpoint Signature";
     font-size: 1.5rem;
 }
