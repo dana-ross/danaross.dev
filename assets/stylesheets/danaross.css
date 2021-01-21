@@ -120,6 +120,10 @@ a[href="/"], a[href="/"]:hover {
     text-decoration: none;
 }
 
+blockquote {
+    font-style: italic;
+}
+
 blockquote:not(.transcript):first-letter {
     float: left;
     font-size: 2.5rem;

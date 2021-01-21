@@ -106,10 +106,6 @@ img[src$=gif], video {
     max-width: 80%;
 }
 
-blockquote {
-    font-style: italic;
-}
-
 cite::before {
     content: "\2014 ";
 }
