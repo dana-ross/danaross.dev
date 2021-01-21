@@ -120,7 +120,7 @@ a[href="/"], a[href="/"]:hover {
     text-decoration: none;
 }
 
-blockquote:first-letter {
+blockquote:first-letter:not(.transcript) {
     float: left;
     font-size: 2.5rem;
     line-height: 1;
