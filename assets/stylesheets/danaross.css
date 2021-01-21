@@ -27,7 +27,7 @@ ul {
 li:before {
     content: '★';
     display: inline-block;
-    margin-right: .5rem;
+    margin-right: .3rem;
     color: rgba(255,0,221,1);
     font-size: .6rem;
     transform: rotate(60deg);
