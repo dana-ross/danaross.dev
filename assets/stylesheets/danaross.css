@@ -20,6 +20,19 @@ main p {
     line-height: 1.6;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li:before {
+    content: '★';
+    display: inline-block;
+    margin-right: .5rem;
+    color: rgba(255,0,221,1);
+    font-size: .6rem;
+    transform: rotate(60deg);
+}
+
 @media screen and (max-height: 600px) {
     main {
         margin: 0 auto;
