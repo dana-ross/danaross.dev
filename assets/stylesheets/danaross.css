@@ -20,11 +20,11 @@ main p {
     line-height: 1.6;
 }
 
-ul {
+ul:not(.professional) {
     list-style-type: none;
 }
 
-li:before {
+ul:not(.professional) li:before {
     content: '★';
     display: inline-block;
     margin-right: .3rem;
