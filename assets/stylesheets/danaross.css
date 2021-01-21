@@ -83,6 +83,14 @@ h3 small {
     font-size: 1.5rem;
 }
 
+#bio {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-column-gap: 1rem;
+    border-top: 1px solid #aaa;
+    padding-top: 1rem;
+}
+
 #social {
     list-style: none;
     display: table;
@@ -181,6 +189,20 @@ blockquote:not(.transcript):first-letter {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    #bio {
+        grid-template-rows: 150px 1fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 1rem;
+    }
+
+    #bio img {
+        margin: 0 auto;
+    }
+
+    #bio p {
+        margin-top: 0;
     }
 }
 
