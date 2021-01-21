@@ -91,6 +91,11 @@ h3 small {
     padding-top: 1rem;
 }
 
+#bio img {
+    width: 150px;
+    height: 150px;
+}
+
 #social {
     list-style: none;
     display: table;
@@ -192,13 +197,15 @@ blockquote:not(.transcript):first-letter {
     }
 
     #bio {
-        grid-template-rows: 150px 1fr;
+        grid-template-rows: 200px 1fr;
         grid-template-columns: 1fr;
         grid-row-gap: 1rem;
     }
 
     #bio img {
         margin: 0 auto;
+        height: 200px;
+        width: 200px;
     }
 
     #bio p {
