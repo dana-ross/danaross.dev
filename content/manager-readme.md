@@ -75,9 +75,11 @@ We usually don’t get to pick our co-workers. We all need to find common ground
 
 ### Growth
 You ever hear that joke that goes?:
-> Manager: We need to increase our training budget.  
-> CEO: What if we spend all this money on our people and they leave?  
-> Manager: What if we don’t invest in them and they STAY?
+<blockquote class="transcript">
+Manager: We need to increase our training budget.<br />
+CEO: What if we spend all this money on our people and they leave?<br />
+Manager: What if we don’t invest in them and they STAY?<br />
+</blockquote>
 
 As your manager, I have a personal investment in your success. It helps you grow as an individual. It helps our team deliver new and innovative solutions. It helps the company as a whole to meet and exceed our goals. Your success is my success, both in real terms of job security and in the pride of watching you grow.
 
