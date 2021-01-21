@@ -12,16 +12,6 @@ h3 {
     color: #AD5949;
 }
 
-main ul {
-    list-style: none;
-}
-
-main ul li:before {
-    content: "★";
-    padding-right: .5rem;
-    left: 0;
-}
-
 h1 {
     margin-bottom: 1rem;
 }
