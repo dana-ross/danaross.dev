@@ -96,6 +96,10 @@ h3 small {
     height: 150px;
 }
 
+#bio p {
+    margin-top: 0;
+}
+
 #social {
     list-style: none;
     display: table;
@@ -206,10 +210,6 @@ blockquote:not(.transcript):first-letter {
         margin: 0 auto;
         height: 200px;
         width: 200px;
-    }
-
-    #bio p {
-        margin-top: 0;
     }
 }
 
