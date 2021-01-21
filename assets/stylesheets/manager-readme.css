@@ -106,6 +106,7 @@ cite::before {
     grid-template-columns: repeat(auto-fit, minmax(287px, .5fr));
     grid-gap: 1rem;
     margin-top: 2rem;
+    list-style-type: none;
 }
 
 .books li:before {
