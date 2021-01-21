@@ -83,6 +83,12 @@ h3 small {
     font-size: 1.5rem;
 }
 
+#bio {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-column-gap: 1rem;
+}
+
 #social {
     list-style: none;
     display: table;
