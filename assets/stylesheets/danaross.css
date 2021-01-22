@@ -94,6 +94,7 @@ h3 small {
 #bio img {
     width: 150px;
     height: 150px;
+    border: 1px solid #aaa;
 }
 
 #bio p {
