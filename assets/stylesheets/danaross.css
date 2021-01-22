@@ -166,6 +166,19 @@ blockquote:not(.transcript):first-letter {
     margin-top: .5rem;
 }
 
+#back a {
+    text-decoration: none;
+}
+
+#back svg {
+    top: .4rem;
+    height: 1.4rem;
+    width: auto;
+    display: inline-block;
+    position: relative;
+    fill: #0000ff;
+}
+
 @media screen and (max-width: 800px) {
     body {
         margin: 0;
