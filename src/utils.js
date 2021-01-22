@@ -251,6 +251,10 @@ function typeset(a) {
 
 };
 
+const getBuildTimestamp = (function() {
+  const buildTimestamp = Date.now();
+  return () => buildTimestamp;
+}())
 
 module.exports = {
   replacePlaceholders,
@@ -263,5 +267,6 @@ module.exports = {
   processMarkdown,
   titleToSlug,
   handleFSError,
-  typeset
+  typeset,
+  getBuildTimestamp
 };
