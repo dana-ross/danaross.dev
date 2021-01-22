@@ -20,6 +20,7 @@ const {
   BLOG_DIR,
   ogimage,
 } = require("./paths");
+const { processImage } = require("./process-images");
 
 /**
  * Asynchronously reads and processes templates to create static pages.
@@ -173,6 +174,17 @@ function processBlogPost(
     html,
     handleFSError
   );
+
+  const dirEntries = fs.readdirSync(contentPath);
+  dirEntries.forEach((dirEntry) => {
+      if(['.jpg', '.png', '.gif'].includes(path.extname(dirEntry))) {
+        processImage(
+          path.resolve(contentPath, dirEntry),
+          path.resolve(buildDir, "blog", postSlug, dirEntry)
+        );
+      }
+  });
+
 }
 
 function insertContent(source, contentPath, potentialBlogPost, baseURL) {
