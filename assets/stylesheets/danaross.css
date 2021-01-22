@@ -150,7 +150,7 @@ h3 small {
 }
 a {
     color: #1081B1;
-    text-decoration: underline solid blue;
+    text-decoration: underline solid #1081B1;
 }
 
 a[href="/"], a[href="/"]:hover {
