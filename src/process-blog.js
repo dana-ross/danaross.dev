@@ -11,7 +11,8 @@ const {
   titleToSlug,
   handleFSError,
   typeset,
-  inlineSVGs
+  inlineSVGs,
+  getBuildTimestamp
 } = require("./utils");
 const {
   scriptsBase,
@@ -158,7 +159,8 @@ function processBlogPost(
     postTitle,
     postTimestamp,
     postSummary,
-    ogimage
+    ogimage,
+    buildTimestamp: getBuildTimestamp()
   };
 
   const html = inlineSVGs(replacePartials(
