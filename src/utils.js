@@ -61,14 +61,20 @@ function replacePartials(source, variables) {
  * Inline SVG <img>s in a web page template.
  *
  * @param {String} source the web page template
+ * @parmam {Function} logFunction function that takes a string with a filename and logs it
  * @returns String
  */
-function inlineSVGs(source) {
+function inlineSVGs(source, logFunction = undefined) {
   const SVG_TAG_REGEX = /<img\s*src="(?<src>[^"]*.svg)"\s*(?<attributes>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*[^\/>]*\/?>/;
 
   let svgTag = null;
   while ((svgTag = source.match(SVG_TAG_REGEX))) {
     const attributes = parseAttributeString(svgTag.groups.attributes || "");
+
+    if(logFunction && typeof logFunction === "function") {
+      logFunction(svgTag.groups.src);
+    }
+
     let replacement = fs.readFileSync(
       "./images/" + path.basename(svgTag.groups.src),
       "utf8"

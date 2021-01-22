@@ -49,7 +49,8 @@ function renderHTMLPage(fileName, buildDir, baseURL, urlRegistry) {
     let source = unbreakMultilineTemplateTags(fs.readFileSync(fileName, 'utf8'))
     source = inlineSVGs(insertContent(replacePlaceholders(replacePartials(source,
         { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() }),
-        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() })))
+        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() })),
+        (svgFilename) => { console.log(`✏️   ${chalk.white('Inlining')} ${chalk.blue(svgFilename)}`) })
 
     if (!isHomeTemplate(fileName)) {
         fs.mkdirSync(buildDir + '/' + path.basename(fileName, '.html'))
