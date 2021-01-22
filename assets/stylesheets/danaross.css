@@ -117,14 +117,27 @@ h3 small {
     padding: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
 }
+
 #professional li {
     display: block;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255,0,221,1);
+    padding: .25rem .5rem;
 }
+
+#professional a {
+    color: white;
+    text-decoration: none;
+    font-family: "Ballast v0.1 Condensed Bold",serif;
+    font-size: 1.4rem;
+}
+
 #social li {
     width: 10%;
 }
@@ -205,6 +218,7 @@ blockquote:not(.transcript):first-letter {
         font-size: 1.65rem;
     }
     #professional {
+        margin-top: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
