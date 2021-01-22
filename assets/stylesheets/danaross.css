@@ -165,7 +165,7 @@ blockquote {
     font-style: italic;
 }
 
-blockquote:not(.transcript):first-letter {
+blockquote:not(.transcript):first-letter, blockquote:not(.transcript) > p:first-child::first-letter {
     float: left;
     font-size: 2.5rem;
     line-height: 1;
