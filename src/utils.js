@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const parseAttributeString = require("parse-attributes");
 const marked = require("marked");
 const { decode } = require("html-entities");
@@ -55,6 +56,36 @@ function replacePartials(source, variables) {
 
   return source;
 }
+
+/**
+ * Inline SVG <img>s in a web page template.
+ *
+ * @param {String} source the web page template
+ * @returns String
+ */
+function inlineSVGs(source) {
+  const SVG_TAG_REGEX = /<img\s*src="(?<src>[^"]*.svg)"\s*(?<attributes>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*[^\/>]*\/?>/;
+
+  let svgTag = null;
+  while ((svgTag = source.match(SVG_TAG_REGEX))) {
+    const attributes = parseAttributeString(svgTag.groups.attributes || "");
+    let replacement = fs.readFileSync(
+      "./images/" + path.basename(svgTag.groups.src),
+      "utf8"
+    );
+
+    replacement = replacement.replace('>', ` role="img" aria-label="${attributes.alt || ""}">`);
+    Object.keys(attributes).forEach((key) => {
+      if(key !== "alt") {
+        replacement = replacement.replace('>', ` ${key}="${attributes[key]}">`)
+      }
+    });
+    source = source.replace(SVG_TAG_REGEX, replacement);
+  }
+
+  return source;
+}
+
 
 /**
  * Replace partials in a gopher page template.
@@ -268,5 +299,6 @@ module.exports = {
   titleToSlug,
   handleFSError,
   typeset,
-  getBuildTimestamp
+  getBuildTimestamp,
+  inlineSVGs
 };

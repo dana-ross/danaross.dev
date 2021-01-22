@@ -141,11 +141,12 @@ h3 small {
 #social li {
     width: 10%;
 }
-#social li img {
+#social li img, #social li svg {
     width: 50%;
+    height: auto;
     filter: invert(60%) ;
 }
-#social li a:hover img {
+#social li a:hover img, #social li a:hover svgs {
     filter: none;
 }
 a {
