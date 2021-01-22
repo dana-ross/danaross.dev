@@ -90,12 +90,13 @@ async function processGlobalImages(buildDir) {
     files.forEach((file) => {
       const sourceFile = './images/' + file
       const targetFile = buildDir + '/images/' + file
-      processImage(file, sourceFile, targetFile);
+      processImage(sourceFile, targetFile);
     })
   })
 }
 
-function processImage(fileName, sourceFile, targetFile) {
+function processImage(sourceFile, targetFile) {
+  const fileName = path.basename(sourceFile);
   if (path.extname(fileName) == '.svg') {
     console.log(`🖼️  ${chalk.white('Optimizing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFile)}`)
     const originalSVG = fs.readFileSync(sourceFile)
