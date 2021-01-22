@@ -149,7 +149,7 @@ h3 small {
     filter: none;
 }
 a {
-    color: #0000ff;
+    color: #1081B1;
     text-decoration: underline solid blue;
 }
 
@@ -185,7 +185,7 @@ blockquote:not(.transcript):first-letter {
     width: auto;
     display: inline-block;
     position: relative;
-    fill: #0000ff;
+    fill: #1081B1;
 }
 
 @media screen and (max-width: 800px) {
