@@ -11,6 +11,7 @@ const {
   titleToSlug,
   handleFSError,
   typeset,
+  inlineSVGs
 } = require("./utils");
 const {
   scriptsBase,
@@ -99,14 +100,14 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
 
   fs.writeFile(
     path.resolve(buildDir, "blog", "index.html"),
-    replacePartials(insertBlogIndex(blogIndexTemplate, blogIndexData), {
+    inlineSVGs(replacePartials(insertBlogIndex(blogIndexTemplate, blogIndexData), {
       baseURL,
       imagesBase,
       stylesheetsBase,
       scriptsBase,
       url: baseURL + "blog",
       ogimage
-    }),
+    })),
     handleFSError
   );
 };
@@ -159,13 +160,13 @@ function processBlogPost(
     ogimage
   };
 
-  const html = replacePartials(
+  const html = inlineSVGs(replacePartials(
     replacePlaceholders(
       insertContent(blogPostTemplate, contentPath, potentialBlogPost, baseURL),
       variables
     ),
     variables
-  );
+  ));
 
   fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "index.html"),
