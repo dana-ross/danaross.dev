@@ -1,5 +1,5 @@
-const fs = require('fs')
-const processImages = require('./process-images')
+const fs = require('fs');
+const { processGlobalImages } = require('./process-images')
 const processHTMLTemplates = require('./process-html-templates')
 const processScripts = require('./process-scripts')
 const processStylesheets = require('./process-stylesheets')
@@ -25,7 +25,7 @@ fs.mkdirSync(BUILD_WWW_DIR, { recursive: true })
 fs.mkdirSync(BUILD_GOPHER_DIR, { recursive: true})
 
 Promise.all([
-    processImages(BUILD_WWW_DIR),
+    processGlobalImages(BUILD_WWW_DIR),
     processHTMLTemplates(BUILD_WWW_DIR, PAGES_WWW_DIR, BASE_URL, urlRegistry),
     processScripts(BUILD_WWW_DIR, SCRIPTS_DIR),
     processStylesheets(BUILD_WWW_DIR, STYLES_DIR),
