@@ -1,6 +1,6 @@
-I’ve been passionate about technology for as long as I can remember. Whether it was tinkering with Apple IIs and Commodore 64s as a child or teaching myself to code at an early age, I’ve been fascinated by technology’s ability to bridge gaps and connect people. Today, I’m still driven by the innovation of technology, and I’ve dedicated my professional career to leading diverse software engineering teams that combine technical excellence with a focus on building highly usable, accessible products that serve their end users.
-
 > "…A deep thinker, a confident coder, and a kind soul. If you give her a problem, no matter how complex, she will generate not just one insightful solution but three—and then cogently explain the pros and cons of each. Once a solution is chosen, her engineering skill ensures it will be delivered as designed or even better."
+
+I’ve been passionate about technology for as long as I can remember. Whether it was tinkering with Apple IIs and Commodore 64s as a child or teaching myself to code at an early age, I’ve been fascinated by technology’s ability to bridge gaps and connect people. Today, I’m still driven by the innovation of technology, and I’ve dedicated my professional career to leading diverse software engineering teams that combine technical excellence with a focus on building highly usable, accessible products that serve their end users.
 
 I champion hiring processes that attract the widest range of qualified candidates, minimize the impact of unconscious bias, and select for the traits that over 20 years of experience within the industry have shown me are the keys to successful collaboration on everyday technical challenges.
 
