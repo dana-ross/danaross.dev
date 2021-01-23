@@ -29,7 +29,7 @@ This is what works for *me*, and you'll find what works best for you through tri
 ## Update it throughout the day
 You carry your phone almost everywhere at work. Your work journal should come along too! Use it to record meetings you attended or important hallway conversations. Did you stop to water the plants? Did you notice a teammate who looked stressed and check in with them? Write those things down too!
 
-If you take a few seconds to jot something down now, you won't need to spend a few minutes remembering everything at the end of the work day.
+If you take a few seconds to jot something down now, you won't need to spend a few minutes remembering it at the end of the work day.
 
 The other day, I sat down to eat lunch and I felt terrible, like I hadn't accomplished a single thing all day. I opened my work journal and realized I'd filled up half a page with training videos and new-hire paperwork already! It really gives you a complete picture of everything you squeeze into a work day.
 
