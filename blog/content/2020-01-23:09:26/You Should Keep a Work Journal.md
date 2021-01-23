@@ -31,7 +31,7 @@ You carry your phone almost everywhere at work. Your work journal should come al
 
 If you take a few seconds to jot something down now, you won't need to spend a few minutes remembering it at the end of the work day.
 
-The other day, I sat down to eat lunch and I felt terrible, like I hadn't accomplished a single thing all day. I opened my work journal and realized I'd filled up half a page with training videos and new-hire paperwork already! It really gives you a complete picture of everything you squeeze into a work day.
+The other day, I sat down to eat lunch and I felt terrible, like I hadn't accomplished a single thing all day. I opened my work journal and realized I'd filled up half a page with training videos and new-hire paperwork already! It really gives you a complete picture of everything you squeeze into a day.
 
 You'll also be able to refer back to it when questions come up. Who had that great idea that saved your bacon today? You chatted about it with Fran while waiting for coffee on the 12th. Was John in the big meeting yesterday? No, John was at his son's violin recital.
 
