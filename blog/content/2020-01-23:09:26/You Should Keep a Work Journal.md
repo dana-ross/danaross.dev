@@ -1,6 +1,8 @@
 At the end of the work day, how do you know what you've accomplished? Who you spoke to? What decisions were made? I've found that keeping a work journal helps me keep perspective while also serving as a vital record of the important conversations I have every day.
 
 ## Find a format that works for you
+![A black, hardcover journal on a pink towel. A black ribbon comes out from between the pages and trails off to the bottom left.](work-journal-cover.jpg)
+
 It's up to you what your journal will look like. I like a small, bound diary type book with a hard cover. That way I have something that feels special and will survive bouncing around in my bag all day. But, I've met people who used a paperback notebook, a Day-Timer, or even the Windows notepad app. The form your work journal takes isn't as important as:
 
 * updating it consistently
@@ -8,11 +10,12 @@ It's up to you what your journal will look like. I like a small, bound diary typ
 * recording pertinent details like who you made decisions with
 * extracting a list of *to-dos* or *action items* for follow-up
 
-Let's take a look at my journal entry from the other day:
+### Let's take a look at my work journal from the other day
+![A journal page filled with notes (names and tool names redacted). A section in purple is labelled "Action items".](work-journal-sample.jpg)
 
-I'm fresh on the job, so you can see my day mostly centered around getting settled in and opening a million Service Desk tickets.
+I'm fresh on the job, so my day mostly centered around getting settled in and opening a million Service Desk tickets. I recorded each of those tickets so I could see what I've already asked for access to.
 
-I've highlighted the date because a day's notes can span a couple pages and I may need to find a certain day quickly.
+I run a highlighter over the date because a day's notes can span a couple pages and I may need to find a certain day quickly.
 
 I'm using two colors of pen to draw attention to margin notes, action items, and other special notes. It also makes writing in it more fun, so I'm more likely to do it every day.
 
