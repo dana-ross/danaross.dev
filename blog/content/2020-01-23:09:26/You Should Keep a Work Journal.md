@@ -12,7 +12,7 @@ It's up to you what your journal will look like. I like a small, hardcover diary
 
 I'm fresh in a new role, so Monday was about getting settled in and opening a million Service Desk tickets. I recorded each of those tickets so I could see what I've already asked for access to and which ones to follow up on.
 
-I track my process on [Cockerell Academy](https://www.cockerellacademy.com/) courses so can see if it was worth the money. I also track the training videos needed when joining a new company, webinars I attend, and conference talks I pull up on YouTube.
+I track my progress in online classes so can see if they were worth my money. I also track the training videos needed when joining a new company, webinars I attend, and conference talks I pull up on YouTube.
 
 I record detailed notes from 1:1's with my Director, but I only mention 1:1s with my direct reports. Notes from those meetings may include personal details or performance concerns, so I keep them in a secure place.
 
