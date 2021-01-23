@@ -3,7 +3,7 @@ At the end of the work day, how do you know what you've accomplished? Who you sp
 ## Find a format that works for you
 ![A black, hardcover journal on a pink towel. A black ribbon comes out from between the pages and trails off to the bottom left.](work-journal-cover.jpg)
 
-It's up to you what your journal will look like. I like a small, bound diary type book with a hard cover. That way I have something that feels special and will survive bouncing around in my bag all day. But, I've met people who used a paperback notebook, a Day-Timer, or even the Windows notepad app. The form your work journal takes isn't as important as:
+It's up to you what your journal will look like. I like a small, bound diary type book with a hard cover. That way I have something that feels special and will survive bouncing around my bag. But, I've met people who used a paperback notebook, a Day-Timer, or even the Windows notepad app. The form your work journal takes isn't as important as:
 
 * updating it consistently
 * writing neatly so you can refer to it later
@@ -36,7 +36,7 @@ My wife writes notes to her future self:
 
 You should take time to set your future self up for success too!
 
-Block off 15-30 minutes at the end of every work day to reviewe your notes and see what warrants a follow-up. I like to write these *action items* in my work journal so there's a clear relationship between the to-do and what prompted it. Be sure to put these reminders in your paper planner or to-do app as well!
+Block off 15-30 minutes at the end of every work day to review your notes and see what warrants a follow-up. I like to write these *action items* in my work journal so there's a clear relationship between the to-do and what prompted it. But be sure to put these reminders in your paper planner or to-do app as well!
 
 Action items can include things like:
 * following up on something you talked about
@@ -46,3 +46,6 @@ Action items can include things like:
 
 This is an important moment for reflection and planning. Approach it with the same seriousness as any other part of your work. Look at it as an investment in tomorrow's success.
 
+## Give it a try!
+
+You don't need an expensive notebook or fancy app to start keeping your own work journal. Start simple with a single sheet of paper until you figure out what helps you stay on-track and inspired to update it regularly. I hope you find a journal that works for you!
