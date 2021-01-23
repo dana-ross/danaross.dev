@@ -10,10 +10,7 @@ It's up to you what your journal will look like. I like a small, bound diary typ
 * recording pertinent details like who you made decisions with
 * extracting a list of *to-dos* or *action items* for follow-up
 
-### Let's take a look at my work journal from the other day
-![A journal page filled with notes (names and tool names redacted). A section in purple is labelled "Action items".](work-journal-sample.jpg)
-
-I'm fresh on the job, so my day mostly centered around getting settled in and opening a million Service Desk tickets. I recorded each of those tickets so I could see what I've already asked for access to.
+I'm fresh on the job, so my day was about getting settled in and opening a million Service Desk tickets. I recorded each of those tickets so I could see what I've already asked for access to.
 
 I run a highlighter over the date because a day's notes can span a couple pages and I may need to find a certain day quickly.
 
