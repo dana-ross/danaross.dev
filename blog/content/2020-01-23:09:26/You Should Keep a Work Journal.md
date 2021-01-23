@@ -16,7 +16,7 @@ I track my progress in online classes so can see if they were worth my money. I 
 
 I record detailed notes from 1:1's with my Director, but I only mention 1:1s with my direct reports. Notes from those meetings may include personal details or performance concerns, so I keep them in a secure place.
 
-I'm using two colors of ink to draw attention to margin notes, action items, and other special details. It also makes journaling more fun, so I'm more likely to do it every day.
+I use two colors of ink, black and purple, to draw attention to margin notes, action items, and other special details. It also makes journaling more fun, so I'm more likely to do it every day.
 
 Lastly, I run a highlighter over the date because a day's notes can span a couple pages and I may need to find a certain day quickly.
 
