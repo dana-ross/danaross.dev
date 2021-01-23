@@ -23,7 +23,7 @@ Lastly, I run a highlighter over the date because a day's notes can span a coupl
 This is what works for *me*, and you'll find what works best for you through trial and error. Don't give up if you don't come up with a perfect system right away. Make small changes until you've got a system that keeps you productive and is unmistakably you!
 
 ## Update it throughout the day
-You carry your phone almost everywhere at work. Your work journal should come along too! Use it to record meetings you attended or important hallway conversations. Did you stop to water the plants? Did you notice a team mate who looked stressed and check in with them? Write those things down too!
+You carry your phone almost everywhere at work. Your work journal should come along too! Use it to record meetings you attended or important hallway conversations. Did you stop to water the plants? Did you notice a teammate who looked stressed and check in with them? Write those things down too!
 
 The other day, I sat down to eat lunch and I felt terrible, like I hadn't accomplished a single thing all day. I opened my work journal and realized I'd filled up half a page with training videos and new-hire paperwork already! It really gives you a complete picture of everything you squeeze into a work day.
 
