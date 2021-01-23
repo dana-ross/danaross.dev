@@ -14,7 +14,7 @@ I'm fresh on the job, so you can see my day mostly centered around getting settl
 
 I've highlighted the date because a day's notes can span a couple pages and I may need to find a certain day quickly.
 
-I'm using two colors of pen to draw attention to margin notes, action items, and other special notes. It also makes writing in it more fun.
+I'm using two colors of pen to draw attention to margin notes, action items, and other special notes. It also makes writing in it more fun, so I'm more likely to do it every day.
 
 But this is what works for *me*, and you'll find what works best for you through trial and error. Don't get disappointed and give up if you don't come up with a perfect system right away. Make small changes until you've got a system that keeps you productive and is unmistakably you!
 
