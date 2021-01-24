@@ -98,7 +98,7 @@ h3 small {
     padding-top: 1rem;
 }
 
-#bio img {
+#bio img, #bio picture {
     width: 150px;
     height: 150px;
     border: 1px solid #aaa;
