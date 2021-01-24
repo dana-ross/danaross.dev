@@ -179,7 +179,7 @@ function processBlogPost(
 
   const dirEntries = fs.readdirSync(contentPath);
   dirEntries.forEach((dirEntry) => {
-      if(['.jpg', '.png', '.gif'].includes(path.extname(dirEntry))) {
+      if(['.jpg', '.png', '.gif', '.webp'].includes(path.extname(dirEntry))) {
         processImage(
           path.resolve(contentPath, dirEntry),
           path.resolve(buildDir, "blog", postSlug, dirEntry)
