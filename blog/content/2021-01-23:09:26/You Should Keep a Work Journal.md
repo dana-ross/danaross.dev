@@ -1,7 +1,10 @@
 At the end of the work day, how do you know what you've accomplished? Who you spoke to? What decisions were made? I've found that keeping a work journal helps me keep perspective while also serving as a vital record of the conversations I have every day.
 
 ## Find a format that works for you
-![A black, hardcover journal on a pink towel. A black ribbon comes out from between the pages and trails off to the bottom left.](work-journal-cover.jpg)
+<picture>
+  <source srcset="work-journal-cover.webp" type="image/webp">
+  <img src="work-journal-cover.jpg" alt="A black, hardcover journal on a pink towel. A black ribbon comes out from between the pages and trails off to the bottom left.">
+</picture>
 
 It's up to you what your journal will look like. I like a small, hardcover diary type book. That way I have something that feels special and can survive bouncing around my bag. But, I've met people who used a paperback notebook, a Day-Timer, or even the Windows notepad app. The form your work journal takes isn't as important as:
 
