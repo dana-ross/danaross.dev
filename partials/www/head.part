@@ -16,6 +16,7 @@
         <meta property="og:image" content="${ogimage}">
         <meta property="og:image:url"  content="${ogimage}">
         <meta property="twitter:image" content="${ogimage}">
+        <meta name="twitter:dnt" content="on">
         <title>${title}</title>
         <meta name="description" content="${metadescription}">
 
