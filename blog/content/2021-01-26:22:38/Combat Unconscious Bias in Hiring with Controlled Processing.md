@@ -19,7 +19,7 @@ There's also the problem of how one completely anonymizes a resume. You can easi
 * Does the candidate's work history point to them living in a particular place? Do they have experiences with technologies that betray their age such as typewriter repair or COBOL?
 * Did the resume include volunteer work or hobbies which indicate a particular background, race, or religious affiliation?
 
-*Panel interviews* are another way to combat bias in hiring. Candidates speak with a diverse panel of current team members to not only get a fuller picture of their competencies, but to evaluate how they interact with people from different backgrounds. These can be an effective tool for combatting hiring bias if the panel interviewers are prepared to confront their own biases. But it's rare that panel interviewers are trained to avoid their own unconscious biases during training.
+*Panel interviews* are another way to combat bias in hiring. Candidates speak with a diverse panel of current team members to not only get a fuller picture of their competencies, but to evaluate how they interact with people from different backgrounds. These can be an effective tool for combatting hiring bias if the panel interviewers are prepared to confront their own biases. But it's rare that panel interviewers are trained to avoid their own unconscious biases.
 
 Amazon had to scrap an AI tool that unemotionally evaluated resumes when they realized [it preferred male candidates to female ones](https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G): 
 
