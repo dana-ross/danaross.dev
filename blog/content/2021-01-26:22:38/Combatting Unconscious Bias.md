@@ -8,7 +8,7 @@ It shouldn't be surprising when research shows discrimination against candidates
 
 We thought we could automate our way out of these problems.
 
-*Resume anonymization* or *blind hiring* has been a common approach. Anonymized resumes are ones stripped of elements such as candidates' names or the schools, in the hopes that what remains is objective criteria to weigh. This has turned out disasterous, with companies that value diversity overlooking minority candidates they would normally pursue with extra effort:
+*Resume anonymization* or *blind hiring* has been a common approach. Anonymized resumes are ones stripped of elements such as candidates' names or the schools, in the hopes that what remains is objective criteria. This has turned out disasterous, with companies that value diversity overlooking minority candidates they would normally pursue with extra effort:
 
 > When resumes were made anonymous, participating firms became less likely to interview and hire minority candidates. The gap in interview rates between non-minority and minority candidates widened by 10.7 percentage points, from 2.4 percentage points in the standard procedure to 13 percentage points in the anonymized procedure. At the hiring stage, the gap widened by 3.7 percentage points. <cite>[Unintended effects of anonymous resumes](https://www.povertyactionlab.org/case-study/unintended-effects-anonymous-resumes)</cite>
 
