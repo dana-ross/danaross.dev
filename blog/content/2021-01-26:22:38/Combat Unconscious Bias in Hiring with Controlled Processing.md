@@ -43,12 +43,12 @@ Controlled processing happens slowly and deliberately. Think following a recipe,
 We're usually overwhelmed when we review resumes. And we probably wouldn't be hiring if we weren't already swamped with work! It's tempting to *go with our gut* when making hiring decisions—in fact some people recommend it. But that's the wrong approach if our goal is a fair hiring process and a diverse team. That kind of quick decision making encourages Automatic Processing, opening the door to all sorts of reckless choices.
 
 Consider how you can force yourself to use Controlled Processing instead. The [SPACE2 model](https://cultureplusconsulting.com/2018/10/17/six-proven-strategies-for-managing-unconscious-bias/) is a set of strategies that enable Controlled Processing:
-> * *Slowing Down* — being mindful and considered in your responses to others
-> * *Perspective Taking* — actively imagining the thoughts and feelings of others
-> * *Asking Yourself* — active self-questioning to challenge your assumptions
-> * *Cultural Intelligence* — interpreting a person’s behaviour through their cultural lens rather than your own
-> * *Exemplars* — identifying counter-stereotypical individuals
-> * *Expand* — the formation of diverse friendships
+* *Slowing Down* — being mindful and considered in your responses to others
+* *Perspective Taking* — actively imagining the thoughts and feelings of others
+* *Asking Yourself* — active self-questioning to challenge your assumptions
+* *Cultural Intelligence* — interpreting a person’s behaviour through their cultural lens rather than your own
+* *Exemplars* — identifying counter-stereotypical individuals
+* *Expand* — the formation of diverse friendships
 
 In my past hiring experience, I've deliberately slowed down to protect against biases I know are there from my upbringing. For example, I:
 
