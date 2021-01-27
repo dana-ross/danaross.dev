@@ -2,7 +2,7 @@ The business world is waking up to the fact we can't simply blame poor diversity
 
 It shouldn't be surprising when research shows discrimination against candidates based on ethnicity indicators such as their name, educational background, or past work experience. And, while companies say they want employees to *bring their whole self* to work, the same research shows no difference in responses to resumes from businesses that claim to value diversity! Candidates attempt to circumvent this by *whitening* their resumes, Anglicizing their names and backgrounds, which turns out to actually work in their favor:
 
-> In fact, companies are more than twice as likely to call minority applicants for interviews if they submit whitened resumes than candidates who reveal their race—and this discriminatory practice is just as strong for businesses that claim to value diversity as those that don’t. <cite>[Minorities Who 'Whiten' Job Resumes Get More Interview](https://hbswk.hbs.edu/item/minorities-who-whiten-job-resumes-get-more-interviews)</cite>
+> In fact, companies are more than twice as likely to call minority applicants for interviews if they submit whitened resumes than candidates who reveal their race—and this discriminatory practice is just as strong for businesses that claim to value diversity as those that don’t. <cite>[Minorities Who 'Whiten' Job Resumes Get More Interviews](https://hbswk.hbs.edu/item/minorities-who-whiten-job-resumes-get-more-interviews)</cite>
 
 ## You can't automate good behavior
 
