@@ -54,7 +54,8 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
             "LLLL do, yyyy h:mm bbb"
           );
           const postSlug = titleToSlug(postTitle);
-          const postURL = `${baseURL}blog/${postSlug}`;
+          const postURLPath = `/blog/${postSlug}/`;
+          const postURL = `${baseURL}${postURLPath}`;
           const postSummary = fs.existsSync(
             path.resolve(contentPath, "summary.txt")
           )
@@ -68,6 +69,7 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
           blogIndexData.set(Date.parse(path.basename(contentPath)), {
             postTitle,
             postURL,
+            postURLPath,
             postTimestamp,
             postSummary: marked(typeset(postSummary)),
           });
