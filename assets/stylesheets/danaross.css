@@ -228,11 +228,18 @@ blockquote:not(.transcript):first-letter, blockquote:not(.transcript) > p:first-
     }
     h1 span::after {
         font-size: 10rem;
-        margin-top: -8rem;
+        margin-top: 0;
         margin-bottom: 0;
+        top: 5rem;
     }
     h1 small {
-        font-size: 2rem;    
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    body:not(.home) h1 small {
+        width: 60%;
+        margin: 0 auto 0 auto;
     }
 }
 
