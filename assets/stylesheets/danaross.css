@@ -238,8 +238,8 @@ blockquote:not(.transcript):first-letter, blockquote:not(.transcript) > p:first-
     }
 
     body:not(.home) h1 small {
-        width: 60%;
-        margin: -.4rem auto 0 auto;
+        width: 80%;
+        margin: -.5rem auto 0 auto;
     }
 }
 
