@@ -40,30 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
         image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA='
 })
-
-// Lazy load Tweets
-document.addEventListener('DOMContentLoaded', () => {
-        const onIntersection = (targets) => {
-                targets.forEach((target) => {
-                        if (target.isIntersecting) {
-                                const scriptElement = document.createElement('script')
-                                scriptElement.async = "async"
-                                scriptElement.src = "https://platform.twitter.com/widgets.js"
-                                scriptElement.charset = "utf-8"
-                                document.body.appendChild(scriptElement)
-                                observer.unobserve(target.target)
-                        }
-                })
-        }
-
-        const observer = new IntersectionObserver(
-                onIntersection,
-                {
-                        rootMargin: '50px 0px',
-                        threshold: 1
-                }
-        )
-        Array.prototype.slice.call(document.getElementsByClassName('twitter-tweet')).forEach((embed) => {
-                observer.observe(embed)
-        })
-})
