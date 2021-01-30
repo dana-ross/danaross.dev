@@ -110,7 +110,8 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
       stylesheetsBase,
       scriptsBase,
       url: baseURL + "blog",
-      ogimage
+      ogimage,
+      buildTimestamp: getBuildTimestamp()
     })),
     handleFSError
   );
