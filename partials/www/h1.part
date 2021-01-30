@@ -1,1 +1,1 @@
-<h1><span aria-label="Dana Ross" data-font-swap-text="D R">Dana Ross</span><small>${subhead}</small></h1>
+<h1><a href="/"><span aria-label="Dana Ross" data-font-swap-text="D R">Dana Ross</span></a><small>${subhead}</small></h1>
