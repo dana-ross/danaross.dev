@@ -55,7 +55,7 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
           );
           const postSlug = titleToSlug(postTitle);
           const postURLPath = `/blog/${postSlug}/`;
-          const postURL = `${baseURL}${postURLPath}`;
+          const postURL = `${baseURL}blog/${postSlug}/`;
           const postSummary = fs.existsSync(
             path.resolve(contentPath, "summary.txt")
           )
