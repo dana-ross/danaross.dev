@@ -1,6 +1,6 @@
 // Swap in special characters for the Ballpoint Signature font
 document.fonts.ready.then(() => {
-        if (document.fonts.check('1em "Ballpoint Signature"')) {
+        if (!document.fonts.check('1em "Ballpoint Signature"')) {
                 document.querySelectorAll('[data-font-swap-text]').forEach((target) => {
                         target.innerText = target.dataset.fontSwapText
                 })
@@ -39,31 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
         image.onload = addResult
 
         image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA='
-})
-
-// Lazy load Tweets
-document.addEventListener('DOMContentLoaded', () => {
-        const onIntersection = (targets) => {
-                targets.forEach((target) => {
-                        if (target.isIntersecting) {
-                                const scriptElement = document.createElement('script')
-                                scriptElement.async = "async"
-                                scriptElement.src = "https://platform.twitter.com/widgets.js"
-                                scriptElement.charset = "utf-8"
-                                document.body.appendChild(scriptElement)
-                                observer.unobserve(target.target)
-                        }
-                })
-        }
-
-        const observer = new IntersectionObserver(
-                onIntersection,
-                {
-                        rootMargin: '50px 0px',
-                        threshold: 1
-                }
-        )
-        Array.prototype.slice.call(document.getElementsByClassName('twitter-tweet')).forEach((embed) => {
-                observer.observe(embed)
-        })
 })
