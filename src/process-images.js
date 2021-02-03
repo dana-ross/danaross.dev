@@ -80,21 +80,42 @@ svgo = new SVGO({
  * Finds image files and copies them to the build directory.
  * Optimizes SVG files.
  * 
- * @param {String} buildDir 
+ * @param {String} sourceDir
+ * @param {String} targetDir
  */
-async function processGlobalImages(buildDir) {
-  fs.mkdirSync(buildDir + '/images')
-
-  // Copy images
-  fs.readdir('./images', (err, files) => {
-    files.forEach((file) => {
-      const sourceFile = './images/' + file
-      const targetFile = buildDir + '/images/' + file
-      processImage(sourceFile, targetFile);
-    })
-  })
+function processGlobalImagesDir (sourceDir, targetDir) {    
+  return fs.readdir(sourceDir, (err, files) => {
+      files.forEach((file) => {
+        const sourceFile = path.resolve(sourceDir, file)
+        if (fs.statSync(sourceFile).isDirectory()) {
+          const targetSubdir = path.resolve(targetDir, file)
+          fs.mkdirSync(targetSubdir)
+          processGlobalImagesDir(sourceFile, targetSubdir)
+        }
+        else {
+          const targetFile = path.resolve(targetDir, file)
+          processImage(sourceFile, targetFile);
+        }
+      })
+    });
 }
 
+/**
+ * Process the main directory of image files
+ * 
+ * @param {String} buildDir Directory where built www files will go 
+ */
+async function processGlobalImages(buildDir) {
+  const targetDir = path.resolve(buildDir + '/images')
+  fs.mkdirSync(targetDir)
+  processGlobalImagesDir(path.resolve('./images'), targetDir)
+}
+
+/**
+ * Process a single image file. Optimizes SVGs. Copies all other image formats.
+ * @param {String} sourceFile 
+ * @param {String} targetFile 
+ */
 function processImage(sourceFile, targetFile) {
   const fileName = path.basename(sourceFile);
   if (path.extname(fileName) == '.svg') {
