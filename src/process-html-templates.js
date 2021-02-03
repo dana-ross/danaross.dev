@@ -1,6 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const beautify = require('beautify')
 const chalk = require('chalk')
 const marked = require('marked')
 const { replacePlaceholders, replacePartials, unbreakMultilineTemplateTags, handleFSError, typeset, getBuildTimestamp, inlineSVGs } = require('./utils')
@@ -90,7 +89,7 @@ function insertContent(source, baseURL) {
  * @returns String
  */
 function cleanHTML(source) {
-    return beautify(source, { format: 'html' }).replace(/\n\W*\n/g, "\n")
+    return source.replace(/\n\W*\n/g, "\n");
 }
 
 /**

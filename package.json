@@ -4,7 +4,6 @@
   "description": "",
   "main": "build.js",
   "dependencies": {
-    "beautify": "0.0.8",
     "chalk": "^4.1.0",
     "date-fns": "^2.16.1",
     "html-entities": "^2.0.2",
