@@ -5,6 +5,7 @@ const marked = require("marked");
 const { decode } = require("html-entities");
 const wrap = require("word-wrap");
 const twemoji = require("twemoji");
+const { emojiBase } = require("./paths")
 
 /**
  * Replace variables/placeholders in a web page template.
@@ -108,7 +109,7 @@ function emojiToSVG(source) {
   const newSource = twemoji.parse(
       source,
       {
-        folder: '/images/noto-emoji',
+        folder: emojiBase.replace(/\/$/, ''),
         ext: '.svg',
         base: ''
       }
