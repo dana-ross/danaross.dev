@@ -4,6 +4,7 @@ const parseAttributeString = require("parse-attributes");
 const marked = require("marked");
 const { decode } = require("html-entities");
 const wrap = require("word-wrap");
+const twemoji = require("twemoji");
 
 /**
  * Replace variables/placeholders in a web page template.
@@ -65,18 +66,22 @@ function replacePartials(source, variables) {
  * @returns String
  */
 function inlineSVGs(source, logFunction = undefined) {
-  const SVG_TAG_REGEX = /<img\s*src="(?<src>[^"]*.svg)"\s*(?<attributes>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*[^\/>]*\/?>/;
+  const SVG_TAG_REGEX = /<img\s*(?<attributes1>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*src="(?<src>[^"]*.svg)"\s*(?<attributes2>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*[^\/>]*\/?>/;
 
   let svgTag = null;
   while ((svgTag = source.match(SVG_TAG_REGEX))) {
-    const attributes = parseAttributeString(svgTag.groups.attributes || "");
+    const attributes = unionOfObjects(
+      parseAttributeString(svgTag.groups.attributes1 || ""),
+      parseAttributeString(svgTag.groups.attributes2 || "")
+    );
 
     if(logFunction && typeof logFunction === "function") {
       logFunction(svgTag.groups.src);
     }
 
+    const sourcePath = path.resolve(svgTag.groups.src.replace(/^\//, ''));
     let replacement = fs.readFileSync(
-      "./images/" + path.basename(svgTag.groups.src),
+      sourcePath,
       "utf8"
     );
 
@@ -92,6 +97,26 @@ function inlineSVGs(source, logFunction = undefined) {
   return source;
 }
 
+/**
+ * Convert emoji to <svg>s.
+ *
+ * @param {String} source the web page template
+ * @returns String
+ */
+function emojiToSVG(source) {
+
+  const newSource = twemoji.parse(
+      source,
+      {
+        folder: '/images/noto-emoji',
+        ext: '.svg',
+        base: ''
+      }
+  );
+  
+
+  return newSource;
+}
 
 /**
  * Replace partials in a gopher page template.
@@ -306,5 +331,6 @@ module.exports = {
   handleFSError,
   typeset,
   getBuildTimestamp,
-  inlineSVGs
+  inlineSVGs,
+  emojiToSVG
 };
