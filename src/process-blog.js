@@ -12,7 +12,8 @@ const {
   handleFSError,
   typeset,
   inlineSVGs,
-  getBuildTimestamp
+  getBuildTimestamp,
+  emojiToSVG
 } = require("./utils");
 const {
   scriptsBase,
@@ -166,13 +167,13 @@ function processBlogPost(
     buildTimestamp: getBuildTimestamp()
   };
 
-  const html = inlineSVGs(replacePartials(
+  const html = inlineSVGs(emojiToSVG(replacePartials(
     replacePlaceholders(
       insertContent(blogPostTemplate, contentPath, potentialBlogPost, baseURL),
       variables
     ),
     variables
-  ));
+  )));
 
   fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "index.html"),
