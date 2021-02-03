@@ -211,6 +211,13 @@ blockquote:not(.transcript):first-letter, blockquote:not(.transcript) > p:first-
     fill: #1081B1;
 }
 
+svg.emoji {
+    height: 1em;
+    width: 1em;
+    margin: 0 .05em 0 .1em;
+    vertical-align: -0.1em;
+}
+
 @media screen and (max-width: 800px) {
     body {
         margin: 0;
