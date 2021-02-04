@@ -7,6 +7,7 @@ const processGopherTemplates = require('./process-gopher-templates')
 const processBlogWWW = require('./process-blog')
 const processBlogGopher = require('./process-gopher-blog')
 const generateSitemap = require('./generate-sitemap')
+const generateFeeds = require('./generate-feeds')
 
 const urlRegistry = new Map()
 
@@ -36,4 +37,5 @@ Promise.all([
     processBlogGopher(BUILD_GOPHER_DIR)
 ]).then((_) => {
     generateSitemap(BUILD_WWW_DIR, urlRegistry)
+    generateFeeds(BASE_URL, BUILD_WWW_DIR, urlRegistry)
 }).catch((err) => console.log(err))
