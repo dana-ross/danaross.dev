@@ -53,9 +53,9 @@ Whether they're family by blood or family by choice, the people close to me are 
 I don’t want anyone on this team burning themselves out or neglecting their health. That means no 60 hour weeks where you’re really productive on paper but you can’t get anything done. Shoot for a 40 hour week average. Finish work at a decent time. Eat good food. Have hobbies. Exercise. Sleep.
 <figure>
     <picture>
-        <source srcset="../images/what-makes-me-productive.webp" type="image/webp">
-        <source srcset="../images/what-makes-me-productive.png" type="image/png">
-        <img src="../images/what-makes-me-productive.png" loading="lazy"
+        <source srcset="/images/what-makes-me-productive.webp" type="image/webp">
+        <source srcset="/images/what-makes-me-productive.jpg" type="image/png">
+        <img src="/images/what-makes-me-productive.jpg" loading="lazy"
             alt="What I thought would make me productive: Picture of a pie chart with \" Hard work\"
             making up 100%. What actually does: Picture of a pie chart split up between hard work,
             exercise, healthy eating, sleep, and time off. Cartoon by @lizandmollie on Twitter.">
