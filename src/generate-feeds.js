@@ -8,8 +8,7 @@ const { BLOG_CONTENT_DIRECTORY } = require('./paths')
 module.exports = (baseURL, buildDir, urlRegistry) => {
   const blogPosts = filterMap(urlRegistry, ([k,v]) => k.startsWith(BLOG_CONTENT_DIRECTORY));
 
-  fs.mkdirSync(path.resolve(buildDir, 'feed', 'rss'), {recursive: true});
-  // fs.mkdirSync(path.resolve(buildDir, 'feed', 'atom'), {recursive: true});
+  fs.mkdirSync(path.resolve(buildDir, 'feed'), {recursive: true});
 
   generateRSS(baseURL, buildDir, blogPosts);
   // generateAtom(baseURL, buildDir, blogPosts);
@@ -22,7 +21,7 @@ function generateRSS(baseURL, buildDir, blogPosts) {
     )}`
   );
 
-  const feedFile = fs.openSync(path.resolve(buildDir, "feed", "rss", "index.html"), "w");
+  const feedFile = fs.openSync(path.resolve(buildDir, "feed", "rss.xml"), "w");
   fs.writeSync(feedFile,`<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
