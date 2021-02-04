@@ -11,7 +11,6 @@ module.exports = (baseURL, buildDir, urlRegistry) => {
   fs.mkdirSync(path.resolve(buildDir, 'feed'), {recursive: true});
 
   generateRSS(baseURL, buildDir, blogPosts);
-  // generateAtom(baseURL, buildDir, blogPosts);
 }
 
 function generateRSS(baseURL, buildDir, blogPosts) {
@@ -52,19 +51,6 @@ function generateRSS(baseURL, buildDir, blogPosts) {
    fs.writeSync(feedFile, `
   </channel>
   </rss>`);
-  fs.close(feedFile, handleFSError);
-
-}
-
-function generateAtom(baseURL, buildDir, urlRegistry, isBlogUrl) {
-  console.log(
-    `📄️  ${chalk.white("Generating")} ${chalk.blue(
-      path.basename(buildDir) + "/feed/atom/index.html"
-    )}`
-  );
-
-  const feedFile = fs.openSync(path.resolve(buildDir, "feed", "atom", "index.html"), "w");
-
   fs.close(feedFile, handleFSError);
 
 }
