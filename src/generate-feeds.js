@@ -8,7 +8,7 @@ const { BLOG_CONTENT_DIRECTORY } = require('./paths')
 module.exports = (baseURL, buildDir, urlRegistry) => {
   const blogPosts = filterMap(urlRegistry, ([k,v]) => k.startsWith(BLOG_CONTENT_DIRECTORY));
 
-  fs.mkdirSync(path.resolve(buildDir, 'feed'), {recursive: true});
+  fs.mkdirSync(path.resolve(buildDir, "blog", 'feed'), {recursive: true});
 
   generateRSS(baseURL, buildDir, blogPosts);
 }
@@ -16,18 +16,18 @@ module.exports = (baseURL, buildDir, urlRegistry) => {
 function generateRSS(baseURL, buildDir, blogPosts) {
   console.log(
     `📄️  ${chalk.white("Generating")} ${chalk.blue(
-      path.basename(buildDir) + "/feed/rss/index.html"
+      path.basename(buildDir) + "/blog/feed/rss.xml"
     )}`
   );
 
-  const feedFile = fs.openSync(path.resolve(buildDir, "feed", "rss.xml"), "w");
+  const feedFile = fs.openSync(path.resolve(buildDir, "blog", "feed", "rss.xml"), "w");
   fs.writeSync(feedFile,`<?xml version="1.0" encoding="UTF-8" ?>
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
    <title>Dana Ross Blog</title>
    <description>Dana Ross's Blog: Engineering Leader, Experienced Full-Stack Developer, Certified Accessibility Pro.</description>
    <link>https://danaross.dev/blog/</link>
-   <atom:link href="${baseURL + 'feed/rss.xml'}" rel="self" type="application/rss+xml" />
+   <atom:link href="${baseURL + 'blog/feed/rss.xml'}" rel="self" type="application/rss+xml" />
    <copyright>2020 Dana Ross All rights reserved</copyright>
    <lastBuildDate>${(new Date(getBuildTimestamp())).toUTCString()}</lastBuildDate>`);
 
