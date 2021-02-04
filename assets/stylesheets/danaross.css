@@ -115,6 +115,16 @@ h3 small {
     border: 1px solid #aaa;
 }
 
+.footerlinks {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.footerlinks a {
+    color: #888;
+    text-decoration: dotted;
+}
+
 #social {
     list-style: none;
     display: table;

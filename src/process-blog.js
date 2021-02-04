@@ -103,17 +103,19 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
     )} → ${chalk.yellow(buildDir + "/blog/index.html")}`
   );
 
+  const variables = {
+    baseURL,
+    imagesBase,
+    stylesheetsBase,
+    scriptsBase,
+    url: baseURL + "blog",
+    ogimage,
+    buildTimestamp: getBuildTimestamp()
+  };
+
   fs.writeFile(
     path.resolve(buildDir, "blog", "index.html"),
-    inlineSVGs(replacePartials(insertBlogIndex(blogIndexTemplate, blogIndexData), {
-      baseURL,
-      imagesBase,
-      stylesheetsBase,
-      scriptsBase,
-      url: baseURL + "blog",
-      ogimage,
-      buildTimestamp: getBuildTimestamp()
-    })),
+    inlineSVGs(replacePlaceholders(replacePartials(insertBlogIndex(blogIndexTemplate, blogIndexData), variables), variables)),
     handleFSError
   );
 };
