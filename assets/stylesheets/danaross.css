@@ -118,6 +118,7 @@ h3 small {
 .footerlinks {
     font-size: .8rem;
     text-align: center;
+    grid-column: 1 / span 2;
 }
 
 .footerlinks a {
