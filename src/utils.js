@@ -319,6 +319,20 @@ const getBuildTimestamp = (function() {
   return () => buildTimestamp;
 }())
 
+/**
+ * Apply a filter function to all elements in a Map.
+ * @see Array.map
+ * @param {Map} map 
+ * @param {Function} predicate
+ * @returns Map
+ */
+function filterMap(map, predicate) {
+  return new Map(
+    [...map]
+    .filter(predicate)
+  );
+}
+
 module.exports = {
   replacePlaceholders,
   replacePartials,
@@ -333,5 +347,6 @@ module.exports = {
   typeset,
   getBuildTimestamp,
   inlineSVGs,
-  emojiToSVG
+  emojiToSVG,
+  filterMap
 };
