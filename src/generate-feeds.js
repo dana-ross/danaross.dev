@@ -70,15 +70,3 @@ function generateAtom(baseURL, buildDir, urlRegistry, isBlogUrl) {
   fs.close(feedFile, handleFSError);
 
 }
-
-  
-  // fs.writeSync(sitemapFile, '<?xml version="1.0" encoding="UTF-8"?>\n');
-  // fs.writeSync(
-  //   sitemapFile,
-  //   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-  // );
-
-  // urlRegistry.forEach((value, key) => {
-  //   fs.writeSync(sitemapFile, `<url><loc>${value}</loc></url>\n`);
-  // });
-  // fs.writeSync(sitemapFile, "</urlset>");
