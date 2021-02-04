@@ -9,6 +9,6 @@ const paths = {
     ogimage: 'https://danaross.dev/images/dana_sweater.jpg',
 }
 
-paths.blogContentDirectory = path.resolve(paths.BLOG_DIR, "content");
+paths.BLOG_CONTENT_DIRECTORY = path.resolve(paths.BLOG_DIR, "content");
 
 module.exports = paths;
