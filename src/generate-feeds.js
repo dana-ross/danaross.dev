@@ -27,7 +27,7 @@ function generateRSS(baseURL, buildDir, blogPosts) {
    <title>Dana Ross Blog</title>
    <description>Dana Ross's Blog: Engineering Leader, Experienced Full-Stack Developer, Certified Accessibility Pro.</description>
    <link>https://danaross.dev/blog/</link>
-   <atom:link href="${baseURL + 'feed/rss'}" rel="self" type="application/rss+xml" />
+   <atom:link href="${baseURL + 'feed/rss.xml'}" rel="self" type="application/rss+xml" />
    <copyright>2020 Dana Ross All rights reserved</copyright>
    <lastBuildDate>${(new Date(getBuildTimestamp())).toUTCString()}</lastBuildDate>`);
 
