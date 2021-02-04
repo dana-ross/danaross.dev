@@ -13,7 +13,7 @@ const {
   typeset,
   inlineSVGs,
   getBuildTimestamp,
-  emojiToSVG
+  renderBlogPost
 } = require("./utils");
 const {
   scriptsBase,
@@ -157,23 +157,13 @@ function processBlogPost(
   const variables = {
     url: postURL,
     baseURL,
-    stylesheetsBase,
-    scriptsBase,
-    imagesBase,
     postTitle,
     postTimestamp,
     postSummary,
     ogimage,
-    buildTimestamp: getBuildTimestamp()
   };
 
-  const html = inlineSVGs(emojiToSVG(replacePartials(
-    replacePlaceholders(
-      insertContent(blogPostTemplate, contentPath, potentialBlogPost, baseURL),
-      variables
-    ),
-    variables
-  )));
+  const html = renderBlogPost(blogPostTemplate, contentPath, potentialBlogPost, baseURL, variables);
 
   fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "index.html"),
@@ -193,16 +183,3 @@ function processBlogPost(
 
 }
 
-function insertContent(source, contentPath, potentialBlogPost, baseURL) {
-  const CONTENT_TAG_REGEX = /<drr-postcontent[^>]+>(<\/drr-content>)?/;
-
-  if ((contentTag = source.match(CONTENT_TAG_REGEX))) {
-    const replacement = marked(typeset(
-      fs.readFileSync(path.resolve(contentPath, potentialBlogPost), "utf8"),
-      { baseURL }
-    ));
-    source = source.replace(CONTENT_TAG_REGEX, replacement);
-  }
-
-  return source;
-}
