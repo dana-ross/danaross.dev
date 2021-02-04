@@ -54,7 +54,7 @@ I don’t want anyone on this team burning themselves out or neglecting their he
 <figure>
     <picture>
         <source srcset="/images/what-makes-me-productive.webp" type="image/webp">
-        <source srcset="/images/what-makes-me-productive.jpg" type="image/png">
+        <source srcset="/images/what-makes-me-productive.jpg" type="image/jpeg">
         <img src="/images/what-makes-me-productive.jpg" loading="lazy"
             alt="What I thought would make me productive: Picture of a pie chart with \" Hard work\"
             making up 100%. What actually does: Picture of a pie chart split up between hard work,
