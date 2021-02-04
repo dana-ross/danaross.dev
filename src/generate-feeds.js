@@ -2,8 +2,8 @@
 const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
-const { handleFSError, getBuildTimestamp, filterMap } = require("./utils");
-const { BLOG_DIR } = require('./paths')
+const { handleFSError, getBuildTimestamp, filterMap, renderBlogPost } = require("./utils");
+const { BLOG_DIR, blogContentDirectory } = require('./paths')
 
 module.exports = (baseURL, buildDir, urlRegistry) => {
   const blogContentDirectory = path.resolve(BLOG_DIR, "content");
@@ -32,22 +32,24 @@ function generateRSS(baseURL, buildDir, blogPosts) {
    <link>https://danaross.dev/blog/</link>
    <atom:link href="${baseURL + 'feed/rss'}" rel="self" type="application/rss+xml" />
    <copyright>2020 Dana Ross All rights reserved</copyright>
-   <lastBuildDate>${(new Date(getBuildTimestamp())).toUTCString()}</lastBuildDate>
-   <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
-   <ttl>1800</ttl>`);
+   <lastBuildDate>${(new Date(getBuildTimestamp())).toUTCString()}</lastBuildDate>`);
 
   blogPosts.forEach((url, sourceFile) => {
-    const content = fs.readFileSync(sourceFile);
+    const variables = {
+      url: url,
+      baseURL,
+    };
+    
+    const content = renderBlogPost('<drr-postcontent />', path.dirname(sourceFile), path.basename(sourceFile), baseURL, variables);
     fs.writeSync(feedFile, `
    <item>
-    <title>Example entry</title>
+    <title>${path.basename(sourceFile)}</title>
     <description><![CDATA[${content}]]></description>
     <link>${url}</link>
     <guid isPermaLink="false">${url}</guid>
-    <pubDate>Sun, 06 Sep 2009 16:20:00 +0000</pubDate>
+    <pubDate>${new Date(Date.parse(path.basename(path.dirname(sourceFile)))).toUTCString()}</pubDate>
    </item>`);
   });
-
 
    fs.writeSync(feedFile, `
   </channel>
