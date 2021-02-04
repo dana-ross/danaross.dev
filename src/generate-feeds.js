@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
 const { handleFSError, getBuildTimestamp, filterMap, renderBlogPost } = require("./utils");
-const { BLOG_DIR, BLOG_CONTENT_DIRECTORY } = require('./paths')
+const { BLOG_CONTENT_DIRECTORY } = require('./paths')
 
 module.exports = (baseURL, buildDir, urlRegistry) => {
   const blogPosts = filterMap(urlRegistry, ([k,v]) => k.startsWith(BLOG_CONTENT_DIRECTORY));
