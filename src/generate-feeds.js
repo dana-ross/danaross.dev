@@ -40,7 +40,7 @@ function generateRSS(baseURL, buildDir, blogPosts) {
     const content = renderBlogPost('<drr-postcontent />', path.dirname(sourceFile), path.basename(sourceFile), baseURL, variables);
     fs.writeSync(feedFile, `
    <item>
-    <title>${path.basename(sourceFile)}</title>
+    <title>${path.basename(sourceFile, path.extname(sourceFile))}</title>
     <description><![CDATA[${content}]]></description>
     <link>${url}</link>
     <guid isPermaLink="false">${url}</guid>
