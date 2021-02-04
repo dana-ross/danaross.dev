@@ -46,9 +46,9 @@ function renderHTMLPage(fileName, buildDir, baseURL, urlRegistry) {
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
     let source = unbreakMultilineTemplateTags(fs.readFileSync(fileName, 'utf8'))
-    source = inlineSVGs(emojiToSVG(insertContent(replacePlaceholders(replacePartials(source,
+    source = inlineSVGs(emojiToSVG(replacePlaceholders(replacePartials(insertContent(source),
         { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() }),
-        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() }))),
+        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() })),
         (svgFilename) => { console.log(`✏️   ${chalk.white('Inlining')} ${chalk.blue(svgFilename)}`) })
 
     if (!isHomeTemplate(fileName)) {

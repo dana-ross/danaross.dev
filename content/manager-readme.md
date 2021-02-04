@@ -27,7 +27,7 @@ My favorite color is orange. At least for this week.
 
 I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a little too close to home sometimes.
 
-<p><img src="../images/being-a-boss.gif" alt="Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'." /></p>
+<p><img src="${baseURL}images/being-a-boss.gif" alt="Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'." /></p>
 
 Music? Pretty much anything but mostly 90s industrial, 90s-2000s EBM, Electro-swing, and Synthwave.
 
@@ -53,9 +53,9 @@ Whether they're family by blood or family by choice, the people close to me are 
 I don’t want anyone on this team burning themselves out or neglecting their health. That means no 60 hour weeks where you’re really productive on paper but you can’t get anything done. Shoot for a 40 hour week average. Finish work at a decent time. Eat good food. Have hobbies. Exercise. Sleep.
 <figure>
     <picture>
-        <source srcset="/images/what-makes-me-productive.webp" type="image/webp">
-        <source srcset="/images/what-makes-me-productive.jpg" type="image/jpeg">
-        <img src="/images/what-makes-me-productive.jpg" loading="lazy"
+        <source srcset="${baseURL}images/what-makes-me-productive.webp" type="image/webp">
+        <source srcset="${baseURL}images/what-makes-me-productive.jpg" type="image/jpeg">
+        <img src="${baseURL}images/what-makes-me-productive.jpg" loading="lazy"
             alt="What I thought would make me productive: Picture of a pie chart with \" Hard work\"
             making up 100%. What actually does: Picture of a pie chart split up between hard work,
             exercise, healthy eating, sleep, and time off. Cartoon by @lizandmollie on Twitter.">
@@ -144,9 +144,9 @@ He’s now a public speaker and author on leadership. His books are invaluable t
     <li><a href="https://www.amazon.com/Creating-Magic-Common-Leadership-Strategies/dp/0385523866/"
             rel=nofollow>
             <picture>
-                <source srcset="../images/creating-magic-book.webp" type="image/webp">
-                <source srcset="../images/creating-magic-book.png" type="image/png">
-                <img src="../images/creating-magic-book.png" loading="lazy"
+                <source srcset="${baseURL}images/creating-magic-book.webp" type="image/webp">
+                <source srcset="${baseURL}images/creating-magic-book.png" type="image/png">
+                <img src="${baseURL}images/creating-magic-book.png" loading="lazy"
                     alt="Creating Magic: 10 Common Sense Leadership Strategies from a Life at Disney">
             </picture>
         </a>
@@ -154,9 +154,9 @@ He’s now a public speaker and author on leadership. His books are invaluable t
     <li><a href="https://www.amazon.com/Career-Magic-Track-Achieve-Stellar/dp/1943127328/"
             rel=nofollow>
             <picture>
-                <source srcset="../images/career-magic-book.webp" type="image/webp">
-                <source srcset="../images/career-magic-book.png" type="image/png">
-                <img src="../images/career-magic-book.png" loading="lazy"
+                <source srcset="${baseURL}images/career-magic-book.webp" type="image/webp">
+                <source srcset="${baseURL}images/career-magic-book.png" type="image/png">
+                <img src="${baseURL}images/career-magic-book.png" loading="lazy"
                     alt="Career Magic: How to Stay on Track to Achieve a Stellar Career" />
             </picture>
         </a>
@@ -164,9 +164,9 @@ He’s now a public speaker and author on leadership. His books are invaluable t
     <li><a href="https://www.amazon.com/Time-Management-Magic-Surviving-Thriving/dp/0990769461/"
             rel=nofollow>
             <picture>
-                <source srcset="../images/time-management-magic-book.webp" type="image/webp">
-                <source srcset="../images/time-management-magic-book.png" type="image/png">
-                <img src="../images/time-management-magic-book.png" loading="lazy"
+                <source srcset="${baseURL}images/time-management-magic-book.webp" type="image/webp">
+                <source srcset="${baseURL}images/time-management-magic-book.png" type="image/png">
+                <img src="${baseURL}images/time-management-magic-book.png" loading="lazy"
                     alt="Time Management Magic: How to Get More Done Every Day and Move from Surviving to Thriving" />
             </picture>
         </a>
@@ -174,9 +174,9 @@ He’s now a public speaker and author on leadership. His books are invaluable t
     <li><a href="https://www.amazon.com/Customer-Rules-Essential-Delivering-Sensational/dp/0770435602/"
             rel=nofollow>
             <picture>
-                <source srcset="../images/the-customer-rules-book.webp" type="image/webp">
-                <source srcset="../images/the-customer-rules-book.png" type="image/png">
-                <img src="../images/the-customer-rules-book.png" loading="lazy"
+                <source srcset="${baseURL}images/the-customer-rules-book.webp" type="image/webp">
+                <source srcset="${baseURL}images/the-customer-rules-book.png" type="image/png">
+                <img src="${baseURL}images/the-customer-rules-book.png" loading="lazy"
                     alt="The Customer Rules: The 39 Essential Rules for Delivering Sensational Service" />
             </picture>
         </a>
