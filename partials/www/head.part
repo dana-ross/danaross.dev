@@ -19,4 +19,5 @@
         <meta name="twitter:dnt" content="on">
         <title>${title}</title>
         <meta name="description" content="${metadescription}">
+        <link rel="alternate" type="application/rss+xml" title="Dana Ross's Blog: Engineering Leader, Experienced Full-Stack Developer, Certified Accessibility Pro." href="${baseURL}feed/rss.xml">
 
