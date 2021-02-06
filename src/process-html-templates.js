@@ -46,9 +46,11 @@ function renderHTMLPage(fileName, buildDir, baseURL, urlRegistry) {
     console.log(`📄️  ${chalk.white('Processing')} ${chalk.blue(fileName)} → ${chalk.yellow(targetFileName)}`)
 
     let source = unbreakMultilineTemplateTags(fs.readFileSync(fileName, 'utf8'))
+
+    const variables = { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() }
     source = inlineSVGs(emojiToSVG(replacePlaceholders(replacePartials(insertContent(source),
-        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() }),
-        { url, imagesBase, baseURL, stylesheetsBase, scriptsBase, ogimage, buildTimestamp: getBuildTimestamp() })),
+        variables),
+        variables)),
         (svgFilename) => { console.log(`✏️   ${chalk.white('Inlining')} ${chalk.blue(svgFilename)}`) })
 
     if (!isHomeTemplate(fileName)) {

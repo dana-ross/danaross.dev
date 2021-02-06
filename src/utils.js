@@ -42,23 +42,27 @@ function replacePlaceholders(source, placeholders) {
  * @param {Object} variables Variables to use when parsing the template {key:value}
  * @returns String
  */
-function replacePartials(source, variables) {
+function replacePartials(source, _variables) {
   const PARTIAL_TAG_REGEX = /<drr-partial\s*name="(?<name>[^"]*)"\s*(?<attributes>(\w+="[^"]*"\s*)*)\s*\/?>/;
 
   let partialTag = null;
   while ((partialTag = source.match(PARTIAL_TAG_REGEX))) {
+    const variables = unionOfObjects(
+      _variables,
+      parseAttributeString(partialTag.groups.attributes || "")
+    );
+
     const replacement = replacePartials(
       replacePlaceholders(
         fs.readFileSync(
           "./partials/www/" + partialTag.groups.name + ".part",
           "utf8"
         ),
-        unionOfObjects(
-          variables,
-          parseAttributeString(partialTag.groups.attributes || "")
-        )
-      )
+        variables
+      ),
+      variables
     );
+    
     source = source.replace(PARTIAL_TAG_REGEX, replacement);
   }
 
@@ -82,20 +86,20 @@ function inlineSVGs(source, logFunction = undefined) {
       parseAttributeString(svgTag.groups.attributes2 || "")
     );
 
-    if(logFunction && typeof logFunction === "function") {
+    if (logFunction && typeof logFunction === "function") {
       logFunction(svgTag.groups.src);
     }
 
-    const sourcePath = path.resolve(svgTag.groups.src.replace(/^\//, ''));
-    let replacement = fs.readFileSync(
-      sourcePath,
-      "utf8"
-    );
+    const sourcePath = path.resolve(svgTag.groups.src.replace(/^\//, ""));
+    let replacement = fs.readFileSync(sourcePath, "utf8");
 
-    replacement = replacement.replace('>', ` role="img" aria-label="${attributes.alt || ""}">`);
+    replacement = replacement.replace(
+      ">",
+      ` role="img" aria-label="${attributes.alt || ""}">`
+    );
     Object.keys(attributes).forEach((key) => {
-      if(key !== "alt") {
-        replacement = replacement.replace('>', ` ${key}="${attributes[key]}">`)
+      if (key !== "alt") {
+        replacement = replacement.replace(">", ` ${key}="${attributes[key]}">`);
       }
     });
     source = source.replace(SVG_TAG_REGEX, replacement);
@@ -111,16 +115,11 @@ function inlineSVGs(source, logFunction = undefined) {
  * @returns String
  */
 function emojiToSVG(source) {
-
-  const newSource = twemoji.parse(
-      source,
-      {
-        folder: emojiBase.replace(/\/$/, ''),
-        ext: '.svg',
-        base: ''
-      }
-  );
-  
+  const newSource = twemoji.parse(source, {
+    folder: emojiBase.replace(/\/$/, ""),
+    ext: ".svg",
+    base: "",
+  });
 
   return newSource;
 }
@@ -265,7 +264,7 @@ function titleToSlug(title) {
 
 /**
  * Standard error handler for async fs functions
- * @param {Object|null} err 
+ * @param {Object|null} err
  */
 function handleFSError(err) {
   if (err) {
@@ -277,103 +276,111 @@ function handleFSError(err) {
  * Change straight quotes to curly and double hyphens to em-dashes.
  * @see https://gist.github.com/drdrang/705071 which uses regexes
  * @param {String} a Text to typeset
- * @return Text with Unicode characters substituted for quotes & em-dashes 
+ * @return Text with Unicode characters substituted for quotes & em-dashes
  */
 function typeset(a) {
   let inTag = false;
   let index = 0;
-  const whitespace = [' ', "\t", "\n", "\r"];
+  const whitespace = [" ", "\t", "\n", "\r"];
 
   while (index < a.length) {
     if (inTag) {
-      if (a[index] === '>') {
+      if (a[index] === ">") {
         inTag = false;
       }
-    }
-    else {
-      if (a[index] === '<') {
+    } else {
+      if (a[index] === "<") {
         inTag = true;
-      }
-      else if (a[index] === '-' && a[index + 1] === '-') {
+      } else if (a[index] === "-" && a[index + 1] === "-") {
         a = `${a.slice(0, index)}—${a.slice(index + 2)}`;
         index += 1;
-      }
-      else if (a[index] === '"') {
+      } else if (a[index] === '"') {
         if (whitespace.includes(a[index + 1])) {
           // closing quote
-          a = `${a.slice(0, index)}”${a.slice(index + 1)}`
-        }
-        else {
+          a = `${a.slice(0, index)}”${a.slice(index + 1)}`;
+        } else {
           // opening quote
-          a = `${a.slice(0, index)}“${a.slice(index + 1)}`
+          a = `${a.slice(0, index)}“${a.slice(index + 1)}`;
         }
-      }
-      else if (a[index] === "'") {
-        a = `${a.slice(0, index)}’${a.slice(index + 1)}`
+      } else if (a[index] === "'") {
+        a = `${a.slice(0, index)}’${a.slice(index + 1)}`;
       }
     }
 
     index += 1;
   }
 
-  return a
+  return a;
+}
 
-};
-
-const getBuildTimestamp = (function() {
+const getBuildTimestamp = (function () {
   const buildTimestamp = Date.now();
   return () => buildTimestamp;
-}())
+})();
 
 /**
  * Apply a filter function to all elements in a Map.
  * @see Array.map
- * @param {Map} map 
+ * @param {Map} map
  * @param {Function} predicate
  * @returns Map
  */
 function filterMap(map, predicate) {
-  return new Map(
-    [...map]
-    .filter(predicate)
-  );
+  return new Map([...map].filter(predicate));
 }
 
 /**
  * Render a blog post to HTML
- * 
- * @param {String} blogPostTemplate 
- * @param {String} contentPath 
- * @param {String} potentialBlogPost 
+ *
+ * @param {String} blogPostTemplate
+ * @param {String} contentPath
+ * @param {String} potentialBlogPost
  * @param {String} baseURL
  * @returns String html
  */
-function renderBlogPost(blogPostTemplate, contentPath, potentialBlogPost, baseURL, _variables) {
+function renderBlogPost(
+  blogPostTemplate,
+  contentPath,
+  potentialBlogPost,
+  baseURL,
+  _variables
+) {
   const variables = unionOfObjects(_variables, {
     baseURL,
     imagesBase,
     stylesheetsBase,
     scriptsBase,
-    buildTimestamp: getBuildTimestamp()
+    buildTimestamp: getBuildTimestamp(),
   });
 
-  return inlineSVGs(emojiToSVG(replacePartials(
-    replacePlaceholders(
-      insertContent(blogPostTemplate, contentPath, potentialBlogPost, baseURL),
-      variables
-    ),
-    variables
-  )));
+  return inlineSVGs(
+    emojiToSVG(
+      replacePartials(
+        replacePlaceholders(
+          insertContent(
+            blogPostTemplate,
+            contentPath,
+            potentialBlogPost,
+            baseURL
+          ),
+          variables
+        ),
+        variables
+      )
+    )
+  );
 }
 
 function insertContent(source, contentPath, potentialBlogPost, baseURL) {
   const CONTENT_TAG_REGEX = /<drr-postcontent[^>]+>(<\/drr-content>)?/;
 
   if ((contentTag = source.match(CONTENT_TAG_REGEX))) {
-    const replacement = marked(typeset(
-      fs.readFileSync(path.resolve(contentPath, potentialBlogPost), "utf8"),
-      { baseURL }
-    ));
+    const replacement = marked(
+      typeset(
+        fs.readFileSync(path.resolve(contentPath, potentialBlogPost), "utf8"),
+        { baseURL }
+      )
+    );
     source = source.replace(CONTENT_TAG_REGEX, replacement);
   }
 
@@ -396,5 +403,5 @@ module.exports = {
   inlineSVGs,
   emojiToSVG,
   filterMap,
-  renderBlogPost
+  renderBlogPost,
 };

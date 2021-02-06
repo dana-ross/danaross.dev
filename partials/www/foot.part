@@ -1,3 +1,4 @@
         <script src="${scriptsBase}danaross.min.js?${buildTimestamp}" async></script>
+        <drr-partial name="footerlinks" />
     </body>
 </html>
