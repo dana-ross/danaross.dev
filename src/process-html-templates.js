@@ -91,7 +91,7 @@ function insertContent(source, baseURL) {
  * @returns String
  */
 function cleanHTML(source) {
-    return source.replace(/\n[^\w\{\}]*\n/g, "\n");
+    return source.replace(/\n\s*\n/g, "\n");
 }
 
 /**
