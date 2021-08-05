@@ -41,12 +41,14 @@ July, 2014
 ### Engineering Manager @ Chewy
 January, 2021
 
+Within two months of forming a cross-functional team, delivered Chewy's first customer-facing Autoship improvement in ten years. Introduced agile processes and ceremonies. Fostered a collaborative, supportive team culture that improved both job satisfaction and productivity. Standardized & documented the on-boarding process for Autoship engineers. Worked to build trust and strengthen bonds with our partners on other Chewy teams.
+
 ### Engineering Manager @ Wirecutter (Remote)  
 January, 2019—January, 2021
 
 Hired to establish a Delivery team responsible for AWS environment upkeep and growth as well as tool building and process improvements. Established on-call rotation (PagerDuty) and set up an "SOS" Slack command for after-hours emergencies. Improved server monitoring and reporting. Oversaw implementation of more agile release workflow and associated tooling changes. Grew team from one engineer to three.
 
-Researched and planned out technical SEO work for H2 2020. Enhanced our newsletter subscription functionality, consolidating logic across diverse systems. Architected enhancements to our Fastly CDN implementation for major uptime improvements. Mentored new hires on our culture, workflows, and tech stack, as well as helping establish a culture which values testing.
+Researched and planned out technical SEO work for H2 2020, resulting in measurable improvements to search ranking and site traffic. Enhanced our newsletter subscription functionality, consolidating logic across diverse systems. Architected enhancements to our Fastly CDN implementation for major uptime improvements. Mentored new hires on our culture, workflows, and tech stack, as well as helping establish a culture which values testing.
 
 ### Director of Engineering @ 10up (Remote)  
 June 2013—December, 2018
