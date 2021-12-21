@@ -19,6 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm install
         id: npm
+      - name: Create build path
+        run: mkdir ./build
       - name: Build site
         run: node ./src/build.js
         id: build
