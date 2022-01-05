@@ -19,7 +19,7 @@ My son was born in 2016. He’s the kindest, smartest, cutest kid ever born.
 
 I’ve been involved in volunteer animal rescue for about fifteen years, with a focus on socializing feral, shy, and abused cats. We have two cats of our own now, both formerly feral and both very cuddly and spoiled.
 
-I got my first programming job in 1999, and I’ve been in management roles for about seven years. I spent over a decade in the web agency world.
+I got my first programming job in 1999, and I’ve been in management roles since 2014. I spent over a decade in the web agency world.
 
 I grew up with Apple IIs and Commodore 64s, and I still love tinkering with vintage technology which you’ll often see behind me on Zoom calls in various states of disassembly.    
 
