@@ -38,7 +38,7 @@ July, 2014
 
 ## Experience
 
-### Engineering Manager @ Grindr
+### Software Development Manager @ Grindr
 December, 2021—Present
 
 ### Engineering Manager @ Chewy
