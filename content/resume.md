@@ -41,7 +41,7 @@ July, 2014
 ### Software Development Manager @ Grindr
 December, 2021—Present
 
-### Engineering Manager @ Chewy
+### Software Development Manager @ Chewy
 January, 2021—December, 2021
 
 Within two months of forming a cross-functional team, delivered Chewy's first customer-facing Autoship improvement in ten years. Introduced agile processes and ceremonies. Fostered a collaborative, supportive team culture that improved both job satisfaction and productivity. Standardized & documented the on-boarding process for Autoship engineers. Worked to build trust and strengthen bonds with our partners on other Chewy teams.
