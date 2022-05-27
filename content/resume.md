@@ -41,6 +41,8 @@ July, 2014
 ### Software Development Manager @ Grindr
 December, 2021—Present
 
+Grew the existing web team with three additional hires in the first six months. Established a Kanban workflow for the team with regular Scrum style retrospectives and daily stand-ups. Drafted our initial product roadmap. Led the team to a mostly feature-complete prototype of Grindr Web in under six months. Worked alongside the team as lead individual contributor on several features. Spearheaded the re-platforming the grindr.com web site on Jekyll. Established a close working relationship with Design and Product stakeholders.
+
 ### Software Development Manager @ Chewy
 January, 2021—December, 2021
 
