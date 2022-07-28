@@ -198,6 +198,10 @@ cite::before {
     content: ' —';
 }
 
+blockquote:not(.transcript) {
+    min-height: 2.5rem;
+}
+
 blockquote:not(.transcript):first-letter, blockquote:not(.transcript) > p:first-child::first-letter {
     float: left;
     font-size: 2.5rem;
