@@ -4,6 +4,8 @@ I’ve been passionate about technology for as long as I can remember. Whether i
 
 I champion hiring processes that attract the widest range of qualified candidates, minimize the impact of unconscious bias, and select for the traits that over 20 years of experience within the industry have shown me are the keys to successful collaboration on everyday technical challenges.
 
+> "Dana is a great interviewer and made the whole process a lot more enjoyable."
+
 I’ve managed agile projects through all points in the software life cycle, from initial requirements gathering through to the launch of scalable, award-winning applications across numerous technology stacks. As a senior leader, I’ve found notable success in managing large teams and have led 30+ distributed engineers at once over four continents with multiple engagements including Microsoft, ESPN, Time Magazine, and World Economic Forum.
 
 When it comes to my teams, I understand engineers are only as efficient as their systems. It’s my belief that teams should be agile about being Agile. If something isn’t working, it’s time to innovate our solutions and strike the right balance between oversight, process, and focused programming time. A successful team also needs a positive workplace environment where they feel valued, included, and respected as a contributor to all our success. As a team leader, I mentor new hires on culture and technical skills that aid in their growth as engineers and collaborators. With these factors combined, we can drive growth and success of both the individual and the team while offering endless possibilities for achievement and creative breakthroughs in technology.
