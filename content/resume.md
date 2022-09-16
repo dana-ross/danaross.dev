@@ -10,7 +10,13 @@ I’ve managed agile projects through all points in the software life cycle, fro
 
 ## Accolades
 
-[![Untapped Top 100 DEIB Leaders "Walk the Walk" award](${baseURL}images/untapped-deib-top-100-2022.jpg)](https://www.untapped.io/blog/untapped-top-deib-leaders-of-2022)
+### Untapped Top 100 DEIB Leaders "Walk the Walk" award
+
+<div>
+    <a href="https://www.untapped.io/blog/untapped-top-deib-leaders-of-2022">
+        <img src="${baseURL}images/untapped-deib-top-100-2022.jpg" alt="Untapped Top 100 DEIB Leaders &apos;Walk the Walk&apos; award">
+    </a>
+</div>
 
 ## Education
 
