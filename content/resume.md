@@ -8,6 +8,10 @@ A successful team also needs a positive workplace environment where they feel va
 
 I’ve managed agile projects through all points in the software life cycle, from initial requirements gathering through to the launch of scalable, award-winning applications across numerous technology stacks. I encourage teams to understand and value the needs of all users, regardless of background, age, or disability, and to reflect that understanding in the things they build. With these factors combined, we can drive growth and success of both the individual and the team while offering endless possibilities for achievement and creative breakthroughs in technology.
 
+## Accolades
+
+[![Untapped Top 100 DEIB Leaders "Walk the Walk" award](${baseURL}images/untapped-deib-top-100-2022.jpg)](https://www.untapped.io/blog/untapped-top-deib-leaders-of-2022)
+
 ## Education
 ### Roosevelt University
 Bachelor of Science, Computer Science  

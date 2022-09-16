@@ -12,3 +12,7 @@ h3 {
 h3 + p {
     margin-top: 0;
 }
+
+#accolades + * img {
+  width: 15rem;
+}
