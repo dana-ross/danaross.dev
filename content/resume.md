@@ -55,7 +55,7 @@ July, 2014
 
 ## Experience
 
-### Software Development Manager @ Grindr
+### Sr. Engineering Manager @ Grindr
 
 December, 2021—Present
 
