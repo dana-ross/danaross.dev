@@ -1,0 +1,55 @@
+{
+  "subject": "acct:dana@danaross.dev",
+  "aliases": [
+    "https://lgbt.io/@nakedambition",
+    "https://lgbt.io/users/nakedambition",
+    "https://cooler.mom/@danaross",
+    "https://cooler.mom/users/danaross",
+    "https://oldbytes.space/@danaross",
+    "https://oldbytes.space/users/danaross"
+  ],
+  "links": [
+    {
+      "rel": "http://webfinger.net/rel/profile-page",
+      "type": "text/html",
+      "href": "https://lgbt.io/@nakedambition"
+    },
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://lgbt.io/users/nakedambition"
+    },
+    {
+      "rel": "http://ostatus.org/schema/1.0/subscribe",
+      "template": "https://lgbt.io/authorize_interaction?uri={uri}"
+    },
+    {
+        "rel":"http://webfinger.net/rel/profile-page",
+        "type":"text/html",
+        "href":"https://oldbytes.space/@danaross"
+    },
+    {
+        "rel":"self",
+        "type":"application/activity+json",
+        "href":"https://oldbytes.space/users/danaross"
+    },
+    {
+        "rel":"http://ostatus.org/schema/1.0/subscribe",
+        "template":"https://oldbytes.space/authorize_interaction?uri={uri}"
+    },
+    {
+        "rel":"http://webfinger.net/rel/profile-page",
+        "type":"text/html",
+        "href":"https://cooler.mom/@danaross"
+    },
+    {
+        "rel":"self",
+        "type":"application/activity+json",
+        "href":"https://cooler.mom/users/danaross"
+    },
+    {
+        "rel":"http://ostatus.org/schema/1.0/subscribe",
+        "template":"https://cooler.mom/authorize_interaction?uri={uri}"
+    }
+  ]
+}

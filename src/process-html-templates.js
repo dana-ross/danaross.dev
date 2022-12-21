@@ -14,18 +14,32 @@ const { scriptsBase, stylesheetsBase, imagesBase, ogimage } = require('./paths')
  * @param {String} baseURL  base URL where the web site will live
  * @param {Map}    urlRegistry 
  */
-module.exports = async function (buildDir, pagesDir, baseURL, urlRegistry) {
-    // Process WWW templates
-    const files = fs.readdirSync(pagesDir)
-    files.forEach(file => {
-        if (path.extname(file) == '.html') {
-            renderHTMLPage(pagesDir + '/' + file, buildDir, baseURL, urlRegistry)
-        }
-        else if(path.extname(file) == '.txt') {
-            fs.copyFile(path.resolve(pagesDir, file), path.resolve(buildDir, file), handleFSError)
-        }
-    })
+async function processHTMLTemplates(buildDir, pagesDir, baseURL, urlRegistry) {
+  // Process WWW templates
+  console.log("PROCESSING " + pagesDir)
+  const files = fs.readdirSync(pagesDir, { withFileTypes: true });
+  files.forEach((file) => {
+    if (file.isDirectory()) {
+      fs.mkdirSync(path.resolve(buildDir, file.name));
+      processHTMLTemplates(buildDir + '/' + file.name, pagesDir + '/' + file.name, baseURL, urlRegistry);
+    } else if (path.extname(file.name) == ".html") {
+      renderHTMLPage(
+        pagesDir + "/" + file.name,
+        buildDir,
+        baseURL,
+        urlRegistry
+      );
+    } else if ([".txt", ""].includes(path.extname(file.name))) {
+      fs.copyFile(
+        path.resolve(pagesDir, file.name),
+        path.resolve(buildDir, file.name),
+        handleFSError
+      );
+    }
+  });
 }
+
+module.exports = processHTMLTemplates
 
 /**
  * Parses a page template to produce a static html document.
