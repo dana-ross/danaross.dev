@@ -64,7 +64,7 @@ I don’t want anyone on this team burning themselves out or neglecting their he
             rel="nofollow">@lizandmollie</a></figcaption>
 </figure>
 
-If you're sick, take a sick day. I'd rather you rest and come back at 100% sooner, rather than cough and sniffle as you work your way through an extended illness.
+If you're sick, take a sick day. I'd rather you rest and come back sooner, rather than cough and sniffle as you work your way through an extended illness.
 
 I believe mental health is health, and mental health care is healthcare. Depression, anxiety, or any other thing affecting you mentally or emotionally is just as valid a reason for a day off as the Flu. Take good care of yourself, and I encourage you to take advantage of all the benefits offered to you by our employer to give yourself the best treatment options possible. 
 
