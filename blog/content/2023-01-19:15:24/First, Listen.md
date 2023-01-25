@@ -1,0 +1,7 @@
+It's funny how the same themes keep popping up in everyday life. Yesterday, I had two completely different experiences with the same important lesson.
+
+A direct report put some fairly heavy topics on our shared 1:1 agenda. I planned out my talking points in advance, and the first bullet point under each topic was: LISTEN. When the time came for our call, I sat back while they gave depth to their ideas, with examples and learnings from previous roles. That was the beginning of a couple great discussions, and they left the call in good spirits.
+
+Last night our school's Caregiver Book Club was discussing the first three chapters of How to Talk so Little Kids Will Listen, and the first chapter really stuck with me. Little kids use big voices in order to be heard, and as parents we naturally want to end their tantrum or tell them they're overreacting, but that doesn't get us anywhere. The most important first step in dealing with a situation like this is to acknowledge your kid's feelings. Help them find a name for that mess of emotion in their growing brains so they have a better way to express themselves next time. But most importantly, make them feel listened to.
+
+Whether we're 4 or 40, we all want to feel listened to. It's key to creating psychological safety at home and at work.
