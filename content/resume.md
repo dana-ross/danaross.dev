@@ -59,7 +59,7 @@ July, 2014
 
 December, 2021—Present
 
-Grew the existing web team with three additional hires in the first six months. Established a Kanban workflow for the team with regular Scrum style retrospectives and daily stand-ups. Drafted our initial product roadmap. Led the team to a mostly feature-complete prototype of a web version of the Grindr app in under six months. Worked alongside the team as lead individual contributor on several features. Spearheaded the re-platforming the grindr.com web site on Jekyll. Established a close working relationship with Design and Product stakeholders.
+More than doubled the size of the existing web team with five hires in the first year. Established a Kanban workflow for the team with regular Scrum style retrospectives and daily stand-ups. Drafted our initial product roadmap for a new product that provided our North Star until Product support arrived. Led the team to a mostly feature-complete prototype in under six months, a closed alpha test at nine months, and a closed beta at one year. Worked alongside the team as lead individual contributor on several features. Spearheaded the re-platforming the grindr.com web site on Jekyll. Established a close working relationship with Design, Product, Legal, and Privacy stakeholders.
 
 ### Software Development Manager @ Chewy
 
