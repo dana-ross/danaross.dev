@@ -69,7 +69,7 @@ If you're sick, take a sick day. I'd rather you rest and come back sooner, rathe
 I believe mental health is health, and mental health care is healthcare. Depression, anxiety, or any other thing affecting you mentally or emotionally is just as valid a reason for a day off as the Flu. Take good care of yourself, and I encourage you to take advantage of all the benefits offered to you by our employer to give yourself the best treatment options possible. 
 
 ### Diversity
-There’s a wide variety of people out there, and we do ourselves a disservice if we don’t actively seek to bring new ideas, viewpoints, and experiences into our team. Prejudice and bias not only rob others of a fair chance at a happy work life, they rob us of their unique contributions to our technical potential and culture. They have no place in a 21st century workplace.
+There’s a wide variety of people out there, and we do ourselves a disservice if we don’t actively seek to bring new ideas, viewpoints, and experiences into our team. Prejudice and bias not only rob others of a fair chance at a happy work life, they rob us of their unique contributions to our technical potential and culture. They have no place in a 21<sup>st</sup> century workplace.
 
 > Our differences are what make us great… and bring us together. Take it from me, a frog who has spent a lot of time getting together with a lot of very different, uh, whatevers  
 > <cite>[KermitTheFrog](https://twitter.com/KermitTheFrog/status/1196843077853417474)</cite>
@@ -120,7 +120,7 @@ A PIP should never be used like that. Why even go through the motions and waste 
 ## Words Matter
 There are some words I don't want to hear from my team.
 
-**Easy/Simple.** We're taking ideas, translating them into symbols, and making a machine follow our instructions step-by-step. We're building upon the work of the 20th & 21st centuries' greatest minds. Nothing about what what we do is easy. What we do every day seems like arcane magick to our stakeholders. If we tell them one task is easy, they'll expect we can perform any task with the same ease. Own the complexity of what we do and the specialized training you've received. Own the effort it takes to do the work right: to brainstorm, to collaborate, to write tests, and to deploy safely.
+**Easy/Simple.** We're taking ideas, translating them into symbols, and making a machine follow our instructions step-by-step. We're building upon the work of the 20<sup>th</sup> & 21<sup>st</sup> centuries' greatest minds. Nothing about what what we do is easy. What we do every day seems like arcane magick to our stakeholders. If we tell them one task is easy, they'll expect we can perform any task with the same ease. Own the complexity of what we do and the specialized training you've received. Own the effort it takes to do the work right: to brainstorm, to collaborate, to write tests, and to deploy safely.
 
 > if you ever code something that &quot;feels like a hack but it works,&quot; just remember that a CPU is literally a rock that we tricked into thinking  
 > <cite>[daisyowl](https://twitter.com/daisyowl/status/841802094361235456)</cite>
