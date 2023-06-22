@@ -137,6 +137,16 @@ That’s to say I know quite a bit about Scrum workflows and I even have a PDF t
 
 **We need to be agile about being Agile.**
 
+Dave Thomas, one of the signers of the original Agile Manifesto, laments what Agile has become. *Agile* is an adjective, not a noun. I can't *do agile* any more than I can *do hungry*, *do happy*, or *do purple*. Instead, he suggests we focus on *agility* as a quality of our teams and processes.
+
+> Let’s develop with agility  
+> You aren’t an agile programmer—you’re a programmer who programs with agility.  
+> You don’t work on an agile team—your team exhibits agility.  
+> You don’t use agile tools—you use tools that enhance your agility.
+> It’s easy to tack the word “agile” onto just about anything. Agility is harder to misappropriate.  
+> <cite>[Agile is Dead (Long Live Agility)]([https://mfbt.ca/we-need-to-talk-about-servant-leadership-a719c4c05434](https://pragdave.me/thoughts/active/2014-03-04-time-to-kill-agile.html#lets-develop-with-agility))</cite>
+
+
 ## Inspiration
 I’m a huge fan of [Lee Cockerell](https://www.leecockerell.com/), former Executive Vice President of Operations for the Walt Disney World Resort. Lee worked his way up from waiting tables at a hotel, to running food & beverage departments, to running hotels, and then went on to Disney where he was critical to the launch and eventual success of Disneyland Paris and then Disney World in Florida. While there, he over saw a company-wide transition from top-down “command and control” leadership to a modern style of trust and distributed decision making authority.
 
