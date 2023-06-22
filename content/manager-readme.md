@@ -139,7 +139,7 @@ That’s to say I know quite a bit about Scrum workflows and I even have a PDF t
 
 Dave Thomas, one of the signers of the original Agile Manifesto, laments what Agile has become. *Agile* is an adjective, not a noun. I can't *do agile* any more than I can *do hungry*, *do happy*, or *do purple*. Instead, he suggests we focus on *agility* as a quality of our teams and processes.
 
-> Let’s develop with agility  
+> Let’s develop with agility.  
 > You aren’t an agile programmer—you’re a programmer who programs with agility.  
 > You don’t work on an agile team—your team exhibits agility.  
 > You don’t use agile tools—you use tools that enhance your agility.
