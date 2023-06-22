@@ -117,6 +117,15 @@ I’m a believer in Performance Improvement Plans (PIPs). PIPs have a reputation
 
 A PIP should never be used like that. Why even go through the motions and waste everyone’s time if you just want to get rid of someone? Instead, **I try to give direct feedback, mentoring, and enough time to achieve the goals we set before you.** The structure of the PIP forces us to regularly reflect on your progress, and to meet regularly to discuss it. It’s a way to ensure you get the support you need to thrive, because we want you to continue being part of our team.
 
+## Words Matter
+There are some words I don't want to hear from my team.
+
+**Easy/Simple.** We're taking ideas, translating them into symbols, and making a machine follow our instructions step-by-step. We're building upon the work of the 20th & 21st centuries' greatest minds. Nothing about what what we do is easy. What we do every day seems like arcane magick to our stakeholders. If we tell them one task is easy, they'll expect we can perform any task with the same ease. Own the complexity of what we do and the specialized training you've received. Own the effort it takes to do the work right: to brainstorm, to collaborate, to write tests, and to deploy safely.
+
+<blockquote class="twitter-tweet">
+    <p lang="en" dir="ltr">if you ever code something that &quot;feels like a hack but it works,&quot; just remember that a CPU is literally a rock that we tricked into thinking</p>&mdash; ben 🚀 cobalt core! (@daisyowl) <a href="https://twitter.com/daisyowl/status/841802094361235456?ref_src=twsrc%5Etfw">March 15, 2017</a>
+</blockquote>
+
 ## Code
 I like code that works.
 
