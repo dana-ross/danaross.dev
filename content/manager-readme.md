@@ -72,7 +72,7 @@ I believe mental health is health, and mental health care is healthcare. Depress
 There’s a wide variety of people out there, and we do ourselves a disservice if we don’t actively seek to bring new ideas, viewpoints, and experiences into our team. Prejudice and bias not only rob others of a fair chance at a happy work life, they rob us of their unique contributions to our technical potential and culture. They have no place in a 21st century workplace.
 
 > Our differences are what make us great… and bring us together. Take it from me, a frog who has spent a lot of time getting together with a lot of very different, uh, whatevers  
-> <cite>[@KermitTheFrog](https://twitter.com/KermitTheFrog/status/1196843077853417474)</cite>
+> <cite>[KermitTheFrog](https://twitter.com/KermitTheFrog/status/1196843077853417474)</cite>
 
 ### Respect
 We usually don’t get to pick our co-workers. We all need to find common ground, work together and not get in the way of anybody else getting their work done. That means personal respect, respecting boundaries, and acting like professionals.
@@ -123,7 +123,7 @@ There are some words I don't want to hear from my team.
 **Easy/Simple.** We're taking ideas, translating them into symbols, and making a machine follow our instructions step-by-step. We're building upon the work of the 20th & 21st centuries' greatest minds. Nothing about what what we do is easy. What we do every day seems like arcane magick to our stakeholders. If we tell them one task is easy, they'll expect we can perform any task with the same ease. Own the complexity of what we do and the specialized training you've received. Own the effort it takes to do the work right: to brainstorm, to collaborate, to write tests, and to deploy safely.
 
 > if you ever code something that &quot;feels like a hack but it works,&quot; just remember that a CPU is literally a rock that we tricked into thinking  
-> <cite>[@daisyowl](https://twitter.com/daisyowl/status/841802094361235456)</cite>
+> <cite>[daisyowl](https://twitter.com/daisyowl/status/841802094361235456)</cite>
 
 ## Code
 I like code that works.
