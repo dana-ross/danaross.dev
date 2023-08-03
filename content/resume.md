@@ -46,7 +46,8 @@ December, 2017
 ### Certified Interviewer
 
 Certified Interviewer Institute (Hire Authority)  
-January, 2018
+January 2018
+Renewed July, 2023
 
 ### Scrum Master Accredited Certification
 
