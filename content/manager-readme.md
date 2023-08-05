@@ -13,9 +13,7 @@ My pronouns are [she/her](http://pronoun.is/she/her) .
 
 I was born in Chicago and moved to Boston in 2012.
 
-My partner is a bioengineer and got a job out here, so we packed up all our stuff, sold our house, and drove half-way across the country in a hatchback with three cats!
-
-We have two cats of our own now, both formerly feral and both spoiled.
+I spoil my cats.
 
 My favorite color is orange. At least for this week.
 
