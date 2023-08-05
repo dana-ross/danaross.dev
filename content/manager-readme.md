@@ -13,15 +13,9 @@ My pronouns are [she/her](http://pronoun.is/she/her) .
 
 I was born in Chicago and moved to Boston in 2012.
 
-My wife is a bioengineer and got a job out here, so we packed up all our stuff, sold our house, and drove half-way across the country in a hatchback with three cats!
+My partner is a bioengineer and got a job out here, so we packed up all our stuff, sold our house, and drove half-way across the country in a hatchback with three cats!
 
-My son was born in 2016. He’s the kindest, smartest, cutest kid ever born.
-
-I’ve been involved in volunteer animal rescue for about fifteen years, with a focus on socializing feral, shy, and abused cats. We have two cats of our own now, both formerly feral and both very cuddly and spoiled.
-
-I got my first programming job in 1999, and I’ve been in management roles since 2014. I spent over a decade in the web agency world.
-
-I grew up with Apple IIs and Commodore 64s, and I still love tinkering with vintage technology which you’ll often see behind me on Zoom calls in various states of disassembly.    
+We have two cats of our own now, both formerly feral and both spoiled.
 
 My favorite color is orange. At least for this week.
 
@@ -32,9 +26,6 @@ I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a l
 Music? Pretty much anything but mostly 90s industrial, 90s-2000s EBM, Electro-swing, and Synthwave.
 
 I use Android but I’m still mourning Windows Phone.
-
-I run 5k, 10k, and half marathon races, although not as much or as fast as I did before my
-    kid was born.
 
 ## Contacting Me
 You'll get my personal cell phone number the day you join my team. I don’t usually answer my phone, but if it’s urgent you can leave a voicemail and I’ll get back to you. I want you to feel comfortable coming to me at any time if there's something weighing heavily on your mind.
