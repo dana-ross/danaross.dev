@@ -1,0 +1,1 @@
+Take home tests are like knives. They can be used to injure people or prepare a meal. Tests can increase candidate diversity. But most often they filter out all but a specific type of candidate, weeding out the diverse voices of what could be your hardest working, most dedicated team members.
