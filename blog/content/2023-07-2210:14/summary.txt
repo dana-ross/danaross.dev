@@ -1,0 +1,1 @@
+I kicked off a Software Engineering Book Club at Grindr yesterday. It's easy to get focused on the minutae of a single platform and the libraries you use. But the big problems we face are universal.
