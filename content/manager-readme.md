@@ -114,6 +114,8 @@ There are some words I don't want to hear from my team.
 > if you ever code something that &quot;feels like a hack but it works,&quot; just remember that a CPU is literally a rock that we tricked into thinking  
 > <cite>[daisyowl](https://twitter.com/daisyowl/status/841802094361235456)</cite>
 
+**User/Users.** People have rich lives, passions, families, and other facets of their lives that affect how and why they're interacting with the things we build. We do them, and ourselves, a disservice to call them *users*. Call them readers, lonely hearts, teachers, shoppers, or anything  that gives some hint of personality and purpose.  
+
 ## Code
 I like code that works.
 
