@@ -9,7 +9,7 @@ This is NOT a pile of excuses for my bad behavior. This is not me trying to make
 Camille Fournier has a great blog post called [I hate manager READMEs](https://medium.com/@skamille/i-hate-manager-readmes-20a0dd9a70d0) that sums up how I feel about how these kinds of things tend to turn out.
 
 ## About Me
-My pronouns are [she/her](http://pronoun.is/she/her) .
+My pronouns are [she/her](http://pronoun.is/she/her).
 
 I was born in Chicago and moved to Boston in 2012.
 
