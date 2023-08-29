@@ -21,7 +21,7 @@ I love Star Trek. I miss Firefly. BoJack Horseman cracks me up and then hits a l
 
 <p><img src="${baseURL}images/being-a-boss.gif" alt="Animated: A frog in a Napoleon style uniform falls across a desk. Caption is 'being a boss is hard'." /></p>
 
-Music? Pretty much anything but mostly 90s industrial, 90s-2000s EBM, Electro-swing, and Synthwave.
+Music? Pretty much anything, but mostly 90s industrial, 90s-2000s EBM, Electro-swing, and Synthwave.
 
 I use Android but I’m still mourning Windows Phone.
 
