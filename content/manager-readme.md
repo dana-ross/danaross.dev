@@ -25,6 +25,8 @@ Music? Pretty much anything, but mostly 90s industrial, 90s-2000s EBM, Electro-s
 
 I use Android but I’m still mourning Windows Phone.
 
+I'm a runner. I love cycling. I'm passionate about barebow recurve archery.
+
 ## Contacting Me
 You'll get my personal cell phone number the day you join my team. I don’t usually answer my phone, but if it’s urgent you can leave a voicemail and I’ll get back to you. I want you to feel comfortable coming to me at any time if there's something weighing heavily on your mind.
 
@@ -55,7 +57,7 @@ I don’t want anyone on this team burning themselves out or neglecting their he
 
 If you're sick, take a sick day. I'd rather you rest and come back sooner, rather than cough and sniffle as you work your way through an extended illness.
 
-I believe mental health is health, and mental health care is healthcare. Depression, anxiety, or any other thing affecting you mentally or emotionally is just as valid a reason for a day off as the Flu. Take good care of yourself, and I encourage you to take advantage of all the benefits offered to you by our employer to give yourself the best treatment options possible. 
+I believe mental health is health, and mental health care is healthcare. Depression, anxiety, or any other thing affecting you mentally or emotionally is just as valid a reason for a day off as the Flu. Take good care of yourself, and I encourage you to take advantage of all the benefits offered to you by our employer to give yourself the best treatment options possible.
 
 ### Diversity
 There’s a wide variety of people out there, and we do ourselves a disservice if we don’t actively seek to bring new ideas, viewpoints, and experiences into our team. Prejudice and bias not only rob others of a fair chance at a happy work life, they rob us of their unique contributions to our technical potential and culture. They have no place in a 21<sup>st</sup> century workplace.
