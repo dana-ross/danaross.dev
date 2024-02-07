@@ -56,9 +56,13 @@ July, 2014
 
 ## Experience
 
+### Director of Enginering @ Swing Education
+
+August, 2023–Present
+
 ### Sr. Engineering Manager @ Grindr
 
-December, 2021—Present
+December, 2021—August, 2023
 
 Engineering manager for the creation and launch of Grindr Web, a web-based version of the popular Grindr app. More than doubled the size of the existing web team with five hires in the first year. Drafted our initial product roadmap that provided our North Star until Product support arrived. Led the team to a mostly feature-complete prototype in under six months, a closed alpha test at nine months, a closed beta at one year, and launch in May 2023. Worked alongside the web team as lead individual contributor on several features. Spearheaded the re-platforming the grindr.com web site on Jekyll and later oversaw a migration to Webflow which empowered our Marketing team to update the site in conjunction with our messaging.
 
