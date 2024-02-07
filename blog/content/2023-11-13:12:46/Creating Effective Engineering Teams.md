@@ -11,3 +11,8 @@ What mattered most is a set of dynamics you can implement on your own teams, no 
 - Impact: The belief that one's work meaningfully contributes to the organization's goals.
 
 Read more at https://addyosmani.com/blog/effective-teams/
+
+<picture>
+  <source srcset="${url}Creating Effective Engineering Teams.jpg" type="image/jpeg">
+  <img src="${url}Creating Effective Engineering Teams.jpg" alt="What separates effective engineering teams from the rest? How teams work together matters more than who is on the team.">
+</picture>
