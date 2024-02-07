@@ -3,3 +3,8 @@ One benefit of remote work that I think gets overlooked is the ability to mix ph
 I get my heart pumping and my blood flowing. I think more clearly when I'm up and moving like this. I'm sure the benefits to my health show up in the company's insurance costs as well.
 
 Trust me, none of you would put up with someone running and panting and sweating in the next cubicle over! These are things I would otherwise need to juggle between work and family time, but now I don't need to choose. I've even inspired teammates over the years to fit fitness into their work routines.
+
+<picture>
+  <source srcset="${url}Remote Work and Fitness.png" type="image/png">
+  <img src="${url}Remote Work and Fitness.png" alt="A purple stretch band and black workout gloves laying on a pink and black computer keyboard.">
+</picture>
