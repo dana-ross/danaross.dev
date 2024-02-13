@@ -235,7 +235,7 @@ function sortMap(map, reverse = false) {
 function processMarkdown(markdown) {
   markdown = wrap(
     decode(
-      marked(markdown)
+      marked(untypeset(markdown))
         .replace(/<br>/g, "\n")
         .replace(/\n<ul>\n/, "")
         .replace(/<h2/g, "## <h2")
@@ -313,6 +313,15 @@ function typeset(a) {
   }
 
   return a;
+}
+
+/**
+ * Replace em-dashes with hyphens
+ * @param {string} a Text to un-typeset
+ * @returns Modified text
+ */
+function untypeset(a) {
+  return a.replaceAll("—", "-");
 }
 
 const getBuildTimestamp = (function () {
