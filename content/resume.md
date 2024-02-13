@@ -1,6 +1,6 @@
 ## Summary
 
-I’ve been passionate about technology for as long as I can remember. Alongside my passion for the advancement of technology itself lies a core value that software and content can empower everyone. Whether it was tinkering with Apple IIs and Commodore 64s as a child or teaching myself to code at an early age, I’ve been fascinated by technology’s ability to bridge gaps and connect people.
+I've been passionate about technology for as long as I can remember. Alongside my passion for the advancement of technology itself lies a core value that software and content can empower everyone. Whether it was tinkering with Apple IIs and Commodore 64s as a child or teaching myself to code at an early age, I’ve been fascinated by technology’s ability to bridge gaps and connect people.
 
 When it comes to my teams, I understand engineers are only as efficient as their systems. It’s my belief that teams should be agile about being Agile. As a team leader, I mentor new hires on culture and technical skills that aid in their growth as engineers and collaborators.
 
