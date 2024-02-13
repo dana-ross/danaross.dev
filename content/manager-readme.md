@@ -4,7 +4,7 @@ This is a description of what I'm all about and my philosophies about what being
 
 ## What this is not:
 
-This is NOT a pile of excuses for my bad behavior. This is not me trying to make my personality quirks into your problems because “well, I warned you about that in my README”.
+This is NOT a pile of excuses for my bad behavior. This is not me trying to make my personality quirks into your problems because "well, I warned you about that in my README".
 
 Camille Fournier has a great blog post called [I hate manager READMEs](https://medium.com/@skamille/i-hate-manager-readmes-20a0dd9a70d0) that sums up how I feel about how these kinds of things tend to turn out.
 
@@ -90,7 +90,7 @@ As your manager, I have a personal investment in your success. It helps you grow
 
 I hope you will take advantage of the resources the company and I make available to you, and I will regularly check in with you to make sure you're setting aside time to learn new things appropriate to the work you do. I also hope you will make time outside work to invest in yourself.
 
-This isn't limited to learning new programming languages and technologies. Growing in so-called “soft skills” will pay big dividends in your career as well. Pick up a foreign language! Learn public speaking! Learn to cook!
+This isn't limited to learning new programming languages and technologies. Growing in so-called "soft skills" will pay big dividends in your career as well. Pick up a foreign language! Learn public speaking! Learn to cook!
 
 ## One on Ones
 
@@ -116,7 +116,7 @@ As your manager and someone invested in your success, I may have to deliver hone
 
 **You have my word that any feedback of this nature will be delivered discreetly and respectfully**, with a goal of building you up into the team members we need, and never to tear you down.
 
-I'm a believer in Performance Improvement Plans (PIPs). PIPs have a reputation as something negative. They're seen as a way to “manage out” employees that bosses don't have the guts to fire outright.
+I'm a believer in Performance Improvement Plans (PIPs). PIPs have a reputation as something negative. They're seen as a way to "manage out" employees that bosses don't have the guts to fire outright.
 
 A PIP should never be used like that. Why even go through the motions and waste everyone's time if you just want to get rid of someone? Instead, **I try to give direct feedback, mentoring, and enough time to achieve the goals we set before you.** The structure of the PIP forces us to regularly reflect on your progress, and to meet regularly to discuss it. It's a way to ensure you get the support you need to thrive, because we want you to continue being part of our team.
 
@@ -159,12 +159,12 @@ Dave Thomas, one of the signers of the original Agile Manifesto, laments what Ag
 > You aren't an agile programmer—you're a programmer who programs with agility.  
 > You don't work on an agile team—your team exhibits agility.  
 > You don't use agile tools—you use tools that enhance your agility.
-> It's easy to tack the word “agile” onto just about anything. Agility is harder to misappropriate.  
+> It's easy to tack the word "agile" onto just about anything. Agility is harder to misappropriate.  
 > <cite>[Agile is Dead (Long Live Agility)](<[https://mfbt.ca/we-need-to-talk-about-servant-leadership-a719c4c05434](https://pragdave.me/thoughts/active/2014-03-04-time-to-kill-agile.html#lets-develop-with-agility)>)</cite>
 
 ## Inspiration
 
-I'm a huge fan of [Lee Cockerell](https://www.leecockerell.com/), former Executive Vice President of Operations for the Walt Disney World Resort. Lee worked his way up from waiting tables at a hotel, to running food & beverage departments, to running hotels, and then went on to Disney where he was critical to the launch and eventual success of Disneyland Paris and then Disney World in Florida. While there, he over saw a company-wide transition from top-down “command and control” leadership to a modern style of trust and distributed decision making authority.
+I'm a huge fan of [Lee Cockerell](https://www.leecockerell.com/), former Executive Vice President of Operations for the Walt Disney World Resort. Lee worked his way up from waiting tables at a hotel, to running food & beverage departments, to running hotels, and then went on to Disney where he was critical to the launch and eventual success of Disneyland Paris and then Disney World in Florida. While there, he over saw a company-wide transition from top-down "command and control" leadership to a modern style of trust and distributed decision making authority.
 
 He was at the helm of the Disney World resort through two hurricanes and the terrorist attack of 9/11. He's now a public speaker and author on leadership.
 
