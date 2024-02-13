@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const parseAttributeString = require("parse-attributes");
-const marked = require("marked");
+const { marked } = require("marked");
 const { decode } = require("html-entities");
 const wrap = require("word-wrap");
 const twemoji = require("twemoji");
@@ -43,7 +43,8 @@ function replacePlaceholders(source, placeholders) {
  * @returns String
  */
 function replacePartials(source, _variables) {
-  const PARTIAL_TAG_REGEX = /<drr-partial\s*name="(?<name>[^"]*)"\s*(?<attributes>(\w+="[^"]*"\s*)*)\s*\/?>/;
+  const PARTIAL_TAG_REGEX =
+    /<drr-partial\s*name="(?<name>[^"]*)"\s*(?<attributes>(\w+="[^"]*"\s*)*)\s*\/?>/;
 
   let partialTag = null;
   while ((partialTag = source.match(PARTIAL_TAG_REGEX))) {
@@ -62,7 +63,7 @@ function replacePartials(source, _variables) {
       ),
       variables
     );
-    
+
     source = source.replace(PARTIAL_TAG_REGEX, replacement);
   }
 
@@ -77,7 +78,8 @@ function replacePartials(source, _variables) {
  * @returns String
  */
 function inlineSVGs(source, logFunction = undefined) {
-  const SVG_TAG_REGEX = /<img\s*(?<attributes1>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*src="(?<src>[^"]*.svg)"\s*(?<attributes2>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*[^\/>]*\/?>/;
+  const SVG_TAG_REGEX =
+    /<img\s*(?<attributes1>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*src="(?<src>[^"]*.svg)"\s*(?<attributes2>[a-zA-Z0-9]+="[^"]*"[^\/>]*)*[^\/>]*\/?>/;
 
   let svgTag = null;
   while ((svgTag = source.match(SVG_TAG_REGEX))) {

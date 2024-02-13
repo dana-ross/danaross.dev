@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const marked = require("marked");
+const { marked } = require("marked");
 const chalk = require("chalk");
 const { format } = require("date-fns");
 const {
@@ -13,7 +13,7 @@ const {
   typeset,
   inlineSVGs,
   getBuildTimestamp,
-  renderBlogPost
+  renderBlogPost,
 } = require("./utils");
 const {
   scriptsBase,
@@ -60,13 +60,13 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
           const postSummary = fs.existsSync(
             path.resolve(contentPath, "summary.txt")
           )
-            ? fs.readFileSync(
-                path.resolve(contentPath, "summary.txt"),
-                "utf8"
-              )
+            ? fs.readFileSync(path.resolve(contentPath, "summary.txt"), "utf8")
             : "";
 
-            urlRegistry.set(path.resolve(contentPath, potentialBlogPost), postURL)
+          urlRegistry.set(
+            path.resolve(contentPath, potentialBlogPost),
+            postURL
+          );
           blogIndexData.set(Date.parse(path.basename(contentPath)), {
             postTitle,
             postURL,
@@ -110,12 +110,20 @@ module.exports = async function (buildDir, baseURL, urlRegistry) {
     scriptsBase,
     url: baseURL + "blog",
     ogimage,
-    buildTimestamp: getBuildTimestamp()
+    buildTimestamp: getBuildTimestamp(),
   };
 
   fs.writeFile(
     path.resolve(buildDir, "blog", "index.html"),
-    inlineSVGs(replacePlaceholders(replacePartials(insertBlogIndex(blogIndexTemplate, blogIndexData), variables), variables)),
+    inlineSVGs(
+      replacePlaceholders(
+        replacePartials(
+          insertBlogIndex(blogIndexTemplate, blogIndexData),
+          variables
+        ),
+        variables
+      )
+    ),
     handleFSError
   );
 };
@@ -165,7 +173,13 @@ function processBlogPost(
     ogimage,
   };
 
-  const html = renderBlogPost(blogPostTemplate, contentPath, potentialBlogPost, baseURL, variables);
+  const html = renderBlogPost(
+    blogPostTemplate,
+    contentPath,
+    potentialBlogPost,
+    baseURL,
+    variables
+  );
 
   fs.writeFile(
     path.resolve(buildDir, "blog", postSlug, "index.html"),
@@ -175,13 +189,11 @@ function processBlogPost(
 
   const dirEntries = fs.readdirSync(contentPath);
   dirEntries.forEach((dirEntry) => {
-      if(['.jpg', '.png', '.gif', '.webp'].includes(path.extname(dirEntry))) {
-        processImage(
-          path.resolve(contentPath, dirEntry),
-          path.resolve(buildDir, "blog", postSlug, dirEntry)
-        );
-      }
+    if ([".jpg", ".png", ".gif", ".webp"].includes(path.extname(dirEntry))) {
+      processImage(
+        path.resolve(contentPath, dirEntry),
+        path.resolve(buildDir, "blog", postSlug, dirEntry)
+      );
+    }
   });
-
 }
-
