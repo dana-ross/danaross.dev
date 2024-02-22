@@ -28,7 +28,7 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rltgoDvOi -zz --exclude '.git' --exclude '.github'"
+          ARGS: "-rlgoDzvc --i -zz --exclude '.git' --exclude '.github'"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           SOURCE: "build/www/"
