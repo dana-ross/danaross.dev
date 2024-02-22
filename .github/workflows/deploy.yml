@@ -25,10 +25,10 @@ jobs:
         run: node ./src/build.js
         id: build
       - name: Deploy WWW
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          ARGS: "-rlgoDzvci -zz --exclude '.git' --exclude '.github'"
+          ARGS: "-rltgoDvOi -zz --exclude '.git' --exclude '.github'"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           SOURCE: "build/www/"
