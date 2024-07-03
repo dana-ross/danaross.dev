@@ -44,6 +44,8 @@ If a message from me needs an urgent response, I'll tell you. Otherwise, assume 
 
 Whether they're family by blood or family by choice, the people close to me are a priority for me, as I hope the people close to you are for you.
 
+I consider pets to be family, too.
+
 ### Physical and Mental Health
 
 I don't want anyone on this team burning themselves out or neglecting their health. That means no 60 hour weeks where you're really productive on paper but you can't get anything done. Shoot for a 40 hour week average. Finish work at a decent time. Eat good food. Have hobbies. Exercise. Sleep. You can't pour from an empty cup.
