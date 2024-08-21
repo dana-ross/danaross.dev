@@ -60,6 +60,8 @@ July, 2014
 
 August, 2023–Present
 
+Led engineering team through 2024 app modernization (React, Typescript) initiative. Grew team by 3 engineers.  Optimized hiring processes - less than 60 days from job posting to hire. Streamlined on-boarding, with new hires making first meaningful commits three days after their start date. Identified redundant and unnecessary tooling costs. Cut data vault overage costs by $40,000 through code optimization and negotiating a better deal with our vendor.
+
 ### Sr. Engineering Manager @ Grindr
 
 December, 2021—August, 2023
